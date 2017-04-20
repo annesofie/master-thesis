@@ -1,4 +1,5 @@
 \documentclass[10pt, b5paper, twoside]{book}
+\usepackage[inner=2cm, outer=2.5cm, top=2.7cm, bottom=3.0cm]{geometry}
 %\usepackage[lmargin=25mm,rmargin=25mm,tmargin=27mm,bmargin=30mm]{geometry}
 
 \usepackage[parfill]{parskip}  % To begin paragraphs with an empty line rather than an indent
@@ -16,14 +17,62 @@
 \usepackage{emptypage} %Removes pagenumber on empty pages 
 \usepackage{setspace} %To use doublespacing / singlespacing ++
 
+\usepackage[toc]{glossaries}%Adding glossary, and adding it to contents with chapter layout
+
 %--------------------  Header and footer layout-----------------
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\fancyhf{}
+\fancyhf{} % Clear all header and footer fields
 
 %L = left, R = right, C=center, O = odd page, E = even page
 \fancyhead[LE]{\leftmark} %\leftmark sets number and name of chapter
 \fancyfoot[LE,RO]{\thepage} %\thepage gives page number
+
+% redefinition of the plain style: Otherwise first page of new chapter gets original plain style
+\fancypagestyle{plain}{%
+	\fancyhf{} % clear all header and footer fields
+	\renewcommand{\headrulewidth}{0pt} %Remove header line on new 
+	\fancyfoot[LE,RO]{\thepage} %\ "thepage" gives page number
+}
+
+
+% --------- CODE LAYOUT ----------------
+% Inserting code and making it look readable (adding numbering, colours and formatting)
+\usepackage{listings} %insert code style
+\usepackage{color}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{pythonstyle}{
+    backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{blue},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,   %Makes underscore look correct             
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+
+%Making space between background box and content
+\usepackage{fancyvrb}
+\usepackage{framed}
+\lstset{
+	style=pythonstyle,
+	framexleftmargin=1pt,
+	framextopmargin=8pt,
+	framexbottommargin=6pt, 
+	frame=tb, framerule=0pt
+}
 
 
 %-------------------- TOC layout ----------------------------------------------------
@@ -44,27 +93,29 @@
 {\contentslabel{2pc}}{\hspace*{-2pc}}
 {\titlerule*[0.7pc]{.}\contentspage} %space between dots
 
-% \titlecontents{subsubsection}[7pc] %hvor starten på title starter?
-%{\addvspace{-0.4pc}\filright\footnotesize} %space between lines
-%{\contentslabel{3pc}}{\hspace*{-2pc}} % hvor mye starten på linjen flyttes / vet ikke hva er
-%{\titlerule*[0.7pc]{.}\contentspage} %space between dots
-%-------------------------------------------------------------------------------------
+%Set levels in contents:
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{2}
 
 
 %-------------------- Make chapter layout better ------------------------------------
 \usepackage{titlesec}
-\titleformat{\chapter}[hang] 
-{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter. }{0.7em}{}%[{\titlerule[0.2pt]}] %underline
+%\titleformat{\chapter}[hang] 
+
+\usepackage{titlesec, blindtext, color}
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+
+%Setting layot to line between number and name, setting the color to gray and adding space
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+
+%{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter. }{0.7em}{}%[{\titlerule[0.2pt]}] %underline
+
 \makeatletter %Decide layout for chapter header
 \renewcommand{\@chapapp}{}% Remove "Chapter" before chap number
 \newenvironment{chapquote}[2][2em]
-%{\setlength{\@tempdima}{#1}%
-%	\def\chapquote@author{#2}%
-%	\parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
-%	\itshape}
-%{\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
-%\makeatother
 %------------------------------------------------------------------
+
 
 
 %\usepackage{titlepic}
@@ -72,7 +123,7 @@
 %\usepackage{subfig}
 %\usepackage{subcaption}
 
-%\usepackage[toc,page]{appendix}
+\usepackage[toc,page]{appendix}
 
 %Bibliography definitons
 \usepackage{natbib}
