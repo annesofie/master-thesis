@@ -31,14 +31,14 @@ The average time spent on the survey was 18 minutes. The two oldest participants
 
 
 \subsubsection{Statistics result}
-The python library Scipy has an Anderson-Darling test function, this was used to answer the normality test with the Anderson-Darling hypothesis. Testing the total time data form all results (in total 32 entries) in Anderson-Darling gave a \textit{p-value} of 0.717. The null hypothesis can not be rejected. When doing the analysis on experienced and non-experienced data set separately the null hypothesis was not rejected. Notice that the \textit{p-value} is lower because of fewer entries. \newline
+First the pilot-test result need to be normality tested. As mentioned in \ref{subsec:normaltesting} this thesis will use the Anderson-Darling test. The python library Scipy has an Anderson-Darling test function \citep{TheScipycommunity2017}, this was used to answer the normality test with the Anderson-Darling hypothesis. Testing the total time data form all participants (in total 32 entries) in Anderson-Darling gave a \textit{p-value} of 0.717. The null hypothesis can not be rejected. When doing the analysis on experienced and non-experienced data set separately the null hypothesis was also not rejected. Notice that the \textit{p-value} is lower because of fewer entries. \newline
 
 \begin{framed}{\noindent\centering
 \textit{Anderson-Darling test} \\
 \textbf{Data:} All participants - total time, 32 entries\\
   \textbf{P-value:} 0.717  \\
-  \textbf{Normal distributed:} Yes\\
-  \textit{P-value} > 0.05
+    \textit{P-value} > 0.05\\
+  \textbf{Normal distributed:} Yes
   \par}
 \end{framed}
 
@@ -47,8 +47,8 @@ The python library Scipy has an Anderson-Darling test function, this was used to
 \textit{Anderson-Darling test} \\
 \textbf{Data:} Experienced participants - total time, 19 entries\\
   \textbf{P-value:} 0.692  \\
-  \textbf{Normal distributed:} Yes\\
-  \textit{P-value} > 0.05
+    \textit{P-value} > 0.05\\
+  \textbf{Normal distributed:} Yes
   \par}
 \end{framed}
 
@@ -57,8 +57,8 @@ The python library Scipy has an Anderson-Darling test function, this was used to
 \textit{Anderson-Darling test} \\
 \textbf{Data:} Non-experienced participants - total time, 12 entries\\
   \textbf{P-value:} 0.679  \\
-  \textbf{Normal distributed:} Yes\\
-  \textit{P-value} > 0.05
+    \textit{P-value} > 0.05 \\
+  \textbf{Normal distributed:} Yes
   \par}
 \end{framed}
 

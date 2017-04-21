@@ -12,7 +12,7 @@ Next step is to determine the level of statistical significance, often expressed
 %Compare the mean time in experienced and not experienced
 %H0: No time difference, Ha: Experienced use less time
 
-\subsection{Normal testing}
+\subsection{Normal testing}\label{subsec:normaltesting}
 A \textit{goodness-of-fit} test is used to determine whether a sample of \textit{n} observations can be considered as a sample from a given specified distribution \citep{Walpole2012}. The Anderson-Darling and the Kolmogorov-Smirow tests stand out as \textit{goodness-of-fit} procedures specialized for small samples \citep{Romeu2003}. The Anderson-Darling test will be used in this study to test if the observations gathered in this study is normally distributed.  %The Kolmogorov-Smirow test is a nonparametric test
 The hypothesis for the Anderson-Darling test is: \newline
 
@@ -25,4 +25,14 @@ The computations in the Anderson-Darling test differs based on that is known abo
 When the variance is unknown we use the Student t-distribution. The random variables $X_{1}, X_{2}, X_{3}, ..., X_{n}$ represents the random sample from a normal distribution with unknown $\mu$ and $\sigma{}^{2}$. 
 
 %Example: In this example where p = .03, we would reject the null hypothesis and accept the alternative hypothesis. We reject it because at a significance level of 0.03 (i.e., less than a 5% chance), the result we obtained could happen too frequently for us to be confident that it was the two teaching methods that had an effect on exam performance. https://statistics.laerd.com/statistical-guides/hypothesis-testing-3.php
+
+\subsection{Two sample test}
+When estimating the difference between two means a two-sample t-test is used \citep{Walpole2012}. A two sampled test assumes two independent, random samples from distributions with means $\mu_{1}$ and $\mu_{2}$ and variances $\sigma_{1}^{2}$ and $\sigma_{2}^{2}$. %*HOW TO DETERMINE IF THEY ARE INDEPENDENT? 
+The one-sided hypothesis on two means can be written as:\newline
+
+\centerline{$H_{0}$: $\mu_{1}$ - $\mu_{2}$ = 0 or $\mu_{1}$ = $\mu_{2}$} 
+\centerline{$H_{A}$: $\mu_{1}$ - $\mu_{2}$ > 0 or $\mu_{1}$ > $\mu_{1}$}
+ 
+Before doing tests on the two means Levene's Test is used to test if the samples are from populations with equal variances. If they are equal a two-sampled t-test may be used. %https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.levene.html
+
 
