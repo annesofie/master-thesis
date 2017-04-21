@@ -30,5 +30,38 @@ The two oldest participants spent almost twice as much time on the test than the
 The average time spent on the survey was 18 minutes. The two oldest participants used on average 33 minutes, while the rest of the participants spent on average 13 minutes. 
 
 
+\subsubsection{Statistics result}
+The python library Scipy has an Anderson-Darling test function, this was used to answer the normality test with the Anderson-Darling hypothesis. Testing the total time data form all results (in total 32 entries) in Anderson-Darling gave a \textit{p-value} of 0.717. The null hypothesis can not be rejected. When doing the analysis on experienced and non-experienced data set separately the null hypothesis was not rejected. Notice that the \textit{p-value} is lower because of fewer entries. \newline
 
+\begin{framed}{\noindent\centering
+\textit{Anderson-Darling test} \\
+\textbf{Data:} All participants - total time, 32 entries\\
+  \textbf{P-value:} 0.717  \\
+  \textbf{Normal distributed:} Yes\\
+  \textit{P-value} > 0.05
+  \par}
+\end{framed}
+
+
+\begin{framed}{\noindent\centering
+\textit{Anderson-Darling test} \\
+\textbf{Data:} Experienced participants - total time, 19 entries\\
+  \textbf{P-value:} 0.692  \\
+  \textbf{Normal distributed:} Yes\\
+  \textit{P-value} > 0.05
+  \par}
+\end{framed}
+
+
+\begin{framed}{\noindent\centering
+\textit{Anderson-Darling test} \\
+\textbf{Data:} Non-experienced participants - total time, 12 entries\\
+  \textbf{P-value:} 0.679  \\
+  \textbf{Normal distributed:} Yes\\
+  \textit{P-value} > 0.05
+  \par}
+\end{framed}
+
+
+%AndersonResult(statistic=3.3820658674402395, critical_values=array([ 0.524,  0.597,  0.717,  0.836,  0.994]), significance_level=array([ 15. ,  10. ,   5. ,   2.5,   1. ]))
 
