@@ -8,7 +8,7 @@ In a self selected sample, which is some the case here, there is potentially a b
 \section{Pilot test}
 It is important to pilot test the survey prior to actual use \citep{Ben2009}. A pilot test provides an opportunity to validate the wording of the tasks, do the participants understand the tasks? It also helps understand the time necessary for completing the survey, which should be communicated to the participants in prior to the survey \citep{Schade2015}. The pilot-test is conducted with a small sample of users. Results from the pilot-test can be used to determine the sample size. The sample size tells us how many responses that are needed \citep{Smith2013}. The formula for determining the sample size requires the standard deviation, how much variance to expect in the response \citep{Smith2013}. This standard deviation can be calculated from the pilot-test results.
 
-A pilot test was conducted with a total of eight participants, five experienced and three non-experienced participants aged from 22 to 64 years. After the pilot test the usability was measured. The standard ISO 9241-11 suggests that measures of usability should cover effectiveness, efficiency and satisfaction \citep{ISO1998}. Measuring these three classes of metric can vary widely and makes it difficult to make comparisons of usability between different systems. "[...] just because a particular design feature has proved to be very useful in making one system usable does not necessarily mean that it will do so for another system" \citep{Brooke1996}. Usability in this thesis was measures with the \textit{System Usability Scale}(SUS). This scale gives an subjective measure of usability and was developed by John Brooke. The \textit{System Usability Scale} questionnaire consists of ten statements where the participants rate their agreement in an five-point scale \citep{Ben2009}. Subjective measure of usability is usually obtained through the use of questionnaire and attitude scales \citep{Brooke1996}. SUS was developed to be quick and simple, but also reliable enough to be able to compare performance changes between versions \citep{Brooke1996}.  
+A pilot test was conducted with a total of eight participants, five experienced and three non-experienced participants aged from 22 to 64 years. After the pilot test the usability was measured. The standard ISO 9241-11 suggests that measures of usability should cover effectiveness, efficiency and satisfaction \citep{ISO1998}. Measuring these three classes of metric can vary widely and makes it difficult to make comparisons of usability between different systems. " just because a particular design feature has proved to be very useful in making one system usable does not necessarily mean that it will do so for another system" \citep{Brooke1996}. Usability in this thesis was measures with the \textit{System Usability Scale}(SUS). This scale gives an subjective measure of usability and was developed by John Brooke. The \textit{System Usability Scale} questionnaire consists of ten statements where the participants rate their agreement in an five-point scale \citep{Ben2009}. Subjective measure of usability is usually obtained through the use of questionnaire and attitude scales \citep{Brooke1996}. SUS was developed to be quick and simple, but also reliable enough to be able to compare performance changes between versions \citep{Brooke1996}.  
 
 The usability is important to measure. If the participants doesn't understand how the web-application works, they will probably not do the survey since they then have to invest time in understanding what to do. %they will either exit the survey or answer the questions in the survey wrong. 
 Usability is an important factor to get enough participants to do the whole survey and not quit halfway. 
@@ -31,37 +31,21 @@ The average time spent on the survey was 18 minutes. The two oldest participants
 
 
 \subsubsection{Statistics result}
-First the pilot-test result need to be normality tested. As mentioned in \ref{subsec:normaltesting} this thesis will use the Anderson-Darling test. The python library Scipy has an Anderson-Darling test function \citep{TheScipycommunity2017}, this was used to answer the normality test with the Anderson-Darling hypothesis. Testing the total time data form all participants (in total 32 entries) in Anderson-Darling gave a \textit{p-value} of 0.717. The null hypothesis can not be rejected. When doing the analysis on experienced and non-experienced data set separately the null hypothesis was also not rejected. Notice that the \textit{p-value} is lower because of fewer entries. \newline
+First the pilot-test result need to be normality tested. 
+As mentioned in \ref{subsec:normaltesting} this thesis will use the Anderson-Darling test. The python library Scipy has an Anderson-Darling test function \citep{TheScipycommunity2017}, this was used to answer the normality test with the Anderson-Darling hypothesis. Testing the total time data form all participants (in total 32 entries) in Anderson-Darling gave a \textit{p-value} of 0.717. The null hypothesis cannot be rejected, then there are two possible cases. One can either accept the null hypothesis or the sample size is not large enough to either accept or reject the null hypothesis \citep{ThePennsylvaniaStateUniversity2017}. An acceptance of the null hypothesis implies that the evidence was insufficient, the result does not necessary accept $H_{0}$, but fails to reject $H_{0}$ \citep{Walpole2012}.  
 
 \begin{framed}{\noindent\centering
 \textit{Anderson-Darling test} \\
 \textbf{Data:} All participants - total time, 32 entries\\
   \textbf{P-value:} 0.717  \\
     \textit{P-value} > 0.05\\
-  \textbf{Normal distributed:} Yes
+  \textbf{$H_{0}$:} Accepted, failed to reject \\
+  \textit{Anderson-Darling test} \\
+  \textbf{Data:} All participants - total time, 32 entries\\
+  \textbf{P-value:} 0.717  \\
+  \textit{P-value} > 0.05
   \par}
 \end{framed}
 
 
-\begin{framed}{\noindent\centering
-\textit{Anderson-Darling test} \\
-\textbf{Data:} Experienced participants - total time, 19 entries\\
-  \textbf{P-value:} 0.692  \\
-    \textit{P-value} > 0.05\\
-  \textbf{Normal distributed:} Yes
-  \par}
-\end{framed}
-
-
-\begin{framed}{\noindent\centering
-\textit{Anderson-Darling test} \\
-\textbf{Data:} Non-experienced participants - total time, 12 entries\\
-  \textbf{P-value:} 0.679  \\
-    \textit{P-value} > 0.05 \\
-  \textbf{Normal distributed:} Yes
-  \par}
-\end{framed}
-
-
-%AndersonResult(statistic=3.3820658674402395, critical_values=array([ 0.524,  0.597,  0.717,  0.836,  0.994]), significance_level=array([ 15. ,  10. ,   5. ,   2.5,   1. ]))
 
