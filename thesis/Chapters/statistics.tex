@@ -2,6 +2,18 @@
 
 %My hypothesis before start
 
+\section{Sample data from Survey}
+
+Independence of observations. This is mostly a study design issue and, as such, you will need to determine whether you believe it is possible that your observations are not independent based on your study design (e.g., group work/families/etc). A lack of independence of cases has been stated as the most serious assumption to fail. Often, there is little you can do that offers a good solution to this problem. %https://statistics.laerd.com/statistical-guides/one-way-anova-statistical-guide-2.php
+
+%Indepencence: Chi-square Test of Independence -  researching if two categorical variables are related or associated (i.e. dependent).  https://onlinecourses.science.psu.edu/stat500/node/56
+
+Designed the survey so that the observations should be random and independent \\
+- Random order on the tests \\
+- Random color on the layers \\
+- Random which order the layers was drawn on the map \\
+- Random which order the metadata was written in the table \\
+
 \section{Statistics theory}
 
 
@@ -62,32 +74,72 @@ Then the hypothesis refer to a one-tailed two sampled t-test. Before doing tests
 \centerline{$H_{0}$: Input samples are from populations with equal variances} 
 \centerline{$H_{A}$: Input samples are from populations that do not have equal variances}
 
-If we can assume equal variances in the two samples a two-sampled t-test may be used. 
+If we can assume equal variances in the two samples and the samples are normal distributed, a two-sampled t-test may be used. 
 %There are also formula for Unknown but unequal variances, page 345 in statistics book
 
 Because the one-sided tests can be backed out from the two-sided tests. (With symmetric distributions one-sided p-value is just half of the two-sided pvalue). It goes on to say that scipy always gives the test statistic as signed. This means that given p and t values from a two-tailed test, you would reject the null hypothesis of a greater-than test when p/2 < alpha and t > 0, and of a less-than test when p/2 < alpha and t < 0. %http://stackoverflow.com/questions/15984221/how-to-perform-two-sample-one-tailed-t-test-with-numpy-scipy
 %https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.stats.ttest_ind.html
 
-An example of a relevant hypothesis test neccessary in this study is:\newline
-\centerline{$H_{0}$:  $\mu_{E} =  \mu_{N} $} 
-\centerline{$H_{A}$: $\mu_{E} > \mu_{N}$}
+Relevant hypothesis in this study that can be tested with a two-sampled t-test (if the conditions mentioned above are valid) is listed under. \newline
 
-Where $\mu_{E}$ is the mean task time for experienced participants and $\mu_{N}$ is the mean task time for non-experienced participant's. More on this later. %*WHICH SECTION?
+\begin{framed}{\noindent\centering
+		
+		\textit{Hypothesis - Two sample t-test} \newline
+		
+		\textbf{$H_{0}$:} Mean task time between participants are equal\\
+		\textbf{$H_{A}$:} Experienced participants finish the tasks faster, use less time\newline
+		
+		$H_{0}$: Total number of correct elements between participants are equal \\
+		$H_{A}$: Experienced participants have a higher number of correct elements\newline
+		
+		$H_{0}$: There are no difference in total number of correct elements between the tasks\\
+		$H_{A}$: Participants have more correct elements on the one element task\newline
+		
+		$H_{0}$: There are no difference in mean time between the tasks\\    
+		$H_{A}$: Participants finish the one element task faster  %* ONE element task or three??
+		\par}
+\end{framed}
+
+Before solving the hypothesis the conditions needs to be testet. More on this later. %*WHICH SECTION?
 
 \subsubsection[ANOVA]{Analysis-of-Variance}\label{sec:anova}
-Analysis-of-Variance (\textit{ANOVA}) is according to \cite{Walpole2012} a very common procedure used for testing population means. A part of the goal of \textit{ANOVA} is to determine if the differences among the sample means are what we would expect due to random variation alone, or due to variation beyond merely random effects. \textit{ANOVA} assumes normally distributed samples with equal variance. 
+Analysis-of-Variance (\textit{ANOVA}) is according to \cite{Walpole2012} a very common procedure used for testing population means. Where a two sample t-test are restricted to consider no more than two population parameters, \textit{ANOVA} can test multiple population parameters. A part of the goal of \textit{ANOVA} is to determine if the differences among the means of two or more samples are what we would expect due to random variation alone, or due to variation beyond merely random effects. \textit{ANOVA} assumes normally distributed, independent, samples with equal variance. The equal variance assumtion will be tested with Levene's Test also mentioned in subsection \ref{sec:t-test}. 
 
-One-way \textit{ANOVA} is used to determine if three or more independent groups have any significant differences between their means.  It tests the hypothesis:\newline
+One-way \textit{ANOVA} tests the null hypothesis that two or more groups have the same population mean given that the mean is measured on the same factor or variable in all groups\citep{LundResearchLtd2013a}. The hypothesis test can be written like this:\newline
 
 \centerline{$H_{0}$:  $\mu_{1} =  \mu_{2} = ... = \mu_{k} $} 
 \centerline{$H_{A}$:  At least two of the means are different}
 
-$\mu$ equals the group mean and $k$ represents the number of groups. The weakness of one-way \textit{ANOVA} is that it cannot tell which specific groups were significally different from each other if $H_{0}$ is rejected. To be able to determine which group a \textit{post hoc test} is used. 
+$\mu$ equals the group mean and $k$ represents the number of groups. It is important to check that each group are normally distributed, not only the sample \citep{LundResearchLtd2013a}. The weakness of one-way \textit{ANOVA} is that it cannot tell which specific groups were significally different from each other if $H_{0}$ is rejected. To be able to determine which group a \textit{post hoc test} is used. 
 
-In this test there should be one variable and minimum three groups, which is an relevant approach considering the data produced from the survey. The test can determine if the mean time (the variable) is significally different between the three tasks (the groups) given in the survey. It can also be used to determine if there are any significant different in mean time given the six different orders the task could serve in. A third test is to have number of correct elements as the variable and the three tasks as groups. More on this later. %*WHIch section?
+In an one-way \textit{ANOVA} test there should be one variable and minimum three independent groups, which is an relevant approach considering the data produced from this thesis survey. There are at least two variables in the survey data, task time and number of correctly chosen elements. The survey result can be divided into three groups, one element task, three elements task and six elements task. Each entry in the sample should only be assigned to one group. Relevant hypothesis from the study that can be used in an one-way \textit{ANOVA} test is shown under. \newline
 
+\begin{framed}
+		\begin{center}
+			\textit{Hypothesis - One-way \textit{ANOVA}} \newline
+			
+			$H_{0}$: Mean task time is not different between the three tasks\\
+			$H_{A}$: Mean task time is different between at least two of the tasks\\
+			\textit{Variable = time, group = tasks}\newline
+			
+			$H_{0}$: Total number of correct elements between the three tasks are equal \\
+			$H_{A}$: Total number of correct elements between at least two of the tasks are not equal \\
+			\textit{Variable = Number of correct elements, group = tasks}\newline
+	\end{center}
+\end{framed}
 
+The hypothesis written above will be testen in the section blabla. %* Add correct section
 
+%As regards the normality of group data, the one-way ANOVA can tolerate data that is non-normal (skewed or kurtotic distributions) with only a small effect on the Type I error rate. However, platykurtosis can have a profound effect when your group sizes are small. This leaves you with two options: (1) transform your data using various algorithms so that the shape of your distributions become normally distributed or (2) choose the nonparametric Kruskal-Wallis H Test which does not require the assumption of normality. https://statistics.laerd.com/statistical-guides/one-way-anova-statistical-guide-3.php
 
+%The test can determine if the mean time (the variable) is significally different between the three tasks (the groups) given in the survey. It can also be used to determine if there are any significant different in mean time given the six different orders the task could serve in. A third test is to have number of correct elements as the variable and the three tasks as groups. More on this later. %*WHIch section?
 
+\subsubsection[Wilcoxon]{Wilcoxon Rank-Sum test}\label{sec:Wilcoxon}
+The Wilcoxon Rank-Sum test is an appropriate alternative to the two-sample t-test (see subsection \ref{sec:t-test}) when the data are not normally distributed \citep{Walpole2012}. Since this method is nonparametric (or distribution-free) it do not require the assumption of normality. A nonparametric method is much more efficient than the parametric procedure when the set of data used deviates significantly from the normal distribution \citep{Walpole2012}. 
 
+\subsubsection[Kruskal]{Kruskal-Wallis test}
+The Kruskal-Wallis test is a nonparametric alternative to \textit{ANOVA} (see subsection \ref{sec:anova})  \citep{Walpole2012}. This test should be used if the assumption of normal distribution failed. As mentioned in subsection \ref{sec:Wilcoxon}, a nonparametric method does not assume normality. Kruskal-Wallis is used to test equality of means in one-way \textit{ANOVA}. 
+
+There are some disadvantages using nonparametric methods. The methods will be less efficient, and to acchieve the same power as the corresponding parametric method a larger sample size is required. If parametric and nonparametric tests are both valid on the same set of data, the parametric test should be used \citep{Walpole2012}. 
+
+\section{Survey results}
