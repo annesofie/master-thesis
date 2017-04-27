@@ -1,25 +1,46 @@
 \chapter{Methodology and experiment}
 
+\section{Experiment}
+This thesis will try to determine questions regarding micro-tasks around geospatial data. Little research is done on how well inexperienced individuals solve micro-tasks when they involve map interaction and geospatial data. 
+
 \section{Survey}
-The survey is a part of this thesis. The survey is used to answer different hypothesis around geospatial micro tasks. To be able to answer the hypothesises three tasks containing the same two questions was developed. The questions will represent two different micro-tasks, while the three tasks will contain one, three and six elements that the participant will use to answer the questions with. The participant will always answers the two question's on six elements, but the tasks vary how many element's need's to be handled at the same time. The variation of number of elements in the task's is to hopefully find out if the number of elements in an micro-task effects how well people solves the task. 
+The survey is a part of this thesis. The survey is used to answer different hypothesis around geospatial micro-tasks. To be able to answer the hypothesizes three tasks containing the same two questions was developed. The questions will represent two different micro-tasks involving geospatial data, while the three tasks will vary the number of elements the participant will use to answer the questions with. The participant will always answer the two question's on six elements, but the tasks vary how many element's need's to be handled at the same time. The variation of a number of elements in the tasks is to hopefully find out if or how much the number of elements in a micro-task effect how well people solves the task. 
 
-There are two variable types used in this survey, dependent- and independent variables. The dependent variables are time, number of correctly chosen elements in both questions and also difficulty. The independent variables are number of elements in the task, experienced or non-experienced participant, gender, age and if the participant know micro tasking.
+When selecting the number of elements in the three different tasks the author decided to base this on cognitive load theory. Cognitive load theory refers to the total amount of mental effort being used in the working memory. Working memory is determined by the number of information elements that need to be processed simultaneously within a certain amount of time \citep{Barrouillet2007}. A heavy cognitive load can have negative effects on task completion, also the cognitive load that is imposed by a learning task is much higher for novices that for more advanced students \citep{Leppink2014a}.  
 
-\section{Web-application}
+It is stated that the working memory has a limited capacity of seven plus or minus two elements (or chunks) of information when merely holding information and even fewer (ca four) when processing information \citep{Leppink2014a}. By choosing three elements in one task and six elements in the other task this paper can determine if the theories about the limited capacity of the human brain also apply to maps and geospatial data. The last task will only contain one element as a minimum cognitive load task. This can help answer how many elements a human can process when doing micro-tasks containing geospatial data. The goal is to determine a preferred number of elements within a micro-task to use when developing micro-tasks so that they are most efficient and accurate.
+
+The “magical” number of 4 has been demonstrated to limit much of human information processing \citep{Mandler2013}. It is said that polygon comparison demand medium cognitive load \citep{Kiefer2016}, which is what the participants do in the first question in this survey. \cite{Kiefer2016} argues that high cognitive load may lead to less effective map reading and spatial orientation, as well as decreased spatial learning. Since polygon comparison doesn't demand high cognitive load, the task should at least not be too demanding on the one element task and the three elements task. A worry is that the inexperienced participants will have a bigger struggle than the experienced participants. The extraneous cognitive load imposed high for the inexperienced when solving problems, because their lack of prior knowledge of how to solve that type of problem forces them to resort to weak problem-solving strategies \citep{Leppink2014a}. By dividing the participants into experienced and inexperienced categories the reaults from the survey can help determine if geospatial micro-tasks are too demanding on inexperienced individuals. 
+
+The survey will then contain three tasks, each task contains six elements but the tasks vary how many elements the participant need to handle at the same time. One task will serve the participant with one and one element, the task that demands the smallest cognitive load. The other task will serve the participant with three and three elements at the same time. This number is just under the limit of how much information humans can process. The last task will serve the participant with all the elements at the same time. This number exceeds the human capacity when processing information according to \cite{Leppink2014a}. 
+
+There are two variable types used in this survey, dependent- and independent variables. The dependent variables are: time spent on each question and each task, the number of correctly chosen elements in both questions and also how difficult the participant though the task was. The independent variables are: number of elements in the task, experienced or inexperienced participant, gender, age and if the participant knows micro-tasking. 
+
+\section{Web application}
 This thesis used an online web-based survey to conduct the experiment. An online survey avoid the cost and effort of printing, distributing, and collecting paper forms. Many people prefer to answer a brief survey displayed on a screen instead of filling in and returning a printed form \citep{Ben2009}.   
 
 In a self selected sample, which is some the case here, there is potentially a bias in the sample \citep{Ben2009}. %s168
 
+\subsection{Technology}
+React \\
+Django \\
+Postgis \\
+AWS \\
+
+\subsection{Architecture}
+
+\subsection{Graphical Interface}
+
 \section{Pilot test}
-It is important to pilot test the survey prior to actual use \citep{Ben2009}. A pilot test provides an opportunity to validate the wording of the tasks, do the participants understand the tasks? It also helps understand the time necessary for completing the survey, which should be communicated to the participants in prior to the survey \citep{Schade2015}. The pilot-test will be conducted with a small sample of users. Results from the pilot test kan be used to do improvements to the actual survey, to the web-application hosting the survey and to find errors or weaknesses in the databasemodels.
+It is important to pilot test the survey prior to actual use \citep{Ben2009}. A pilot test provides an opportunity to validate the wording of the tasks, do the participants understand the tasks? It also helps understand the time necessary for completing the survey, which should be communicated to the participants in prior to the survey \citep{Schade2015}. The pilot-test will be conducted with a small sample of users. Results from the pilot test are in this thesis used to do improvements to the actual survey, to the web application hosting the survey and to find errors or weaknesses in the database models.
 
-After the pilot test the usability was measured. The standard ISO 9241-11 suggests that measures of usability should cover effectiveness, efficiency and satisfaction \citep{ISO1998}. Measuring these three classes of metric can vary widely and makes it difficult to make comparisons of usability between different systems. "[...] just because a particular design feature has proved to be very useful in making one system usable does not necessarily mean that it will do so for another system" \citep{Brooke1996}. Usability in this thesis will be measured with the \textit{System Usability Scale}(SUS) because it gives an subjective measure of usability. The \textit{System Usability Scale} questionnaire consists of ten statements where the participants rate their agreement in an five-point scale \citep{Ben2009}. Subjective measure of usability is usually obtained through the use of questionnaire and attitude scales \citep{Brooke1996}. SUS was developed to be quick and simple, but also reliable enough to be able to compare performance changes between versions \citep{Brooke1996}. It is also easy to administer the participants through the usability test and it can be used on small sample sizes an still give reliable results \citep{Affairs2013}.  
+After the pilot test, the usability was measured. The standard ISO 9241-11 suggests that measures of usability should cover effectiveness, efficiency and satisfaction \citep{ISO1998}. Measuring these three classes of metric can vary widely and makes it difficult to make comparisons of usability between different systems. "[...] just because a particular design feature has proved to be very useful in making one system usable does not necessarily mean that it will do so for another system" \citep{Brooke1996}. Usability in this thesis will be measured with the \textit{System Usability Scale}(SUS) because it gives a subjective measure of usability. The \textit{System Usability Scale} questionnaire consists of ten statements where the participants rate their agreement on a five-point scale \citep{Ben2009}. Subjective measure of usability is usually obtained through the use of questionnaire and attitude scales \citep{Brooke1996}. SUS was developed to be quick and simple, but also reliable enough to be able to compare performance changes between versions \citep{Brooke1996}. It is also easy to administer the participants through the usability test and it can be used on small sample sizes and still give reliable results \citep{Affairs2013}.  
 
-The usability is important to measure. If the participants doesn't understand how the web-application works, they will probably not do the survey since they then have to invest time in understanding what to do. %they will either exit the survey or answer the questions in the survey wrong. 
-It is also important to get enough participants to do the whole survey and not quit halfway in frustration of not understanding it properly. The \textit{System Usability Scale} can effectively differantiate between usable and unusable systems \citep{Affairs2013}. 
+The usability is important to measure. If the participants don't understand how the web application works, they will probably not do the survey since they then have to invest time in understanding what to do. %they will either exit the survey or answer the questions in the survey wrong. 
+It is also important to get enough participants to do the whole survey and not quit halfway in frustration of not understanding it properly. The \textit{System Usability Scale} can effectively differentiate between usable and unusable systems \citep{Affairs2013}. 
 
 \subsection{Execution of the pilot test}
-The pilot test was conducted with a total of eight participants, five experienced and three non-experienced participants aged from 22 to 64 years. It started with a brief information about this study and the survey. They where told to talk out load during the survey, no help or guidance was given to the participants. The author observed the participants while they conducted the survey. The author took notes and watched if the participants understood the questions in the survey correctly. After the survey a \textit{System Usability Scale} questionnaire was answered by the participants. At the end the participants was asked to give general feedback on the web-application. The SUS score and the feedback was then used to determine the usability of the web-application and to determine which improvements to be done.  
+The pilot test was conducted with a total of eight participants, five experienced and three non-experienced participants aged from 22 to 64 years. It started with a brief information about this study and the survey. They were told to talk out load during the survey, no help or guidance was given to the participants. The author observed the participants while they conducted the survey. The author took notes and watched if the participants understood the questions in the survey correctly. After the survey a \textit{System Usability Scale} questionnaire was answered by the participants. At the end, the participants were asked to give general feedback on the web application. The SUS score and the feedback were then used to determine the usability of the web application and to determine which improvements to be done.  
 
 \subsection{Results from the pilot test}
 
@@ -29,13 +50,13 @@ The average SUS score was 84.64 out of 100. Anything above 68 is considered abov
 
 All participants thought that the instruction movie was confusing. It was short, the instructions went too fast and it lacked voice descriptions. The movie needed major improvements, an important discovery. The purpose of the movie is to give the participant an introduction to how to answer the two questions. It gives important instructions, especially for participants that are not used to working with maps on a web page. 
 
-Overall feedback on question one was that it was difficult to understand which building was which and also when a building layer was selected or not. The lack of labels on the buildings was done on purpose to get the task as much as possible realistic. The prosess of selecting the best building layer needed improvements, it had to be clearer that selection was done by clicking on the layer on the map, not by using the layer control as some thought. This was added to the movie with voice description. The design on the question one page was also improved by adding color to the text telling the participant which layer was selected. 
- 
-Some pages also had too much information and long sentences. The task progress bar was removed, no one noticed it, only the survey progress bar on the top right is necessary. 
+Overall feedback on question one was that it was difficult to understand which building was which and also when a building layer was selected or not. The lack of labels on the buildings was done on purpose to get the task as much as possible realistic. The process of selecting the best building layer needed improvements, it had to be clearer that selection was done by clicking on the layer on the map, not by using the layer control as some thought. This was added to the movie with voice description. The design on the question one page was also improved by adding color to the text telling the participant which layer was selected. 
 
-The two oldest participants spent almost twice as much time on the test than the younger. Maybe it where too much cognitive load on them. Learning a new application and at the same time understanding how to do the survey and answer the questions given to them. One of them where experienced and the other non-experienced, so this is a surprising result.  CHECK THE TIME ON EACH TASK FOR THE OLDER PARTICIPANTS. Figure \ref{fig:allparticipantssortedageparticipantexclude4labelage} show the task results from all participants ordered by age. There are three entries per participant, so three and three bars are results from the same participant. \newline
+Another feedback from one of the participants was that both question views had too much information and long sentences. The participant advised to shorten the sentences and to move some of the information to the movie. The task progress bar was also removed, during the eight pilot tests the author didn't notice that any of the participants looked at the task progress bar. The progress bar was thought of as an extra help to inform how many elements was left in the task. Only the survey progress bar on the top right was found necessary. 
 
-\begin{figure}[h]
+The two oldest participants spent almost twice as much time on the test than the younger. Maybe it was too much cognitive load on them. Learning a new application and at the same time understanding how to do the survey and answer the questions given to them. One of them were experienced and the other non-experienced, so this is a surprising result. Figure \ref{fig:allparticipantssortedageparticipantexclude4labelage} show the task results from all participants ordered by age. There are three entries per participant, so three and three bars are results from the same participant. Task 1 represents the task with one elements, task 2 the task with three elements and task 3 the task with six elements.
+
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.8\linewidth]{fig/allParticipants_sorted_Age_Participant_exclude4_labelage}
 	\caption[totaltimeage]{Total time - all participants ordered by age}
@@ -55,23 +76,12 @@ The pilot test data was used to test some of the hypothesis to find errors or we
 		\item Task number
 		\item List of correctly chosen building numbers in both questions
 	\end{itemize}
+	\item Difficulty field in Tasksurvey model was changed from Char field to Integer field
 \end{enumerate}
 
 The additional fields will maninly help with creating plots to better interpret the data and to more easily visualize the different results. 
 
-%\subsubsection{Statistics result}
-%First the pilot-test result need to be normality tested. 
-%As mentioned in \ref{subsec:normaltesting} this thesis will use the Anderson-Darling test. The python library Scipy has an Anderson-Darling test function \citep{TheScipycommunity2017}, this was used to answer the normality test with the Anderson-Darling hypothesis. Testing the total time data form all participants (in total 32 entries) in Anderson-Darling gave a \textit{p-value} of 0.717. The null hypothesis cannot be rejected, then there are two possible cases. One can either accept the null hypothesis or the sample size is not large enough to either accept or reject the null hypothesis \citep{ThePennsylvaniaStateUniversity2017}. An acceptance of the null hypothesis implies that the evidence was insufficient, the result does not necessary accept $H_{0}$, but fails to reject $H_{0}$ \citep{Walpole2012}.  
-
-\begin{framed}{\noindent\centering
-\textit{Anderson-Darling test} \\
-\textbf{Data:} All participants - total time, 32 entries\\
-  \textbf{P-value:} 0.717  \\
-    \textit{P-value} > 0.05\\
-  \textbf{$H_{0}$:} Accepted, failed to reject
-  \par}
-\end{framed}
-
+In the pilot-test the same buildingl ayers and metadata rows was used in all three tasks. At the end of the pilot-test the author asked the participants if they remembered the buildings and meta information in the last task. $\frac{7}{8}$ answred yes on the question. This information was important. If every participant does a better job at the last task every time the result will not be as usefull. Even though the task order varies. Reading of the data in figure \ref{fig:allparticipantssortedageparticipantexclude4labelage}, $\frac{7}{8}$ participants spent less time on the last task, even though the task order varies. Which matches the number of participants who remembered the buildings and meta information from the previous tasks.
 
 \section[Sample Size]{Determining the sample size}
 The sample size is influenced by a number of factors, including the purpose of the study, population size, the risk of selecting a "bad" sample and the allowable sampling error \citep{Israel1992}. In this survey there are three possible ways of determining the sample size. 
