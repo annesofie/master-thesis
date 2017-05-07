@@ -1,10 +1,12 @@
 \chapter{Methodology and experiment}
 
+\cite{Gadiraju2015} categorize typically crowdsourced tasks into six top-level classes. Interesting classes within geospatial data is \textit{Verification and validation}, \textit{Interpretation and analysis} and \textit{Content creation}. There are examples of all three task classes in geospatial crowdsourcing. During imports of large datasets into OpenStreetMap, crowdsourcing is used to validate the new data. In humanitarian OpenSteetMap, they map areas during a crisis to support the help organizations through crowdsourcing, creating valuable content to the workers in the field. In a machine learning process, they are starting to use micro-tasks to both validate the created data and also create test data sets to the algorithms. \textit{Interpretation and analysis} tasks rely on the individual to use their interpretation skills during task completion. This is the task class used in this thesis during the survey. Is it safe to assume that individuals, both experienced and inexperienced, can interpret and analyse geospatial data presented to the on both map and in tables correctly? This is the main goal of the survey. 
+
 \section{Experiment}
-This thesis will try to determine questions regarding micro-tasks around geospatial data. Little research is done on how well inexperienced individuals solve micro-tasks when they involve map interaction and geospatial data. 
+This thesis will try to determine questions regarding micro-tasks containing geospatial data. Little research is done on how well inexperienced individuals solve micro-tasks when they involve map interaction and geospatial data. To the authors best knowledge, little, if any, research has been done on micro-tasks involving map interaction and geospatial interpretation and analysis. 
 
 \section{Survey}\label{sec:survey}
-The survey is a part of this thesis. The survey is used to answer different hypothesis around geospatial micro-tasks. To be able to answer the hypothesizes three tasks containing the same two questions was developed. The questions will represent two different micro-tasks involving geospatial data, while the three tasks will vary the number of elements the participant will use to answer the questions with. The participant will always answer the two question's on six elements, but the tasks vary how many element's need's to be handled at the same time. The variation of a number of elements in the tasks is to hopefully find out if or how much the number of elements in a micro-task effect how well people solves the task. 
+The survey is a part of this thesis. The survey is used to answer different hypothesis around geospatial micro-tasks. To be able to answer the hypothesizes three tasks containing the same two questions was developed. The questions will represent two different micro-tasks involving geospatial data, while the three tasks will vary the number of elements the participant will use to answer the questions with. The participant will always answer the two question's on six elements, but the tasks vary how many element's need to be handled at the same time. The variation of a number of elements in the tasks is to hopefully find out if or how much the number of elements in a micro-task effect how well people solves the task. 
 
 When selecting the number of elements in the three different tasks the author decided to base this on cognitive load theory. Cognitive load theory refers to the total amount of mental effort being used in the working memory. Working memory is determined by the number of information elements that need to be processed simultaneously within a certain amount of time \citep{Barrouillet2007}. A heavy cognitive load can have negative effects on task completion, also the cognitive load that is imposed by a learning task is much higher for novices that for more advanced students \citep{Leppink2014a}.  
 
@@ -89,17 +91,75 @@ The additional fields will maninly help with creating plots to better interpret 
 
 The two oldest participants spent almost twice as much time on the test than the younger. Maybe it was too much cognitive load on them. Learning a new application and at the same time understanding how to do the survey and answer the questions given to them. One of them were experienced and the other non-experienced, so this is a surprising result. Figure \ref{fig:allparticipantssortedageparticipantexclude4labelage} show the task results from all participants ordered by age. There are three entries per participant, so three and three bars are results from the same participant. Task 1 represents the task with one elements, task 2 the task with three elements and task 3 the task with six elements.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\linewidth]{fig/allParticipants_sorted_Age_Participant_exclude4_labelage}
-	\caption[totaltimeage]{Total time - all participants ordered by age}
+	\includegraphics[width=0.7\linewidth]{fig/allParticipants_sorted_Age_Participant_exclude4_labelage}
+	\caption[Total time, all]{Total time - all participants ordered by age}
 	\label{fig:allparticipantssortedageparticipantexclude4labelage}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../../thesis-statisticmethods/statistic_analysis/figures/bar_chart/experienced_exclude4_labelage_totaltime}
+		\caption{Experienced: Mean 204 sec, Std. 94 sec}
+		\label{fig:experiencedexclude4labelagetotaltime}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../../thesis-statisticmethods/statistic_analysis/figures/bar_chart/nonexperienced_exclude4_labelage_totaltime}
+		\caption{Inexperienced: Mean 304 sec, Std. 371 sec}
+		\label{fig:nonexperiencedexclude4labelagetotaltime}
+	\end{subfigure}
+	\caption[Total time, sorted]{Total time - ordered by age, splitted into experienced and inexperienced}
 \end{figure}
 
 The average time spent on the survey was 18 minutes. The two oldest participants used on average 33 minutes, while the rest of the participants spent on average 13 minutes to complete the survey. 
 
 In the pilot-test the same building layers and meta data rows was used in all three tasks. At the end of the pilot-test the author asked the participants if they remembered the buildings and meta information in the last task. $\frac{7}{8}$ answered yes on the question. This information was important. If every participant does a better job at the last task every time the result will not be as useful. Even though the task order varies. Reading of the data in figure \ref{fig:allparticipantssortedageparticipantexclude4labelage}, $\frac{7}{8}$ participants spent less time on the last task, even though the task order varies. Which matches the number of participants who remembered the buildings and meta information from the previous tasks.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/bar_chart/allParticipants_sorted_Age_totalcorrect}
+	\caption[Total correct, ordered by age]{Total correct, both questions - ordered by age}
+	\label{fig:allparticipantssortedagetotalcorrect}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../../thesis-statisticmethods/statistic_analysis/figures/bar_chart/allParticipants_sorted_Age_Participant_exclude4_labelage_geom}
+		\caption{Building shapes}
+		\label{fig:allparticipantssortedageparticipantexclude4labelagegeom}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../../thesis-statisticmethods/statistic_analysis/figures/bar_chart/allParticipants_sorted_Age_Participant_exclude4_labelage_meta}
+		\caption{Metadata rows}
+		\label{fig:allparticipantssortedageparticipantexclude4labelagemeta}
+	\end{subfigure}
+\caption[Correctly chosen elements, splitted by question]{Total correct, sorted by age - splitted by question one and two}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../../thesis-statisticmethods/statistic_analysis/figures/bar_chart/experienced_exclude4_labelage_geom}
+		\caption{Experienced}
+		\label{fig:experiencedexclude4labelagegeom}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../../thesis-statisticmethods/statistic_analysis/figures/bar_chart/nonexperienced_exclude4_labelage_geom}
+		\caption{Inexperienced}
+		\label{fig:nonexperiencedexclude4labelagegeom}
+	\end{subfigure}	
+\caption[Correcly chosen shapes, sorted]{Number of correctly chosen building shapes - splitted by experience}
+\end{figure}
 
 \section[Sample Size]{Determining the sample size}
 The sample size is influenced by a number of factors, including the purpose of the study, population size, the risk of selecting a "bad" sample and the allowable sampling error \citep{Israel1992}. In this survey there are three possible ways of determining the sample size. 
