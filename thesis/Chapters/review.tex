@@ -52,7 +52,7 @@ In machine-learning algorithms, combining human computation abilities and crowds
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\linewidth]{../../../../../Desktop/swimmingpoolpolygon3}
-	\caption[Swimming pools  \citep{Nikki2016}]{Polygons with swimming pools created by the machine learning algorithm \citep{Nikki2016}}
+	\caption[Swimming pools  \citep{Nikki2016}]{Polygons created by an algorithm that maybe contain pools \citep{Nikki2016}}
 	\label{fig:swimmingpoolpolygon3}
 \end{figure}
 
@@ -68,20 +68,26 @@ According to \cite{Deng2016a}, evidence indicates that crowdsourcing is radicall
 Individuals who perform micro-tasks for micropayment is called \textit{crowd workers} by \citep{Deng2016a}. A study done on workers in the micro-tasking platform MTurk (section \ref{sec:mturk}), says that the workers are representative for the general Internet user population, but are generally younger and have lower incomes and smaller families \citep{Ipeirotis2010}.  
 
 \subsection{Micro-tasking platforms}
+
+%Note that like Tomnod, both CrowdFlower and CrowdCrafting also have built-in quality control mechanisms [\citep{Meier2013}, p. 101]. 
+
 \subsubsection[MTurk]{Amazon's Mechanical Turk}\label{sec:mturk}
 Amazon's Mechanical Turk (MTurk) is one of the biggest (if not the biggest) micro-tasking platform today. It provides the infrastructure, connectivity and payment mechanisms so that hundreds of thousands of people can perform micro-tasks on the Internet and get paid for it. MTurk is used for many different tasks that are easier for people than computers. It contains simple tasks such as labeling or segmenting images or tagging content, to more complex tasks such as translating or even editing text (\ref{sec:soylent}) \citep{Franklin2011}.  In the marketplace, employers are known as requesters and they post tasks, called \textit{human intelligence tasks} (HIT's). The HIT's are then picked up by online users, \textit{crowd workers}, who complete the tasks in exchange for a small payment (a few cents per HIT) \citep{Ipeirotis2010}. 
 
-\subsubsection{Soylent}\label{sec:soylent}
-Is a word processing interface that enables writers to call on Mechanical Turk workers to shorten, proofread, and edit parts of their document on demand. To improve the quality of the work, the Soylen team introduced the Find-Fix-Verify crowd programming pattern. This architecture splits tasks into a series of generating and review stages \citep{Bernstein2015a}. 
+%\subsubsection{Soylent}\label{sec:soylent}
+%Is a word processing interface that enables writers to call on Mechanical Turk workers to shorten, proofread, and edit parts of their document on demand. To improve the quality of the work, the Soylen team introduced the Find-Fix-Verify crowd programming pattern. This architecture splits tasks into a series of generating and review stages \citep{Bernstein2015a}. 
 
 \subsubsection{Tasking manager}
+The Tasking Manager tool is OpenStreetMap's micro-tasking platform. It was created in the aftermath of the Haiti earthquake in 2010 \citep{Palen2015}. The tool is used to coordinate satellite image tracing projects. The tool sorts the area covered by the satellite images into grids so that multiple people can map the same area at the same time. Each person works at one grid each, this way they don't map the same areas. This is an very effective approach to coordinate the crowd participating in the mapping. The tasking manager is mainly used by the \textit{Humanitarian OpenStreetMap Team} (HOT). This platform do not have a rewarding system og a gamification approach. It is solely based on volunteer contributors. The page shows which areas need to be mapped and which areas need the mapping validated by others. 
 
 \subsubsection{CrowdFlower}  
-CrowdFlower is a company that wants to help businesses take advantage of crowdsourcing and/or human computation. They act as an intermediary for these businesses \citep{Quinn2011}. CrowdFlower receives tasks from businesses wanting to crowdsource their work or problems. 
+CrowdFlower is a company that wants to help businesses take advantage of crowdsourcing and/or human computation. They act as an intermediary for these businesses \citep{Quinn2011}. CrowdFlower receives tasks from businesses wanting to crowdsource their work or problems. A project done for eBay exploited CrowdFlower's large online contributor pool and completed the tasks given to them from eBay five times faster than a traditional outsourcing team. eBay got a solution that was optimized for both quality and cost. CrowdFlower works with a variety of services to get connected with workers (i.e MTurk) \citep{Quinn2011}. 
 
-\subsubsection{CrowdMap}
-CrowdMap is implemented using CrowdFlower. 
-Is an approach to integrate human and computational intelligence in ontology \footnote{\label{ontology} Ontology is a formal naming and definition of types, properties, and interrelationships of the entities that really or fundamentally exists for a particular domain of discourse. Ontologies are created to limit complexity and to organize information. The ontology can then be applied to problem-solving. } alignment tasks via microtask crowdsourcing \citep{Sarasua2012}. Ontology is still (2012) one of those problems that we cannot automate completely and by having a human in the loop might increase the quality of the results of machine-driven approaches. 
+What's special with CorwdFlower is their close ties with AI technology and a crowdsourced workforce. Their costumers are allowed to perform tasks with algorithms and machine learning, but bring in human judgement when they're not confident on the technology and the human work can make the algorithms smarter \citep{Ha2016}.  Founder of CrowdFlower says that "self-driving cars have gotten pretty good at recognizing many of the objects they encounter on the street, [..] they can still struggle with tricky things like “a person in a Halloween costume dressed as a stationary object, or a pole with a person painted on it,” which is where CrowdFlower comes in." \citep{Ha2016}. 
+
+%\subsubsection{CrowdMap}
+%CrowdMap is implemented using CrowdFlower. 
+%Is an approach to integrate human and computational intelligence in ontology \footnote{\label{ontology} Ontology is a formal naming and definition of types, properties, and interrelationships of the entities that really or fundamentally exists for a particular domain of discourse. Ontologies are created to limit complexity and to organize information. The ontology can then be applied to problem-solving. } alignment tasks via microtask crowdsourcing \citep{Sarasua2012}. Ontology is still (2012) one of those problems that we cannot automate completely and by having a human in the loop might increase the quality of the results of machine-driven approaches. 
 
 \subsection{Challenges}
 Getting enough people to use the micro-tasking platforms is crucial for its success. Most of the platforms mentioned in this chapter give payments to the workers. Another option is to make the platform as a game, which is also shown in this chapter. Creating a micro-tasking platform without payments or gamification factors the page is likely to have a short life, even though the tasking manager, supported by HOT, is an exception to this rule. 
