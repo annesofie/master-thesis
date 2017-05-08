@@ -31,7 +31,7 @@ In the creation of the elements and conflicts used in the first question in the 
 
 Shape accuracy evaluates how well the layer matches the building with reference to an aerial image. \cite{Fan2014} mentions three main reasons to why building footprints are simplified in OSM. First reason is because of the difficulties following building details when looking from a bird's-eye view. Second reason is the limited resolution on the Bing aerial image used during digitalization. The last reason that is mentioned is that the volunteers in OSM don't have the patience to digitalize a complicated footprint exactly as it is. Drawing two layers with one of them matching the building shape better than the other, the participant has to use an aerial image to determine which layer fits the building best. This will test if the participants manage to make correct shape judgements by only using an aerial image as reference. 
 
-Position accuracy evaluates how well the coordinate value of a building relates to the reality on the ground. The correct layer will be drawn on the corresponding ground coordinates, while the conflicting layer will not match the ground. \cite{Fan2014} tested the accuracy of buildings in OSM, and concluded with an mean offset of 4.13 m. The low positional accuracy of OSM building footprints data is caused by the limited resolution of Bing map images. By combining shape- and position accuracy in some of the cases used in question one this study can also determine if participants manage to evaluate both factors. Creating cases with position errors 
+Position accuracy evaluates how well the coordinate value of a building relates to the reality on the ground. The correct layer will be drawn on the corresponding ground coordinates, while the conflicting layer will not match the ground. \cite{Fan2014} tested the accuracy of buildings in OSM, and concluded with an mean offset of 4.13 m. The low positional accuracy of OSM building footprints data is caused by the limited resolution of Bing map images. By combining shape- and position accuracy in some of the cases used in question one this study can also determine if participants manage to evaluate both factors. In this study the participants don't have available information about what the true ground coordinates are. Therefore position accuracy will be examined by shifting one of the layers. The correct positional accuracy will be at the building in the aerial image. 
 
 \section{Web application}
 This thesis used an online web-based survey to conduct the experiment. An online survey avoid the cost and effort of printing, distributing, and collecting paper forms. Many people prefer to answer a brief survey displayed on a screen instead of filling in and returning a printed form \citep{Ben2009}.   
@@ -45,6 +45,23 @@ Postgis \\
 AWS \\
 
 \subsection{Architecture}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{fig/uml_diagram_task2}
+	\caption[Task, UML diagram]{UML diagram, Task: Task Element and Task Conflict}
+	\label{fig:umldiagramtask2}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{fig/uml_diagram_taskresult}
+	\caption[Survey result, UML diagram]{UML diagram, Survey result: Task result and Task survey}
+	\label{fig:umldiagramtaskresult}
+\end{figure}
+
+
 
 \subsection{Graphical Interface}
 
@@ -63,15 +80,15 @@ The pilot test was conducted with a total of eight participants, five experience
 
 - Did someone knew micro-tasking? Can we see something here?
 
-The average SUS score was 84.64 out of 100. Anything above 68 is considered above average \citep{Affairs2013}. When adding the SUS score to an adjective rating will an score of 85.5 or higher be described as excellent \citep{Bangor2009}. A score of 84.64 is then described as good/excellent. 
+The average SUS score was 84.64 out of 100. Anything above 68 is considered above average \citep{Affairs2013}. When adding the SUS score to an adjective rating will an score of 85.5 or higher be described as excellent \citep{Bangor2009}. A score of 84.64 is then described as good/excellent. This result gives a good indication that the web-application is user friendly. 
 
 All participants thought that the instruction movie was confusing. It was short, the instructions went too fast and it lacked voice descriptions. The movie needed major improvements, an important discovery. The purpose of the movie is to give the participant an introduction to how to answer the two questions. It gives important instructions, especially for participants that are not used to working with maps on a web page. 
 
-Overall feedback on question one was that it was difficult to understand which building was which and also when a building layer was selected or not. The lack of labels on the buildings was done on purpose to get the task as much as possible realistic. The process of selecting the best building layer needed improvements, it had to be clearer that selection was done by clicking on the layer on the map, not by using the layer control as some thought. This was added to the movie with voice description. The design on the question one page was also improved by adding color to the text telling the participant which layer was selected. 
+Overall feedback on question one was that it was difficult to understand which building was which and also when a building layer was selected or not. The lack of labels on the buildings was done on purpose to get the task as much as possible realistic. The process of selecting the best building layer needed improvements, it had to be clearer that selection was done by clicking on the layer on the map, not by using the layer control as some thought. This problem was added to the movie with voice description, describing in detail how a layer was selected. The design on the question one page was also improved by adding color to the text telling the participant which layer they had selected. 
 
-Another feedback from one of the participants was that both question views had too much information and long sentences. The participant advised to shorten the sentences and to move some of the information to the movie. The task progress bar was also removed, during the eight pilot tests the author didn't notice that any of the participants looked at the task progress bar. The progress bar was thought of as an extra help to inform how many elements was left in the task. Only the survey progress bar on the top right was found necessary. 
+Another feedback from one of the participants was that both question views had too much information and long sentences. The participant advised to shorten the sentences and to move some of the information to the movie. This request was fulfilled in the new movie. The task progress bar was also removed, during the eight pilot tests the author didn't notice that any of the participants looked at the task progress bar. The progress bar was thought of as an extra help to inform how many elements was left in the task. Only the survey progress bar on the top right was found necessary. 
 
-The pilot test data was used to test some of the hypothesis to find errors or weaknesses in the databasemodel. The data was extracted with the help of Django QuerySets and saved in csv files. Some preliminary results can be seen in section \ref{sec:preliminalyresult}. There were a few errors and weaknesses found during the statistical tests. Changes to the database models are listed under: 
+The pilot test data was used to test some of the hypothesis to find errors or weaknesses in the databasemodel. The data was extracted with the help of Django QuerySets and saved in csv files. Some preliminary results can be seen in section \ref{sec:preliminalyresult}. There were a few errors and weaknesses found during the statistical tests. Changes to the database models was necessary, and the changes done are listed under: 
 
 \begin{enumerate}
 	\item Add foreign key from TaskResult model to TaskSurvey
@@ -85,11 +102,12 @@ The pilot test data was used to test some of the hypothesis to find errors or we
 	\item Difficulty field in Tasksurvey model was changed from Char field to Integer field
 \end{enumerate}
 
-The additional fields will maninly help with creating plots to better interpret the data and to more easily visualize the different results. 
+The additional fields will mainly help with creating plots to better interpret the data and to more easily visualize the different results. 
 
 \subsection{Preliminary results}\label{sec:preliminalyresult}
+The pilot-test data was not normally distributed, and doing statistical analysis on data from eight participants didn't seem relevant. The data was mapped in char plots, visualizing some trends. 
 
-The two oldest participants spent almost twice as much time on the test than the younger. Maybe it was too much cognitive load on them. Learning a new application and at the same time understanding how to do the survey and answer the questions given to them. One of them were experienced and the other non-experienced, so this is a surprising result. Figure \ref{fig:allparticipantssortedageparticipantexclude4labelage} show the task results from all participants ordered by age. There are three entries per participant, so three and three bars are results from the same participant. Task 1 represents the task with one elements, task 2 the task with three elements and task 3 the task with six elements.
+The two oldest participants spent almost twice as much time on the test than the younger. Maybe it was too much cognitive load on them. Learning a new application and at the same time understanding how to do the survey and answer the questions given to them. One of them were experienced and the other inexperienced, so this is a surprising result. Figure \ref{fig:allparticipantssortedageparticipantexclude4labelage} show the task results from all participants ordered by age. There are three entries per participant, so three and three bars are results from the same participant. Task 1 represents the task with one elements, task 2 the task with three elements and task 3 the task with six elements.
 
 \begin{figure}[H]
 	\centering
@@ -97,6 +115,8 @@ The two oldest participants spent almost twice as much time on the test than the
 	\caption[Total time, all]{Total time - all participants ordered by age}
 	\label{fig:allparticipantssortedageparticipantexclude4labelage}
 \end{figure}
+
+Splitting the data into two groups, experienced and inexperienced, and then mapping totaltime and order by age plots can be seen in figures \ref{fig:experiencedexclude4labelagetotaltime} and \ref{fig:nonexperiencedexclude4labelagetotaltime}. Experienced participant had a mean time of 3 minutes and 24 seconds (204 sec) and inexperienced participants had a mean time of 5 minutes and 4 seconds (304 sec), almost 2 minutes difference. It is clear to see that the 54 year old participant's total time on task 2 is dramatically higher than the rest. By looking at figure \ref{fig:nonexperiencedexclude4labelagetotaltime}, two of the inexperienced participants spent less than 200 seconds on all their tasks.  
 
 \begin{figure}[H]
 	\centering
@@ -119,31 +139,15 @@ The two oldest participants spent almost twice as much time on the test than the
 
 The average time spent on the survey was 18 minutes. The two oldest participants used on average 33 minutes, while the rest of the participants spent on average 13 minutes to complete the survey. 
 
-In the pilot-test the same building layers and meta data rows was used in all three tasks. At the end of the pilot-test the author asked the participants if they remembered the buildings and meta information in the last task. $\frac{7}{8}$ answered yes on the question. This information was important. If every participant does a better job at the last task every time the result will not be as useful. Even though the task order varies. Reading of the data in figure \ref{fig:allparticipantssortedageparticipantexclude4labelage}, $\frac{7}{8}$ participants spent less time on the last task, even though the task order varies. Which matches the number of participants who remembered the buildings and meta information from the previous tasks.
+In the pilot-test the same building layers and meta data rows was used in all three tasks. At the end of the pilot-test the author asked the participants if they remembered the buildings and meta information in the last task. $\frac{7}{8}$ answered yes on the question. This information was important. If every participant does a better job at the last task the result will not be as useful. Even though the task order varies. Reading the data in figure \ref{fig:allparticipantssortedageparticipantexclude4labelage}, $\frac{6}{8}$ participants spent less time on the last task, even though the task order varied. This matches the number of participants who remembered the buildings and meta information from the previous tasks.
+
+Total number of correctly chosen elements in each task is shown in figure \ref{fig:allparticipantssortedagetotalcorrect}. 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/pilot-test/bar_chart/allParticipants_sorted_Age_totalcorrect}
 	\caption[Total correct, ordered by age]{Total correct, both questions - ordered by age}
 	\label{fig:allparticipantssortedagetotalcorrect}
-\end{figure}
-
-
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.45\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{../../thesis-statisticmethods/statistic_analysis/figures/pilot-test/bar_chart/allParticipants_sorted_Age_Participant_exclude4_labelage_geom}
-		\caption{Building shapes}
-		\label{fig:allparticipantssortedageparticipantexclude4labelagegeom}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.45\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{../../thesis-statisticmethods/statistic_analysis/figures/pilot-test/bar_chart/allParticipants_sorted_Age_Participant_exclude4_labelage_meta}
-		\caption{Metadata rows}
-		\label{fig:allparticipantssortedageparticipantexclude4labelagemeta}
-	\end{subfigure}
-\caption[Correctly chosen elements, splitted by question]{Total correct, sorted by age - splitted by question one and two}
 \end{figure}
 
 \begin{figure}[H]
