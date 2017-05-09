@@ -1,4 +1,4 @@
-\chapter{Statistics}
+\chapter{Result}
 
 %My hypothesis before start
 
@@ -160,7 +160,6 @@ Here $\mu_{k}$ is the rank mean for the group k. As in Wilcoxon Rank-Sum test (s
 
 \section{Survey results}
 
-\subsection{Bar Charts}
 
 - All participants ordered by age \\
 - All participants ordered by age, excluded by task 4 \\
@@ -169,3 +168,208 @@ Here $\mu_{k}$ is the rank mean for the group k. As in Wilcoxon Rank-Sum test (s
 - Is there a difference in task order number 1, 2, 3? time and correct \\
 - Is there a difference in task number 1, 2, 3? time and correct  \\
 Can use it to explain the data
+
+\subsection{Gathered data}
+
+The gathered data will be analyse on the two variables, total time to complete each task and number of correctly chosen elements per task. Mean, standard deviation, minimum result and maximum result are listed in the tables. In these tables, results from the training task is removed. Only results from the three tasks is used. Maximum possible correct elements per task is twelve. There are six elements in question one and six elements in question two, and the number of correctly chosen elements in each task is added together. 
+
+\subsubsection{All participants,  experienced and inexperienced participants}
+
+The mean, standard deviation, minimum and maximum values are listen i table \ref{tab:totaltime_all} and \ref{tab:totalcorrect_all}. In these tables data from all participants and all three tasks, excluding the training task, is used. Tasks with total time longer than 2000 seconds are filtered out. This is to remove 5 %*Sjekk dette tallet
+outliers that spend more than twice the approximated time. 
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|l|l|l}
+		Total time per task (seconds)   & Total  & Experienced & Inexperienced \\ \hline
+		Number of observations & 457    & 247      & 210   \\
+		Mean                   & 176.86 & 184.68     & 167.66      \\
+		Standard deviation     & 99.21  & 108.01  & 87.10   \\
+		Minimum                & 26.00  & 44.00  & 26.00     \\
+		Maximum                & 755.00 & 752.00    & 755.00    \\ \hline
+	\end{tabular}
+	\caption[All participants and all tasks]{Total time (\textit{4 entries per volunteer)}}
+	\label{tab:totaltime_all}
+\end{table}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.32\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/all_participants/histogram/totaltime}
+		\caption{All}
+		\label{fig:totaltime_all}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.32\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/experienced_participants/histogram/totaltime}
+		\caption{Experienced}
+		\label{fig:totaltime_experienced}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.32\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/inexperienced_participants/histogram/totaltime}
+		\caption{Inexperienced}
+		\label{fig:totaltime_inexperienced}
+	\end{subfigure}
+	\caption[Total time, participants sorted]{Total time per task divided in  all-, experienced- and inexperienced-participants}
+\end{figure}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|l|l|l}
+		Correct elements per task  & Total  & Experienced & Inexperienced \\ \hline
+		Number of observations & 457    & 247  & 210   \\
+		Mean                   & 9.79 & 9.82  & 9.75  \\
+		Standard deviation     & 1.50  & 1.50  &  1.51 \\
+		Minimum                & 4.00 & 5.00  &  4.00  \\
+		Maximum                & 12.00 & 12.00  & 12.00  \\ \hline
+	\end{tabular}
+	\caption[Correct elements, all participants and all tasks]{Number of correctly chosen elements (\textit{4 entries per volunteer)}}
+	\label{tab:totalcorrect_all}
+\end{table}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.32\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/all_participants/histogram/total_correct_elements}
+		\caption{All}
+		\label{fig:totalcorrectelements_all}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.32\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/experienced_participants/histogram/total_correct_elements}
+		\caption{Experienced}
+		\label{fig:totalcorrectelements_experienced}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.32\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/inexperienced_participants/histogram/total_correct_elements}
+		\caption{Inexperienced}
+		\label{fig:totalcorrectelements_inexperienced}
+	\end{subfigure}
+	\caption[Correct elements, participants sorted]{Correctly chosen elements per task divided in  all-, experienced- and inexperienced-participants}
+\end{figure}
+
+\subsubsection{All participants, divided in task 1, task 2 and task 3}
+
+In table \ref{tab:totaltime_tasks} and \ref{tab:totalcorrect_tasks} mean, standard deviation, minimum and maximum is listed for the three different task the participants did in the survey. Task 1 is the task that served the participants with one and one elements. Task 2 is the task that served the participants with three and three elements, and task 3 gave all six elements at the same time. 
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|l|l|l}
+		Total time per task (seconds) & One element task & Three elements task & Six elements task \\ \hline
+		Number of observations & 152    & 153      & 152        \\
+		Mean                   & 174.44  &  174.55   &   181.60   \\
+		Standard deviation     & 101,23  & 94.72  & 102.00     \\
+		Minimum                & 47  & 26  &   38   \\
+		Maximum                & 657 & 755  & 752   \\ \hline
+	\end{tabular}
+	\caption[Total time, divided into task 1, 2 and 3]{Total time divided into task 1, task 2 and task 3}
+	\label{tab:totaltime_tasks}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|l|l|l}
+		Correct elements per task & One element task & Three elements task & Six elements task \\ \hline
+		Number of observations & 152    & 153      & 152        \\
+		Mean                   & 10.13  &  9.67  &   9.55   \\
+		Standard deviation     & 1.40  & 1.54  & 1.50    \\
+		Minimum                & 5.00  & 5.00  &   4.00  \\
+		Maximum                & 12.00 & 12.00  & 12.00 \\ \hline
+	\end{tabular}
+	\caption[Correct elements, divided into task 1, task 2 and task 3]{Number of correctly chosen elements divided into task 1, task 2 and task 3}
+	\label{tab:totalcorrect_tasks}
+\end{table}
+
+\subsubsection{Experienced participants, divided in task 1, task 2 and task 3}
+
+Dividing task 1, task 2 and task 3 results into experienced and inexperienced. Table \ref{tab:totaltime_tasks_experienced} are data gathered about experienced participants total time per task. Table \ref{tab:totalcorrect_tasks_experienced} are data gathered about experienced participants number of correctly chosen elements per task.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|l|l|l}
+		Total time per task & One element task & Three elements task & Six elements task \\ \hline
+		Number of observations & 81    & 84      & 82   \\
+		Mean                   & 187.74  &  174.65  &  191.93   \\
+		Standard deviation     & 122.08  & 84.30  & 115.18    \\
+		Minimum                & 57.00  & 52.00 &  44.00  \\
+		Maximum                & 657.00 & 492.00  & 752.00 \\ \hline
+	\end{tabular}
+	\caption[Total time, task and experienved divided]{Experienced total time per task, divided by task}
+	\label{tab:totaltime_tasks_experienced}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|l|l|l}
+		Correct elements per task & One element task & Three elements task & Six elements task \\ \hline
+		Number of observations & 81    & 84      & 82   \\
+		Mean                   & 10.23  &  9.69  &  9.51   \\
+		Standard deviation     & 1.30  & 1.62  & 1.46   \\
+		Minimum                & 7.00 & 5.00 &  5.00 \\
+		Maximum                & 12.00 & 12.00  & 12.00 \\ \hline
+	\end{tabular}
+	\caption[Correct elements, task and experienved divided]{Experienced participant's number of correct elements per task, divided by task}
+	\label{tab:totalcorrect_tasks_experienced}
+\end{table}
+
+\subsubsection{Inexperienced participants, divided in task 1, task 2 and task 3}
+
+Table \ref{tab:totaltime_tasks_inexperienced} are mean time, standard deviation, minimum time and maximum time spent on each task for inexperienced participants. Number of correctly chosen elements per task for inexperienced participants is shown in table \ref{tab:totalcorrect_tasks_inexperienced}. 
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|l|l|l}
+		Total time per task (seconds) & One element task & Three elements task & Six elements task \\ \hline
+		Number of observations & 71    & 69  & 70   \\
+		Mean                   & 159.28  &  174.42  &  169.50  \\
+		Standard deviation     & 68.24  & 106.69  & 83.17   \\
+		Minimum                & 47.00 & 26.00 &  38.00 \\
+		Maximum                & 487.00 & 755.00  & 529.00  \\ \hline
+	\end{tabular}
+	\caption[Total time, inexperienced per task]{Inexperienced participant's time spent per task, divided by task}
+	\label{tab:totaltime_tasks_inexperienced}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{l|l|l|l}
+		Correct elements per task & One element task & Three elements task & Six elements task \\ \hline
+		Number of observations & 71    & 69  & 70  \\
+		Mean                   & 9.99  &  9.65  &  9.60  \\
+		Standard deviation     & 1.50  & 1.45  & 1.56   \\
+		Minimum                & 5.00 & 6.00 &  4.00  \\
+		Maximum                & 12.00 & 12.00  & 12.00 \\ \hline
+	\end{tabular}
+	\caption[Correct elements, inexperienced per task]{Inexperienced participant's number of correct elements per task, divided by task}
+	\label{tab:totalcorrect_tasks_inexperienced}
+\end{table}
+
+\subsection{Normality tests}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/all_participants/normalcurve/totaltime_exclude4}
+	\caption{All participants, total time}
+	\label{fig:totaltimeexcludetask4_all}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/experienced_participants/normalplot/totaltime_exclude4}
+	\caption{Experienced participants, total time}
+	\label{fig:totaltimeexclude4_experienced}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/inexperienced_participants/normalplot/totaltime_exclude4}
+	\caption{Inexperienced participants, total time}
+	\label{fig:totaltimeexclude4_inexperienced}
+\end{figure}
+
+
