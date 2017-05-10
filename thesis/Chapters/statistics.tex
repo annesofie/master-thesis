@@ -17,7 +17,7 @@ Designed the survey so that the observations should be random and independent \\
 \section{Statistics theory}
 This section will give an introduction to the statistics used in this thesis. The thesis will examine the data with parametric methods but also with non-parametric methods if the assumption of a normally distributed samples fails. A nonparametric method is much more efficient than the parametric procedure when the set of data used in the test deviates significantly from the normal distribution \citep{Walpole2012}. There are also some disadvantages using nonparametric methods. The methods will be less efficient, and to acchieve the same power as the corresponding parametric method a larger sample size is required. If parametric and nonparametric tests are both valid on the same set of data, the parametric test should be used \citep{Walpole2012}. 
 
-\subsection{Normal testing}\label{subsec:normaltesting}
+\subsection{Normal testing}\label{sec:normaltesting}
 The sampling distribution of a statistic depend on the distribution of the population, the size of the samples, and the method of choosing the samples \citep{Walpole2012}. Sampling distibution describes the variability of sample averages around the population mean $\mu$. All parametric statistics assumes normally distributed, independent observations. Parametric tests are preffered in statistics because it got more statistical power than nonparametric tests \citep{Frost2015}. The power of a test is the probability of correctly rejecting a false null hypothesis, which in this case is the ability to detect if the sample comes from a non-normal distribution. To determine if a sample is normally distrubuted there exists both visual methods and normality tests to assess the samples normality. A visual inspection of the sample's distribution is usually unreliable and does not guarantee that the distribution is normal \citep{Pearson2006}. Presenting the data visually gives the reader an opportunity to judge the distribution themselves. In this thesis histograms are used to visualize the data for normality. 
 
 Normality tests compare the scores in the sample to a normally distributed set of scores with the same mean and standard deviation \citep{Ghasemi2012}. There are multiple normality tests, and deciding which test to use is not easy. This study needs a test that doesn't require every value to be unique, a test that can handle ties (identical observations). The survey used to collect the samples in this study do not guarantee unique values. 
@@ -52,6 +52,15 @@ For small sample sizes, normality tests have little power to reject the null hyp
 %\centerline{$H_{A}$: The data do not follow the normal distribution}
 
 %The computations in the Anderson-Darling test differs based on what is known about the observations. In this study both the expected mean and variance is unknown. In all the Anderson-Darling tests in this study a significance level of $0.05$ is used, which gives a confidence interval of $95$ \% . If the calculated \textit{p-value} is less than the significance level ($0.05$), the null hypothesis is rejected. The larger the \textit{p-value} the closer match is the data to the normal distribution. The Anderson-Darling statistics is used to calculate the \textit{p+value} for the \textit{goodness-of-fit} test. 
+\subsection{Bionomal disstibution}
+Used for discrete variables. It used the probability of getting $x$ successes and $n-x$ failures in $n$ trials. Each success comes with a probability $p$ and each failure with probability $q=1-p$  [\citep{Walpole2012}, p. 145]. The sample mean $\overline{x}$ and variance of $\overline{x}$ of the bionomial distribution is: $\overline{x} = n * p$ and $\sigma^{2} = n*p*q$. The probability p has to be the same on every trial - NOT TRUE HERE.
+
+In the survey, the number of correctly chosen elements is recorded. Here x = the number of correct elements. x is a random variable who has the binomial distribution. The following null and alternative hypothesis can be used:
+
+\centerline{$H_{0}$: All elements are correctly chosen in each task} 
+\centerline{$H_{A}$: Not all element are correctly chosen in each task}
+
+$p=\frac{\overline{x}}{n}$, if $p*n >= 5$ and $n*(1-p) > = 5$ then we can use the normal distribution. 
 
 \subsection{Hypothesis testing}\label{sec:hypothesistesting}
 The null- and alternative hypothesis are statements regarding a difference or an effect that occur in the population of the study. The alternative hypothesis (Ha) usually represents the question to be answered or the theory to be tested, while the null hypothesis ($H_{0}$) nullifies or opposes Ha \citep{Walpole2012}. The sample collected in the study is used to test which statement is most likely (technically it's testing the evidence against the null hypothesis).  When the hypothesis is identified, both null and alternative, the next step is to find evidence and develop a strategy for or against the null hypothesis \citep{LundResearchLtd2013}.
@@ -169,24 +178,28 @@ Here $\mu_{k}$ is the rank mean for the group k. As in Wilcoxon Rank-Sum test (s
 - Is there a difference in task number 1, 2, 3? time and correct  \\
 Can use it to explain the data
 
-\subsection{Gathered data}
+\subsection{Gathered data}\label{sec:gathereddata}
 
-The gathered data will be analyse on the two variables, total time to complete each task and number of correctly chosen elements per task. Mean, standard deviation, minimum result and maximum result are listed in the tables. In these tables, results from the training task is removed. Only results from the three tasks is used. Maximum possible correct elements per task is twelve. There are six elements in question one and six elements in question two, and the number of correctly chosen elements in each task is added together. 
+The gathered data will be analyse on the two variables: 1) total time used to complete each task and 2) number of correctly chosen elements per task. Total time and number of correct elements adds time and correctly chosen elements on question one and question two together. Sample mean $\overline{x}$, standard deviation of $\overline{x}$, standard error ($\frac{standard deviation}{\sqrt{sample size}}$) of $\overline{x}$, minimum in sample and maximum in sample are listed in the tables. In these tables, results from the training task is removed. Only results from the three tasks is used. Maximum possible correct elements per task is twelve. There are six elements in question one and six elements in question two, and the number of correctly chosen elements in each task is added together, maximum twelve correctly chosen elements.
 
-\subsubsection{All participants,  experienced and inexperienced participants}
+The tables in this section, (\ref{sec:gathereddata}), are task results from all participants and all three tasks, excluding the training task. Task results with total time longer than 2160 seconds are filtered out. This is to remove 4 outliers that spend more than twice the approximated time (average time on the survey was 1080 seconds in the pilot test). These 4 participants also answered that they were disturbed during the test.
 
-The mean, standard deviation, minimum and maximum values are listen i table \ref{tab:totaltime_all} and \ref{tab:totalcorrect_all}. In these tables data from all participants and all three tasks, excluding the training task, is used. Tasks with total time longer than 2000 seconds are filtered out. This is to remove 5 %*Sjekk dette tallet
-outliers that spend more than twice the approximated time. 
+ The samples are in the first subsection (\ref{sec:alltasks}) divided into experienced and inexperienced, but the three tasks are not separated in this sample. In subsection \ref{sec:taskdivided_all} the sample are separated into the three tasks, all participants are kept in the sample. Section \ref{sec:taskdivided_experienced}  and \ref{sec:taskdivided_inexperienced} separates the samples in the three tasks and also in experienced and inexperienced participants. 
+
+\subsubsection{All,  experienced and inexperienced participants}\label{sec:alltasks}
+
+The mean, standard deviation, minimum and maximum values are listen i table \ref{tab:totaltime_all} and \ref{tab:totalcorrect_all}. I. 
 
 \begin{table}[H]
 	\centering
 	\begin{tabular}{l|l|l|l}
-		Total time per task (seconds)   & Total  & Experienced & Inexperienced \\ \hline
+		Total time per task (seconds)   & All  & Experienced & Inexperienced \\ \hline
 		Number of observations & 457    & 247      & 210   \\
-		Mean                   & 176.86 & 184.68     & 167.66      \\
-		Standard deviation     & 99.21  & 108.01  & 87.10   \\
-		Minimum                & 26.00  & 44.00  & 26.00     \\
-		Maximum                & 755.00 & 752.00    & 755.00    \\ \hline
+		Sample mean $\overline{x}$     & 176.86 & 184.68     & 167.66      \\
+		Standard deviation of $\overline{x}$  & 99.21  & 108.01  & 87.10   \\
+		Standard error of $\overline{x}$  & 4.64  & 6.87  & 6.01  \\
+		Minimum in sample & 26.00  & 44.00  & 26.00     \\
+		Maximum in sample & 755.00 & 752.00    & 755.00    \\ \hline
 	\end{tabular}
 	\caption[All participants and all tasks]{Total time (\textit{4 entries per volunteer)}}
 	\label{tab:totaltime_all}
@@ -218,12 +231,13 @@ outliers that spend more than twice the approximated time.
 \begin{table}[H]
 	\centering
 	\begin{tabular}{l|l|l|l}
-		Correct elements per task  & Total  & Experienced & Inexperienced \\ \hline
+		Correct elements per task  & All  & Experienced & Inexperienced \\ \hline
 		Number of observations & 457    & 247  & 210   \\
-		Mean                   & 9.79 & 9.82  & 9.75  \\
-		Standard deviation     & 1.50  & 1.50  &  1.51 \\
-		Minimum                & 4.00 & 5.00  &  4.00  \\
-		Maximum                & 12.00 & 12.00  & 12.00  \\ \hline
+		Sample mean $\overline{x}$   & 9.79 & 9.82  & 9.75  \\
+		Standard deviation of $\overline{x}$   & 1.50  & 1.50  &  1.51 \\
+		Standard error of $\overline{x}$   & 0.07  & 0.09 &  0.10 \\
+		Minimum in sample & 4.00 & 5.00  &  4.00  \\
+		Maximum in sample  & 12.00 & 12.00  & 12.00  \\ \hline
 	\end{tabular}
 	\caption[Correct elements, all participants and all tasks]{Number of correctly chosen elements (\textit{4 entries per volunteer)}}
 	\label{tab:totalcorrect_all}
@@ -252,7 +266,7 @@ outliers that spend more than twice the approximated time.
 	\caption[Correct elements, participants sorted]{Correctly chosen elements per task divided in  all-, experienced- and inexperienced-participants}
 \end{figure}
 
-\subsubsection{All participants, divided in task 1, task 2 and task 3}
+\subsubsection{All participants, divided in task 1, task 2 and task 3}\label{sec:taskdivided_all}
 
 In table \ref{tab:totaltime_tasks} and \ref{tab:totalcorrect_tasks} mean, standard deviation, minimum and maximum is listed for the three different task the participants did in the survey. Task 1 is the task that served the participants with one and one elements. Task 2 is the task that served the participants with three and three elements, and task 3 gave all six elements at the same time. 
 
@@ -261,10 +275,11 @@ In table \ref{tab:totaltime_tasks} and \ref{tab:totalcorrect_tasks} mean, standa
 	\begin{tabular}{l|l|l|l}
 		Total time per task (seconds) & One element task & Three elements task & Six elements task \\ \hline
 		Number of observations & 152    & 153      & 152        \\
-		Mean                   & 174.44  &  174.55   &   181.60   \\
-		Standard deviation     & 101,23  & 94.72  & 102.00     \\
-		Minimum                & 47  & 26  &   38   \\
-		Maximum                & 657 & 755  & 752   \\ \hline
+		Sample mean $\overline{x}$  & 174.44  &  174.55   &   181.60   \\
+		Standard deviation of $\overline{x}$   & 101,23  & 94.72  & 102.00     \\
+		Standard error of $\overline{x}$   & 8.21 & 7.66 & 8.27 \\
+		Minimum in sample    & 47  & 26  &   38   \\
+		Maximum in sample   & 657 & 755  & 752   \\ \hline
 	\end{tabular}
 	\caption[Total time, divided into task 1, 2 and 3]{Total time divided into task 1, task 2 and task 3}
 	\label{tab:totaltime_tasks}
@@ -275,16 +290,17 @@ In table \ref{tab:totaltime_tasks} and \ref{tab:totalcorrect_tasks} mean, standa
 	\begin{tabular}{l|l|l|l}
 		Correct elements per task & One element task & Three elements task & Six elements task \\ \hline
 		Number of observations & 152    & 153      & 152        \\
-		Mean                   & 10.13  &  9.67  &   9.55   \\
-		Standard deviation     & 1.40  & 1.54  & 1.50    \\
-		Minimum                & 5.00  & 5.00  &   4.00  \\
-		Maximum                & 12.00 & 12.00  & 12.00 \\ \hline
+		Sample mean $\overline{x}$ & 10.13  &  9.67  &   9.55   \\
+		Standard deviation of $\overline{x}$ & 1.40  & 1.54  & 1.50    \\
+		Standard error of $\overline{x}$ & 0.11 &  0.12 & 0.12  \\
+		Minimum in sample  & 5.00  & 5.00  &   4.00  \\
+		Maximum in sample  & 12.00 & 12.00  & 12.00 \\ \hline
 	\end{tabular}
 	\caption[Correct elements, divided into task 1, task 2 and task 3]{Number of correctly chosen elements divided into task 1, task 2 and task 3}
 	\label{tab:totalcorrect_tasks}
 \end{table}
 
-\subsubsection{Experienced participants, divided in task 1, task 2 and task 3}
+\subsubsection{Experienced participants, divided in task 1, task 2 and task 3}\label{sec:taskdivided_experienced}
 
 Dividing task 1, task 2 and task 3 results into experienced and inexperienced. Table \ref{tab:totaltime_tasks_experienced} are data gathered about experienced participants total time per task. Table \ref{tab:totalcorrect_tasks_experienced} are data gathered about experienced participants number of correctly chosen elements per task.
 
@@ -293,10 +309,11 @@ Dividing task 1, task 2 and task 3 results into experienced and inexperienced. T
 	\begin{tabular}{l|l|l|l}
 		Total time per task & One element task & Three elements task & Six elements task \\ \hline
 		Number of observations & 81    & 84      & 82   \\
-		Mean                   & 187.74  &  174.65  &  191.93   \\
-		Standard deviation     & 122.08  & 84.30  & 115.18    \\
-		Minimum                & 57.00  & 52.00 &  44.00  \\
-		Maximum                & 657.00 & 492.00  & 752.00 \\ \hline
+		Sample mean $\overline{x}$  & 187.74  &  174.65  &  191.93   \\
+		Standard deviation of $\overline{x}$ & 122.08  & 84.30  & 115.18    \\
+		Standard error of $\overline{x}$ & 13.64  & 9.20 & 12.79   \\
+		Minimum in sample   & 57.00  & 52.00 &  44.00  \\
+		Maximum in sample  & 657.00 & 492.00  & 752.00 \\ \hline
 	\end{tabular}
 	\caption[Total time, task and experienved divided]{Experienced total time per task, divided by task}
 	\label{tab:totaltime_tasks_experienced}
@@ -307,16 +324,17 @@ Dividing task 1, task 2 and task 3 results into experienced and inexperienced. T
 	\begin{tabular}{l|l|l|l}
 		Correct elements per task & One element task & Three elements task & Six elements task \\ \hline
 		Number of observations & 81    & 84      & 82   \\
-		Mean                   & 10.23  &  9.69  &  9.51   \\
-		Standard deviation     & 1.30  & 1.62  & 1.46   \\
-		Minimum                & 7.00 & 5.00 &  5.00 \\
-		Maximum                & 12.00 & 12.00  & 12.00 \\ \hline
+		Sample mean $\overline{x}$ & 10.23  &  9.69  &  9.51   \\
+		Standard deviation of $\overline{x}$ & 1.30  & 1.62  & 1.46   \\
+		Standard error of $\overline{x}$ & 0.14  & 0.18  & 0.16   \\
+		Minimum in sample & 7.00 & 5.00 &  5.00 \\
+		Maximum in sample  & 12.00 & 12.00  & 12.00 \\ \hline
 	\end{tabular}
 	\caption[Correct elements, task and experienved divided]{Experienced participant's number of correct elements per task, divided by task}
 	\label{tab:totalcorrect_tasks_experienced}
 \end{table}
 
-\subsubsection{Inexperienced participants, divided in task 1, task 2 and task 3}
+\subsubsection{Inexperienced participants, divided in task 1, task 2 and task 3}\label{sec:taskdivided_inexperienced}
 
 Table \ref{tab:totaltime_tasks_inexperienced} are mean time, standard deviation, minimum time and maximum time spent on each task for inexperienced participants. Number of correctly chosen elements per task for inexperienced participants is shown in table \ref{tab:totalcorrect_tasks_inexperienced}. 
 
@@ -325,10 +343,11 @@ Table \ref{tab:totaltime_tasks_inexperienced} are mean time, standard deviation,
 	\begin{tabular}{l|l|l|l}
 		Total time per task (seconds) & One element task & Three elements task & Six elements task \\ \hline
 		Number of observations & 71    & 69  & 70   \\
-		Mean                   & 159.28  &  174.42  &  169.50  \\
-		Standard deviation     & 68.24  & 106.69  & 83.17   \\
-		Minimum                & 47.00 & 26.00 &  38.00 \\
-		Maximum                & 487.00 & 755.00  & 529.00  \\ \hline
+		Sample mean $\overline{x}$  & 159.28  &  174.42  &  169.50  \\
+		Standard deviation of $\overline{x}$  & 68.24  & 106.69  & 83.17   \\
+		Standard error of $\overline{x}$  & 8.10  & 12.84  & 9.94   \\
+		Minimum in sample & 47.00 & 26.00 &  38.00 \\
+		Maximum in sample & 487.00 & 755.00  & 529.00  \\ \hline
 	\end{tabular}
 	\caption[Total time, inexperienced per task]{Inexperienced participant's time spent per task, divided by task}
 	\label{tab:totaltime_tasks_inexperienced}
@@ -339,37 +358,57 @@ Table \ref{tab:totaltime_tasks_inexperienced} are mean time, standard deviation,
 	\begin{tabular}{l|l|l|l}
 		Correct elements per task & One element task & Three elements task & Six elements task \\ \hline
 		Number of observations & 71    & 69  & 70  \\
-		Mean                   & 9.99  &  9.65  &  9.60  \\
-		Standard deviation     & 1.50  & 1.45  & 1.56   \\
-		Minimum                & 5.00 & 6.00 &  4.00  \\
-		Maximum                & 12.00 & 12.00  & 12.00 \\ \hline
+		Sample mean $\overline{x}$  & 9.99  &  9.65  &  9.60  \\
+		Standard deviation of $\overline{x}$  & 1.50  & 1.45  & 1.56   \\
+		Standard error of $\overline{x}$  & 0.18 & 0.17 & 0.19  \\
+		Minimum in sample  & 5.00 & 6.00 &  4.00  \\
+		Maximum in sample  & 12.00 & 12.00  & 12.00 \\ \hline
 	\end{tabular}
 	\caption[Correct elements, inexperienced per task]{Inexperienced participant's number of correct elements per task, divided by task}
 	\label{tab:totalcorrect_tasks_inexperienced}
 \end{table}
 
 \subsection{Normality tests}
+To check if a two-sample t-test (subsection \ref{sec:t-test}) and \textit{ANOVA}-test (subsection \ref{sec:anova}) can be used, the samples need to be tested if they are normally distributed or not. Both tests assumes normaly distributed samples. The normality section \ref{sec:normaltesting} concluded that the D'Agostino and Person normality test should be used in this thesis. A visual interpretation of histograms will also be a part of the normality tests. 
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/all_participants/normalcurve/totaltime_exclude4}
-	\caption{All participants, total time}
-	\label{fig:totaltimeexcludetask4_all}
-\end{figure}
-
+\subsubsection{Experienced and inexperienced participants}
+The histograms \ref{fig:totaltimeexclude4_experienced} and \ref{fig:totaltimeexclude4_inexperienced} are positively skewed (see figure \ref{fig:skew}). This gives a strong evidence that the samples are not normally distributed. Samples involving time measurements are rarely normally distributed. This is because the sample will always be skewed since it is impossible to have negative time. There will always be a limit to how fast a participant can finish the tasks. 
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/experienced_participants/normalplot/totaltime_exclude4}
-	\caption{Experienced participants, total time}
+	\caption{Sample 1 - Experienced participants, total time}
 	\label{fig:totaltimeexclude4_experienced}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/inexperienced_participants/normalplot/totaltime_exclude4}
-	\caption{Inexperienced participants, total time}
+	\caption{Sample 2 - Inexperienced participants, total time}
 	\label{fig:totaltimeexclude4_inexperienced}
 \end{figure}
 
+An D'Agostino and Pearson normality test (\ref{sec:normaltesting}) confirmed the visual assessment conclusion with an significance level of 5\% (0.05). Both samples are not normally distributed with a confidence level of 95\%. 
 
+\begin{tcolorbox}
+		\begin{center}
+			\textit{D'Agostino and Pearson normality test}\\
+			Significance level: 95\%  \\[0.5cm]
+
+			Sample 1: Experienced, total time per task\\
+			P-value: $5.10 * 10^{-32}$\\
+			P-value < 0.05 \\
+			\underline{Sample 1 not normally distributed}	\\[0.5cm]
+			
+			Sample 2: Inexperienced, total time per task \\
+			P-value: $3.34 * 10^{-32}$ \\
+			P-value < 0.05 \\
+			\underline{Sample 2 not normally distributed}	\\[0.5cm]
+		\end{center}
+\end{tcolorbox}
+
+\cite{Osborne2010} claim that almost all analyses, even nonparametric tests, benefit from improving the normality of the samples, especially when the normality test is significantly denied. In both sample 1 and 2, the p-value was significantly lower than the significance level of 0.05. Data transformations are commonly used tools to improve normality of a sample distributions, but there are many types of data transformations. Common traditional transformations are square root or converting to logarithmic scales  \citep{Osborne2010}.    
+
+%Boc-Cox Transformation? https://docs.scipy.org/doc/scipy-0.19.0/reference/generated/scipy.stats.boxcox.html https://www.isixsigma.com/tools-templates/normality/dealing-non-normal-data-strategies-and-tools/
+
+%DIscrete variables http://stattrek.com/probability-distributions/discrete-continuous.aspx
