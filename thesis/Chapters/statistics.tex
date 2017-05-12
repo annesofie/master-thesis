@@ -155,7 +155,19 @@ The hypothesis for Wilcoxon Rank-Sum Test is:\newline
 The alternative hypothesis depends on what the test should determine. If the sample with mean $\tilde{\mu}_1$ is greater than, smaller than or unequal to the sample with mean $\tilde{\mu}_2$.  First select a random sample from each population with means $\tilde{\mu}_{1} $ and $ \tilde{\mu}_{2} $. If the sample sizes are different, let $n_{1}$ be the number of observations in the smallest sample and $n_{2}$ for the largest sample. Then $\tilde{\mu}_1$ will be the mean for the smallest sample. If there are ties (identical observations) in the sample a Mann-Whitey U test is preffered \citep{TheScipycommunity2017}. 
 
 \subsubsection{Mann-Whitey U test}
-Skriv om nødvendig, om vi bare bruker tid er det liten sannsynlighet at det et identiske målinger.. 
+The Mann-Whitney U test is used to compare differences between two independent groups. This test can be used to conclude whether two populations differ. It can for instance test if there are differences in medians between groups \citep{LundResearchLtd2013b}. In contrast to the t-test, it compares the median scores of two samples instead of the mean score. The test is non-parametric and can therefore be used on not normally distributed samples. When comparing two sample medians the two independent variables (i.e experienced and inexperienced participants) has to have a similar shape. It can test the hypothesis: \\
+
+\centerline{$H_{0}$: The two populations are equal} 
+\centerline{$H_{A}$: The two populations are not equal}
+
+The null hypothesis is rejected if \citep{LaMorte2017}: \\
+
+\begin{equation}
+\label{eq:mannwhitey-ciritcalvalue}
+U <= critical value
+\end{equation}
+
+The critical value is found in the table of Critical Values for U and depends on the sample sizes, n1 and n2, and the significant level $\alpha$. U is the statistical value calculated. 
 
 \subsubsection[Kruskal]{Kruskal-Wallis test}
 The Kruskal-Wallis test is a nonparametric alternative to one-way \textit{ANOVA} (see subsection \ref{sec:anova})  \citep{Walpole2012}. This test should be used if the assumption of normal distribution failed. As mentioned in this sections introduction, a nonparametric method does not assume normality. This test is an generalization of the rank-sum test when there are more than 2 samples.
@@ -733,14 +745,42 @@ To try to get all the samples approved in the normality test the Box-Cox transfo
 \end{table}
 
 \subsection{Levene's test}
-As mentioned in section \ref{sec:normaltesting}, the two sample t-test assumes that both samples come from a population with equal variances. This assumption will be examined with levene's test. The hypothesis in this test is: 
+As mentioned in section \ref{sec:normaltesting} and \ref{sec:anova}, the two sample t-test and \textit{ANOVA} assumes that the samples come from a population with equal variances. This assumption will be examined with levene's test. The hypothesis in this test is: \\[0.5cm]
 
 \centerline{$H_{0}$: Input samples are from populations with equal variances} 
 \centerline{$H_{A}$: Input samples are from populations that do not have equal variances}
 
-\subsubsection[Sample 1 and 2]{Sample 1 and 2 - experienced and inexperienced}
+\subsubsection[Sample 1 and 2]{Sample 1 and 2 - experienced and inexperienced}\label{sec:sample1,2}
 Since sample 1 and 2 was normal distributed accepted after the Box-Cox transformation, will the Levene's test use the transformed data in the analysis. 
 
+ \begin{center}
+	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
+		\centering
+		\textit{Levene's test, sample 1 and 2}\\
+		Significance level: 5\%  \\[0.5cm]
+		
+		P-value: $1.258 * 10^{-25}$\\[0.2cm]
+		
+		$P-value$ is smaller than the significance level ($1.258*10^{-25}$ < $0.05$) and the null hypothesis is \underline{rejected} and $H_1$ accepted.\\[0.5cm]
+	\end{tcolorbox} 
+\end{center}
+
+We cannot assume that sample 1 and sample 2 comes from populations with equal variances. 
+
+\subsubsection{Sample 5, 6 and 7 - task 1, 2 and 3}\label{sec:sample5,6,7}
+Sample 5, 6 and 7 was normal distributed accepted after the Box-Cox transformation. Before using the samples in a \textit{ANOVA test} they need to be equal variance tested. 
+
+ \begin{center}
+	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
+		\centering
+		\textit{Levene's test, sample 1 and 2}\\
+		Significance level: 5\%  \\[0.5cm]
+		
+		P-value: $0.636$\\[0.2cm]
+		
+		$P-value$ is larger than the significance level ($0.636$ > $0.05$) and the null hypothesis is \underline{accepted}.\\[0.5cm]
+	\end{tcolorbox} 
+\end{center}
 
 
 \subsection{Hypothesis testing}\label{sec:hypothesis_results}
@@ -751,7 +791,7 @@ The two sample t-test is used to estimate if differences between two means are s
 
 \begin{equation}
 \label{eq:ttest_twoway}
--t_{\frac{\alpha}{2}, v} < T < t_{\frac{\alpha}{2}, v}
+|T| > t_{\frac{\alpha}{2}, v} 
 \end{equation}
 
 In a two sample, one sided, t-test the null hypothesis is rejected when [\citep{Walpole2012}, p. 350]:
@@ -765,7 +805,7 @@ T > t_{\frac{\alpha}{2}, v}
 T < - t_{\frac{\alpha}{2}, v}
 \end{equation}
 
-Equation \ref{eq:ttest_greater} is used on one sample test where the alternative test is to check if the mean is greater than, and the \ref{eq:ttest_lower} equation is used on hypothesis where the test is to check if the mean is lower than. $T$ is the calculated statistical value and t is the critical value with the given significance level ($\alpha$) and degree of freedom ($v$). \newline 
+Equation \ref{eq:ttest_greater} is used on one sample test where the alternative test is to check if the mean is greater than, and the \ref{eq:ttest_lower} equation is used on hypothesis where the test is to check if the mean is lower than. $T$ is the calculated statistical value and t is the critical value with the given significance level ($\alpha$) and degree of freedom ($v$). The critical value is found in the table of Critical values for t-distribution. \newline 
 
 \textbf{Differences between experienced and inexperienced participants - samples with total time}\newline
 
@@ -778,7 +818,7 @@ This test is covered by sample 1 and sample 2 from section \ref{sec:totaltime_ex
 \centerline{$H_{0}$: $\overline{x}_1$ = $\overline{x}_2$} 
 \centerline{$H_{A}$: $\overline{x}_1$ $\neq$ $\overline{x}_2$}
 
-Conclusions from the two sample, two sided t-test is that there is a significant difference between the means of the two population samples.\newline
+Since we cannot assume equal variances in the two samples, this test will use the Welch's t-test for unequal variances [\citep{Walpole2012}, p. 345]. Equation \ref{eq:ttest_twoway} is still valid. The T-statistic calculated is smaller than the critical value. We then conclude with that there is a significant difference between the means of the two population samples wit a confidence interval of 95\%.\\[0.2cm]
 
  \begin{center}
 	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
@@ -786,12 +826,12 @@ Conclusions from the two sample, two sided t-test is that there is a significant
 		\textit{Two sample t-test, sample 1 and 2}\\
 		Significance level: 5\%  \\[0.5cm]
 		
-		$T-statistic$: -64.654 \\
+		$T-statistic$: -60.442 \\
 		Degree of freedom ($v$): 447 \\ %http://web.utk.edu/~cwiek/TwoSampleDoF
 		Significance level ($\alpha$): 0.05 \\
 		Critical value: 1.960\\[0.2cm]
 		
-		$T-statistic$ is smaller than the critical value ($-64.654$ < $1.960$) and the null hypothesis is \underline{rejected} and $H_1$ accepted.\\[0.5cm]
+		Using equation \ref{eq:ttest_twoway}, the absolute value of the $T-statistic$ is larger than the critical value ($|60.442|$ > $1.960$) and the null hypothesis is \underline{rejected} and $H_1$ accepted.\\[0.5cm]
 
 	\end{tcolorbox} 
 \end{center}
@@ -806,7 +846,7 @@ With sample 1 equals experienced participants and sample 2 equals inexperienced 
 \centerline{$H_{A}$: $\overline{x}_1$ >= $\overline{x}_2$}
 \centerline{$H_{A}$: $\overline{x}_1$ < $\overline{x}_2$}
 
-This test gives the same T-statistics as the previous test, but the critical value is changed since it is an two sample, one way t-test. The test results are shown under. The $T-statistic$ is still smaller than the critical value (-64.654 < 1.645). Our test is to check if the sample 1 mean is significantly larger than the sample 2 mean, then we use the test written in equation \ref{eq:ttest_greater}. Our $T-statistic$ is not larger than the critical value, therefore we need to accept the null hypothesis. There is no evidence that experienced participants use less time on the tasks than the inexperienced. 
+This test gives the same T-statistics as the previous test, but the critical value is changed since it is an two sample, one way t-test. Since we cannot assume equal variances in the two samples a Welch's test is performed. The test results are shown under. The $T-statistic$ is still smaller than the critical value (-64.654 < 1.645). Our test is to check if sample 1 mean is significantly larger than sample 2 mean, then we use the test written in equation \ref{eq:ttest_greater}. Our $T-statistic$ is not larger than the critical value, therefore we need to accept the null hypothesis. There is no evidence that experienced participants use less time on the tasks than the inexperienced. 
 
  \begin{center}
 	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
@@ -814,13 +854,12 @@ This test gives the same T-statistics as the previous test, but the critical val
 		\textit{Two sample t-test, sample 1 and 2}\\
 		Significance level: 5\%  \\[0.5cm]
 		
-		T-statistic: -64.654 \\
+		$T-statistic$: -60.442 \\
 		Degree of freedom ($v$): 447 \\ %http://web.utk.edu/~cwiek/TwoSampleDoF
 		Significance level ($\alpha$): 0.05 \\
 		Critical value: 1.645\\[0.2cm]
 		
-		T-statistic is smaller than the critical value ($-64.654$ < $1.645$) and the null hypothesis is \underline{accepted}.\\[0.5cm]
-		
+		T-statistic is smaller than the critical value ($-60.442$ < $1.645$) and the null hypothesis is \underline{accepted}.\\[0.5cm]
 	\end{tcolorbox} 
 \end{center}
 
@@ -830,10 +869,74 @@ Since we know that there is a significant difference between the two sample mean
 
 \textbf{Differences between experienced and inexperienced participants - samples with correct elements}\newline
 
+This section will test if there is a difference between experienced- and inexperienced participants when looking at the number of correctly chosen elements. Sample 3 and 4 is the correct samples to use in this test. Both samples are not normally distributed, we need to use a non-parametric method. The Mann-Whitey U test is the preferred test to use on these samples. As mentioned in section \ref{sec:Wilcoxon}, the Mann-Whitey U test is preferred when the samples are ties (identical observations) in the data. From histogram \ref{fig:correctelementswasnotinterupter_ex} and \ref{fig:correctelementswasnotinterupted_inex} we see that the samples for both independent variables are similar. Mann-Whitey U test can therefore be used to compare the population medians. The hypothesis to be tested is: 
 
+\centerline{$H_{A}$: $median_3$ = $median_4$}
+\centerline{$H_{A}$: $median_3$ $\neq$ $median_4$}
 
+The results from the test, the statistical value and finding the critical value in the Mann-Whitey U table is shown in the box under. Using equation \ref{eq:mannwhitey-ciritcalvalue} we conclude that there are not enough evidence to reject the null hypothesis with an confidence interval of 95\%. The $U-statistic$ is larger than the critical value. 
 
+ \begin{center}
+	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
+		\centering
+		\textit{Two sample t-test, sample 1 and 2}\\
+		Significance level: 5\%  \\[0.5cm]
+		
+		$U-statistic$: 17012 \\
+		Significance level ($\alpha$): 0.05 \\
+		Sample size, n1:  229\\
+		Sample size, n2: 200\\
+		Critical-value: 127 \\[0.2cm] %http://web.utk.edu/~cwiek/TwoSampleDoF
+		
+		$U-statistic$ is larger than the critical value ($17012$ > $127$) and the null hypothesis is \underline{accepted}.\\[0.5cm]
+	\end{tcolorbox} 
+\end{center}
 
+There is not enough evidence to conclude that there are any difference between experienced- and inexperienced participants when we use the dependent variable number of correctly chosen elements. 
 
+\subsubsection{One-way \textit{ANOVA} test}\label{sec:anova_result}
 
+The one-way \textit{ANOVA} test will be used to test population means between the three task samples. This test is used when there is more then two samples being compared, see section \ref{sec:anova}. The assumption that sample 5, 6 and 7 come from populations with equal variances are met \ref{sec:sample5,6,7}. The hypothesis tested here is: \\
 
+\centerline{$H_{0}$: $\overline{x}_5$ = $\overline{x}_6$ = $\overline{x}_7$}
+\centerline{$H_{A}$: Total time is different between at least two of the tasks}
+
+Using the one-way \textit{ANOVA} test to answer the hypothesis. P-value 
+
+ \begin{center}
+	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
+		\centering
+		\textit{One-way \textit{ANOVA}, sample 5, 6 and 7}\\
+		Significance level: 5\%  \\[0.5cm]
+		
+		$P-value$: $2.805 * 10^{-222}$ \\
+		Significance level ($\alpha$): 0.05 \\
+		$v_1$ = 2, $v_2$ = 426
+		Critical-value: 3.00 \\[0.2cm] %http://web.utk.edu/~cwiek/TwoSampleDoF
+		
+		$P-value$ is significantly lower than the critical value ($2.805 * 10^{-222}$ < $3.00$) and the null hypothesis is \underline{rejected}, $H_A$ is accepted..\\[0.5cm]
+	\end{tcolorbox} 
+\end{center}
+
+\subsubsection{Hypothesis test summary}
+
+\begin{table}[H]
+	\begin{tabular}{l|l|l|l}
+		\multicolumn{1}{c}{\textcolor{cyan}{Dependent variable}, \textcolor{blue}{independent variable}} & Sample & Result \\[0.2cm] \hline
+		\textcolor{cyan}{Total time}, \textcolor{blue}{Experienced} and \textcolor{blue}{Inexperienced} & &  \\
+		There are a difference between experienced and inexperienced  & 1 and 2 & \textbf{Yes} \\
+		Experienced finish the tasks faster than inexperienced  & 1 and 2 & No   \\ \hline
+		\textcolor{cyan}{Correct elements}, \textcolor{blue}{Experienced} and \textcolor{blue}{Inexperienced} & &  \\
+		There are a difference between experienced and inexperienced & 3 and 4 & No   \\ \hline
+		\textcolor{cyan}{Total time }& &  \\
+		Task 1 & 5 &No   \\
+		Task 2 & 6 &No  \\
+		Task 3 & 7 & No  \\ \hline
+		\textcolor{cyan}{Correct elements} & &  \\
+		Task 1 & 8 & No  \\
+		Task 2 & 9 &\textbf{Yes}  \\
+		Task 3 & 10 & No  \\ \hline
+	\end{tabular}
+	\caption[Summary, normality tests]{Summary of normality tests done in section \ref{sec:normality_results}}
+	\label{tab:normaltest_summary}
+\end{table}
