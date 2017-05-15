@@ -1,238 +1,20 @@
-\chapter{Result}
-
-%My hypothesis before start
-
-\section{Sample data from Survey}
-
-Independence of observations. This is mostly a study design issue and, as such, you will need to determine whether you believe it is possible that your observations are not independent based on your study design (e.g., group work/families/etc). A lack of independence of cases has been stated as the most serious assumption to fail. Often, there is little you can do that offers a good solution to this problem. %https://statistics.laerd.com/statistical-guides/one-way-anova-statistical-guide-2.php
-
-%Indepencence: Chi-square Test of Independence -  researching if two categorical variables are related or associated (i.e. dependent).  https://onlinecourses.science.psu.edu/stat500/node/56
-
-Designed the survey so that the observations should be random and independent \\
-- Random order on the tests \\
-- Random color on the layers \\
-- Random which order the layers was drawn on the map \\
-- Random which order the metadata was written in the table \\
-
-\section{Statistics theory}\label{sec:statistic_theory}
-This section will give an introduction to the statistics used in this thesis. The thesis will examine the data with parametric methods but also with non-parametric methods if the assumption of a normally distributed samples fails. A nonparametric method is much more efficient than the parametric procedure when the set of data used in the test deviates significantly from the normal distribution \citep{Walpole2012}. There are also some disadvantages using nonparametric methods. The methods will be less efficient, and to acchieve the same power as the corresponding parametric method a larger sample size is required. If parametric and nonparametric tests are both valid on the same set of data, the parametric test should be used \citep{Walpole2012}. 
-
-\subsection{Normal testing}\label{sec:normaltesting}
-The sampling distribution of a statistic depend on the distribution of the population, the size of the samples, and the method of choosing the samples \citep{Walpole2012}. Sampling distibution describes the variability of sample averages around the population mean $\mu$. All parametric statistics assumes normally distributed, independent observations. Parametric tests are preffered in statistics because it got more statistical power than nonparametric tests \citep{Frost2015}. The power of a test is the probability of correctly rejecting a false null hypothesis, which in this case is the ability to detect if the sample comes from a non-normal distribution. To determine if a sample is normally distrubuted there exists both visual methods and normality tests to assess the samples normality. A visual inspection of the sample's distribution is usually unreliable and does not guarantee that the distribution is normal \citep{Pearson2006}. Presenting the data visually gives the reader an opportunity to judge the distribution themselves. In this thesis histograms are used to visualize the data for normality. 
-
-Normality tests compare the scores in the sample to a normally distributed set of scores with the same mean and standard deviation \citep{Ghasemi2012}. There are multiple normality tests, and deciding which test to use is not easy. This study needs a test that doesn't require every value to be unique, a test that can handle ties (identical observations). The survey used to collect the samples in this study do not guarantee unique values. 
-
-The D'Agostino-Pearson omnibus test stand out as the best choice. This test first computes the skewness, see figure \ref{fig:skew}, and kurtois, see figure \ref{fig:kurtois}, to quantify how far from the normal distribution the sample is from the terms of assymetry and shape. Then it calculates how far each of these values differs from the value expected with a normal distribution \citep{Pearson2006}. It works well even if all values are not unique \citep{Motulsky2013}. The test also works well on both short- and long-tailed distributions \citep{Yap2011}. \newline  %THIS STUDY HAS?? LONG OR SHORT??
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{"fig/skew"}
-	\caption{Skew \citep{MedCalcSoftwarebvba2017}}
-	\label{fig:skew}
-\end{figure}
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{fig/kurtois}
-	\caption{Kurtois \citep{MedCalcSoftwarebvba2017}}
-	\label{fig:kurtois}
-\end{figure}
-
-
-The D'Agostino-Pearson test uses the following hypothesis:\newline
-
-\centerline{$H_{0}$: The data follows the normal distribution} 
-\centerline{$H_{A}$: The data do not follow the normal distribution}
-
-For small sample sizes, normality tests have little power to reject the null hypothesis, therefore small sample sizes most often pass normality tests. For large sample sizes, significant results would be derived even in the case of a small deviation from normality \citep{Pearson2006}. When the null hypothesis cannot be rejected, then there are two possible cases. First case is to accept the null hypothesis or the second case is that the sample size is not large enough to either accept or reject the null hypothesis \citep{ThePennsylvaniaStateUniversity2017}. An acceptance of the null hypothesis implies that the evidence was insufficient, the result does not necessary accept $H_{0}$, but fails to reject $H_{0}$ \citep{Walpole2012}.  
-
-%A \textit{goodness-of-fit} test is used to determine whether a sample of \textit{n} observations can be considered as a sample from a given specified distribution \citep{Walpole2012}. The Anderson-Darling and the Kolmogorov-Smirow tests stand out as \textit{goodness-of-fit} procedures specialized for small samples \citep{Romeu2003}. The Anderson-Darling test will be used in this study to test if the observations gathered in this study is normally distributed.  %The Kolmogorov-Smirow test is a nonparametric test. The hypothesis for the Anderson-Darling test is: \newline
-
-%\centerline{$H_{0}$: The data follows the normal distribution} 
-%\centerline{$H_{A}$: The data do not follow the normal distribution}
-
-%The computations in the Anderson-Darling test differs based on what is known about the observations. In this study both the expected mean and variance is unknown. In all the Anderson-Darling tests in this study a significance level of $0.05$ is used, which gives a confidence interval of $95$ \% . If the calculated \textit{p-value} is less than the significance level ($0.05$), the null hypothesis is rejected. The larger the \textit{p-value} the closer match is the data to the normal distribution. The Anderson-Darling statistics is used to calculate the \textit{p+value} for the \textit{goodness-of-fit} test. 
-\subsection{Bionomal disstibution}
-Used for discrete variables. It used the probability of getting $x$ successes and $n-x$ failures in $n$ trials. Each success comes with a probability $p$ and each failure with probability $q=1-p$  [\citep{Walpole2012}, p. 145]. The sample mean $\overline{x}$ and variance of $\overline{x}$ of the bionomial distribution is: $\overline{x} = n * p$ and $\sigma^{2} = n*p*q$. The probability p has to be the same on every trial - NOT TRUE HERE.
-
-In the survey, the number of correctly chosen elements is recorded. Here x = the number of correct elements. x is a random variable who has the binomial distribution. The following null and alternative hypothesis can be used:
-
-\centerline{$H_{0}$: All elements are correctly chosen in each task} 
-\centerline{$H_{A}$: Not all element are correctly chosen in each task}
-
-$p=\frac{\overline{x}}{n}$, if $p*n >= 5$ and $n*(1-p) > = 5$ then we can use the normal distribution. 
-
-\subsection{Hypothesis testing}\label{sec:hypothesistesting}
-The null- and alternative hypothesis are statements regarding a difference or an effect that occur in the population of the study. The alternative hypothesis (Ha) usually represents the question to be answered or the theory to be tested, while the null hypothesis ($H_{0}$) nullifies or opposes Ha \citep{Walpole2012}. The sample collected in the study is used to test which statement is most likely (technically it's testing the evidence against the null hypothesis).  When the hypothesis is identified, both null and alternative, the next step is to find evidence and develop a strategy for or against the null hypothesis \citep{LundResearchLtd2013}.
-
-The first step, after identifying the hypothesis, is to determine the level of statistical significance, often expressed as the \textit{p-value}. A statistical test will result in the probability (\textit{the p-value}) of observing your sample results given that the null hypothesis is true. A significance level widely used in academic research is 0.05 or 0.01 \citep{Walpole2012}. 
-
-You should not report the result as "significant difference", but instead report it as "statistically significant difference". This is because your decision as to whether the result is significant or not should not be based solely on your statistical test. Therefore, to indicate to readers that this "significance" is a statistical one, include this is your sentence \citep{LundResearchLtd2013a}. 
-
-%Compare the mean time in experienced and not experienced
-%H0: No time difference, Ha: Experienced use less time
-
-\subsubsection{Two sample t-test}\label{sec:t-test}
-When estimating the difference between two means a two-sample t-test is used \citep{Walpole2012}. A two sampled test assumes two independent, random samples from distributions with means [$\mu_{1}$ , $\mu_{2}$] and variances [$\sigma_{1}^{2}$, $\sigma_{2}^{2}$]. %*HOW TO DETERMINE IF THEY ARE INDEPENDENT? 
-The hypothesis on two means can be written as:\newline
-
-\centerline{$H_{0}$: $\mu_{1}$ - $\mu_{2}$ = 0 or $\mu_{1}$ = $\mu_{2}$} 
-\centerline{$H_{A}$:$\mu_{1}$ - $\mu_{2}$ $\neq$ 0 or $\mu_{1}$ - $\mu_{2}$ > 0 or $\mu_{1}$ > $\mu_{1}$}
-
-The two sample t-test is used to estimate if differences between two means are significant. In a two sample, two sided, t-test ($\mu_{1}$ - $\mu_{2}$ $\neq$ 0) the null hypothesis is rejected when [\citep{Walpole2012}, p. 345]:
-
-\begin{equation}
-\label{eq:ttest_twoway}
-|T| > t_{\frac{\alpha}{2}, v} 
-\end{equation}
-
-In a two sample, one sided, t-test the null hypothesis is rejected when [\citep{Walpole2012}, p. 350]:
-
-\begin{equation}
-\label{eq:ttest_greater}
-T > t_{\frac{\alpha}{2}, v}
-\end{equation}
-\begin{equation}
-\label{eq:ttest_lower}
-T < - t_{\frac{\alpha}{2}, v}
-\end{equation}
-
-Equation \ref{eq:ttest_greater} is used on one sample test where the alternative test is to check if the mean is greater than zero ($\mu_{1}$ - $\mu_{2}$ > 0), and the \ref{eq:ttest_lower} equation is used on hypothesis where the test is to check if the mean is lower than zero ($\mu_{1}$ - $\mu_{2}$ < 0). $T$ is the calculated statistical value and t is the critical value with the given significance level ($\alpha$) and degree of freedom ($v$). The critical value is found in the table of Critical values for t-distribution. \newline 
- 
-Before doing tests on the two means, the Levene's Test is used to test if the samples are from populations with equal variances. It tests the hypothesis:\newline %https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.levene.html
-
-\centerline{$H_{0}$: Input samples are from populations with equal variances} 
-\centerline{$H_{A}$: Input samples are from populations that do not have equal variances}
-
-If we can assume equal variances in the two samples and the samples are normal distributed, a two-sampled t-test may be used. 
-%There are also formula for Unknown but unequal variances, page 345 in statistics book
-
-%Because the one-sided tests can be backed out from the two-sided tests. (With symmetric distributions one-sided p-value is just half of the two-sided pvalue). It goes on to say that scipy always gives the test statistic as signed. This means that given p and t values from a two-tailed test, you would reject the null hypothesis of a greater-than test when p/2 < alpha and t > 0, and of a less-than test when p/2 < alpha and t < 0. %http://stackoverflow.com/questions/15984221/how-to-perform-two-sample-one-tailed-t-test-with-numpy-scipy
-%https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.stats.ttest_ind.html
-
-Relevant hypothesis in this study that can be tested with a two-sampled t-test (if the conditions mentioned above are valid) is listed under. \newline
-
-\begin{framed}{\noindent\centering
-		
-		\textit{Hypothesis - Two sample t-test} \newline
-		
-		\textbf{$H_{0}$:} Experienced and inexperienced spent the same amount of time on the tasks\\
-		\textbf{$H_{A}$:} Total task time differs between them \newline
-		
-		\textbf{$H_{0}$:} Experienced do not finish the tasks more quickly than inexperienced\newline
-		\textbf{$H_{A}$:} Experienced participants finish the tasks faster\newline
-		
-		$H_{0}$: Total number of correct elements between experienced and inexperienced are equal \\
-		$H_{A}$: There is a difference in number of correct elements between them\newline
-		
-		$H_{0}$: Experienced no not have more total correct elements then inexperienced\\
-		$H_{A}$: Experienced participants have a higher number of correct elements\newline
-		
-		\par}
-\end{framed}
-
-Before solving the hypothesis the conditions needs to be testet. More on this later. %*WHICH SECTION?
-
-\subsubsection[ANOVA]{Analysis-of-Variance}\label{sec:anova}
-Analysis-of-Variance (\textit{ANOVA}) is according to \cite{Walpole2012} a very common procedure used for testing population means. Where a two sample t-test are restricted to consider no more than two population parameters, \textit{ANOVA} can test multiple population parameters. A part of the goal of \textit{ANOVA} is to determine if the differences among the means of two or more samples are what we would expect due to random variation alone, or due to variation beyond merely random effects. \textit{ANOVA} assumes normally distributed, independent, samples with equal variance. The equal variance assumtion will be tested with Levene's Test also mentioned in subsection \ref{sec:t-test}. 
-
-One-way \textit{ANOVA} tests the null hypothesis that two or more groups have the same population mean given that the mean is measured on the same factor or variable in all groups\citep{LundResearchLtd2013a}. The hypothesis test can be written like this:\newline
-
-\centerline{$H_{0}$:  $\mu_{1} =  \mu_{2} = ... = \mu_{k} $} 
-\centerline{$H_{A}$:  At least two of the means are different}
-
-$\mu$ equals the group mean and $k$ represents the number of groups. It is important to check that each group are normally distributed \citep{LundResearchLtd2013a}. The weakness of one-way \textit{ANOVA} is that it cannot tell which specific groups were significally different from each other if $H_{0}$ is rejected. To be able to determine which group a \textit{post hoc test} is used. The null hypothesis is accepted if:\\
-
-\begin{equation}
-\label{eq:anova_reject}
-F-statistic < f_{\alpha, v_{1}, v_{2}} (critical value)
-\end{equation}
-
-If the alternative hypothesis is accepted a \textit{post hoc test} is used. A post hoc test makes paired comparisons to determine which groups differs. This thesis will use Tykey's test to detemine which groups means are significantly different [\citep{Walpole2012}, p.526]. 
-
-In a one-way \textit{ANOVA} test there should be one dependent variable and minimum three independent groups, which is an relevant approach considering the data produced from this thesis survey. There are at least two dependent variables in the survey data, task time and number of correctly chosen elements. The survey result can be divided into three groups, one element task, three elements task and six elements task. Each entry in the sample should only be assigned to one group. Relevant hypothesis from the study that can be used in an one-way \textit{ANOVA} analusis is shown under. \newline
-
-\begin{framed}
-		\begin{center}
-			\textit{Hypothesis - One-way \textit{ANOVA}} \newline
-			
-			$H_{0}$: Mean task time is not different between the three tasks\\
-			$H_{A}$: Mean task time is different between at least two of the tasks\\
-			\textit{Variable = time, group = tasks}\newline
-			
-			$H_{0}$: Total number of correct elements between the three tasks are equal \\
-			$H_{A}$: Total number of correct elements between at least two of the tasks are not equal \\
-			\textit{Variable = Number of correct elements, group = tasks}\newline
-	\end{center}
-\end{framed}
-
-The hypothesis written above will be tested in section \ref{sec:anova_result}. %* Add correct section
-%As regards the normality of group data, the one-way ANOVA can tolerate data that is non-normal (skewed or kurtotic distributions) with only a small effect on the Type I error rate. However, platykurtosis can have a profound effect when your group sizes are small. This leaves you with two options: (1) transform your data using various algorithms so that the shape of your distributions become normally distributed or (2) choose the nonparametric Kruskal-Wallis H Test which does not require the assumption of normality. https://statistics.laerd.com/statistical-guides/one-way-anova-statistical-guide-3.php
-
-%The test can determine if the mean time (the variable) is significally different between the three tasks (the groups) given in the survey. It can also be used to determine if there are any significant different in mean time given the six different orders the task could serve in. A third test is to have number of correct elements as the variable and the three tasks as groups. More on this later. %*WHIch section?
-
-\subsubsection[Wilcoxon]{Wilcoxon Rank-Sum test}\label{sec:Wilcoxon}
-The Wilcoxon Rank-Sum test is an appropriate alternative to the two-sample t-test (see subsection \ref{sec:t-test}) when the normality assuptions do not hold, but the samples are still independend and have a continous distribution \citep{Walpole2012}. Since this method is nonparametric (or distribution-free) it do not require the assumption of normality. 
-
-The hypothesis for Wilcoxon Rank-Sum Test is:\newline
-
-\centerline{$H_{0}$:  $\tilde{\mu}_{1} =  \tilde{\mu}_{2} $} 
-\centerline{$H_{A}$: $\tilde{\mu}_{1} >  \tilde{\mu}_{2} $ or $\tilde{\mu}_{1} <  \tilde{\mu}_{2} $ or $\tilde{\mu}_{1} \neq  \tilde{\mu}_{2} $}
-
-The alternative hypothesis depends on what the test should determine. If the sample with mean $\tilde{\mu}_1$ is greater than, smaller than or unequal to the sample with mean $\tilde{\mu}_2$.  First select a random sample from each population with means $\tilde{\mu}_{1} $ and $ \tilde{\mu}_{2} $. If the sample sizes are different, let $n_{1}$ be the number of observations in the smallest sample and $n_{2}$ for the largest sample. Then $\tilde{\mu}_1$ will be the mean for the smallest sample. If there are ties (identical observations) in the sample a Mann-Whitey U test is preffered \citep{TheScipycommunity2017}. 
-
-\subsubsection{Mann-Whitey U test}
-The Mann-Whitney U test is used to compare differences between two independent groups. This test can be used to conclude whether two populations differ. It can for instance test if there are differences in medians between groups \citep{LundResearchLtd2013b}. In contrast to the t-test, it compares the median scores of two samples instead of the mean score. The test is non-parametric and can therefore be used on not normally distributed samples. When comparing two sample medians the two independent variables (i.e experienced and inexperienced participants) has to have a similar shape. It can test the hypothesis: \\
-
-\centerline{$H_{0}$: The two populations are equal} 
-\centerline{$H_{A}$: The two populations are not equal}
-
-The null hypothesis is rejected if \citep{LaMorte2017}: \\
-
-\begin{equation}
-\label{eq:mannwhitey-ciritcalvalue}
-U <= critical value
-\end{equation}
-
-The critical value is found in the table of Critical Values for U and depends on the sample sizes, n1 and n2, and the significant level $\alpha$. U is the statistical value calculated. 
-
-\subsubsection[Kruskal]{Kruskal-Wallis test}\label{sec:kruskal-w-test}
-The Kruskal-Wallis test is a nonparametric alternative to one-way \textit{ANOVA} (see subsection \ref{sec:anova})  \citep{Walpole2012}. This test should be used if the assumption of normal distribution failed. As mentioned in this sections introduction, a nonparametric method does not assume normality. This test is an generalization of the rank-sum test when there are more than 2 samples.
-
-Kruskal-Wallis is used to test equality of means in one-way \textit{ANOVA}, so the hypothesis for the Kruskal-Wallis test is:\newline
-
-\centerline{$H_{0}$:  $\mu_{1} =  \mu_{2} = ... = \mu_{k} $} 
-\centerline{$H_{A}$: Minimum two of the $\mu_{k}$'s are different}
-
-Here $\mu_{k}$ is the rank mean for the group k. As in Wilcoxon Rank-Sum test (subsection \ref{sec:Wilcoxon}), the number of observations in the smallest sample is assigned to $n_1$, the second smallest to $n_2$ and the largest sample is assigned to $n_k$. 
-
-The null hypothesis is accepted if: 
-
-\begin{equation}
-\label{eq:kruskapw-accept}
-H-value < h_{\alpha}
-\end{equation}
-
 \section{Survey results}\label{sec:survey_results}
 
-
-- All participants ordered by age \\
 - All participants ordered by age, excluded by task 4 \\
 - All results in one task, ordered by age \\ 
 - Average time per micro-task \\
-- Is there a difference in task order number 1, 2, 3? time and correct \\
 - Is there a difference in task number 1, 2, 3? time and correct  \\
 Can use it to explain the data
 
 \subsection{Gathered data}\label{sec:gathereddata}
 
-The gathered data will be analyse on the two variables: 1) total time used to complete each task and 2) number of correctly chosen elements per task. Total time and number of correct elements adds time and correctly chosen elements on question one and question two together. Sample mean $\overline{x}$, standard deviation of $\overline{x}$, standard error ($\frac{standard deviation}{\sqrt{sample size}}$) of $\overline{x}$, minimum in sample and maximum in sample are listed in the tables. In these tables, results from the training task is removed. Only results from the three tasks is used. Maximum possible correct elements per task is twelve. There are six elements in question one and six elements in question two, and the number of correctly chosen elements in each task is added together, maximum twelve correctly chosen elements.
+The gathered data will be analyse on the two variables: 1) total time used to complete each task and 2) number of correctly chosen elements per task. Total time and number of correct elements sums the time and correctly chosen elements on question one and question two together. Sample mean $\overline{x}$, standard deviation of $\overline{x}$, standard error ($\frac{standard deviation}{\sqrt{sample size}}$) of $\overline{x}$, minimum in sample and maximum in sample are listed in the tables. In these tables, results from the training task is removed. Only results from the three tasks is used. Results from participants that was disturbed during the survey was also removed, four of the participants spent more than twice the estimated time on the survey. Maximum possible correct elements per task is twelve. There are six elements in question one and six elements in question two, and the number of correctly chosen elements in each task is added together, maximum twelve correctly chosen elements.
 
-The tables in this section, (\ref{sec:gathereddata}), are task results from all participants and all three tasks, excluding the training task. Task results with total time longer than 2160 seconds are filtered out. This is to remove 4 outliers that spend more than twice the approximated time (average time on the survey was 1080 seconds in the pilot test). These 4 participants also answered that they were disturbed during the test.
+% The tables in this section, (\ref{sec:gathereddata}), are task results from all participants and all three tasks, excluding the training task. Task results with total time longer than 2160 seconds are filtered out. This is to remove 4 outliers that spend more than twice the approximated time (average time on the survey was 1080 seconds in the pilot test). These 4 participants also answered that they were disturbed during the test.
 
- The samples are in the first subsection (\ref{sec:alltasks}) divided into experienced and inexperienced, but the three tasks are not separated in this sample. In subsection \ref{sec:taskdivided_all} the sample are separated into the three tasks, all participants are kept in the sample. Section \ref{sec:taskdivided_experienced}  and \ref{sec:taskdivided_inexperienced} separates the samples in the three tasks and also in experienced and inexperienced participants. 
+ The gathered data are in the first subsection (\ref{sec:alltasks}) divided into experienced and inexperienced. In subsection \ref{sec:taskdivided_all} the data is divided into the three tasks, containing all participants. Section \ref{sec:taskdivided_experienced}  and \ref{sec:taskdivided_inexperienced} divides the data into the three tasks and also in experienced and inexperienced participants. 
  
-Removed all participants that said they was distracted. 26 task results was removed, 10 inexperienced and 18 experienced results.
+%Removed all participants that said they was distracted. 26 task results was removed, 10 inexperienced and 18 experienced results.
 
 \subsubsection{All,  experienced and inexperienced participants}\label{sec:alltasks}
 
@@ -242,14 +24,16 @@ The mean, standard deviation, minimum and maximum values are listen i table \ref
 	\centering
 	\begin{tabular}{l|l|l|l}
 		Total time per task (seconds)   & All  & Experienced & Inexperienced \\ \hline
+		Sample number &   & 1  & 2   \\
 		Number of observations & 429    & 229    & 200   \\
 		Sample mean $\overline{x}$     & 170.32 & 177.65  & 161.94     \\
+		Sample median  & 155.0 & 158.0  & 154.0  \\
 		Standard deviation of $\overline{x}$  & 82.19  & 88.24  & 73.99   \\
 		Standard error of $\overline{x}$  & 3.98  & 5.83 & 5.23  \\
 		Minimum in sample & 38.00  & 52.00  & 38.00     \\
 		Maximum in sample & 657.00 & 657.00  & 529.00    \\ \hline
 	\end{tabular}
-	\caption[All participants and all tasks]{Total time (\textit{4 entries per volunteer)}}
+	\caption[All participants and all tasks]{Total time used per task}
 	\label{tab:totaltime_all}
 \end{table}
 
@@ -282,14 +66,16 @@ The histogram show that finishing a task within 100 seconds has a higher probabi
 	\centering
 	\begin{tabular}{l|l|l|l}
 		Correct elements per task  & All  & Experienced & Inexperienced \\ \hline
+		Sample number &   & 3  & 4   \\
 		Number of observations & 429    & 229  & 200   \\
 		Sample mean $\overline{x}$   & 9.82 & 9.81  & 9.83  \\
+		Sample median & 10.0 & 10.0 & 10.0 \\
 		Standard deviation of $\overline{x}$   & 1.52  & 1.53  &  1.51 \\
 		Standard error of $\overline{x}$   & 0.07  & 0.10 &  0.11 \\
 		Minimum in sample & 4.00 & 5.00  &  4.00  \\
 		Maximum in sample  & 12.00 & 12.00  & 12.00  \\ \hline
 	\end{tabular}
-	\caption[Correct elements, all participants and all tasks]{Number of correctly chosen elements (\textit{4 entries per volunteer)}}
+	\caption[Correct elements, all participants and all tasks]{Number of correctly chosen elements per task}
 	\label{tab:totalcorrect_all}
 \end{table}
 
@@ -325,9 +111,11 @@ In table \ref{tab:totaltime_tasks} and \ref{tab:totalcorrect_tasks} mean, standa
 \begin{table}[H]
 	\centering
 	\begin{tabular}{l|l|l|l}
-		Total time per task (seconds) & One element task & Three elements task & Six elements task \\ \hline
+		Total time per task (seconds) & Task 1 & Task 2 & Task 3 \\ \hline
+		Sample number & 5  & 6  & 7    \\
 		Number of observations & 146    & 142      & 141     \\
 		Sample mean $\overline{x}$  & 166.38  &  172.25   &   172.48  \\
+		Sample median & 150.0  &  155.5  & 157.0  \\
 		Standard deviation of $\overline{x}$   & 84.57  & 84.21  & 77.95   \\
 		Standard error of $\overline{x}$   & 7.00 & 7.07 & 6.56 \\
 		Minimum in sample    & 47  & 50 &   38   \\
@@ -340,9 +128,11 @@ In table \ref{tab:totaltime_tasks} and \ref{tab:totalcorrect_tasks} mean, standa
 \begin{table}[H]
 	\centering
 	\begin{tabular}{l|l|l|l}
-		Correct elements per task & One element task & Three elements task & Six elements task \\ \hline
+		Correct elements per task & Task 1 & Task 2 & Task 3\\ \hline
+		Sample number & 8  & 9  & 10   \\
 		Number of observations & 146    & 142     & 141        \\
 		Sample mean $\overline{x}$ & 10.19  &  9.71  &   9.55   \\
+		Sample median & 11.0 &  10.0  &  10.0   \\
 		Standard deviation of $\overline{x}$ & 1.43  & 1.53 & 1.52    \\
 		Standard error of $\overline{x}$ & 0.12 &  0.13 & 0.13  \\
 		Minimum in sample  & 5.00  & 5.00  &   4.00  \\
@@ -359,9 +149,11 @@ Dividing task 1, task 2 and task 3 results into experienced and inexperienced. T
 \begin{table}[H]
 	\centering
 	\begin{tabular}{l|l|l|l}
-		Total time per task & One element task & Three elements task & Six elements task \\ \hline
+		Total time per task & Task 1 & Task 2 & Task 3 \\ \hline
+		Sample number & 11  & 12  & 13   \\
 		Number of observations & 81    & 84      & 82   \\
 		Sample mean $\overline{x}$  & 187.74  &  174.65  &  191.93   \\
+		Sample median  & 162.5  &  153.0  &  165.0  \\
 		Standard deviation of $\overline{x}$ & 122.08  & 84.30  & 115.18    \\
 		Standard error of $\overline{x}$ & 13.64  & 9.20 & 12.79   \\
 		Minimum in sample   & 57.00  & 52.00 &  44.00  \\
@@ -374,9 +166,11 @@ Dividing task 1, task 2 and task 3 results into experienced and inexperienced. T
 \begin{table}[H]
 	\centering
 	\begin{tabular}{l|l|l|l}
-		Correct elements per task & One element task & Three elements task & Six elements task \\ \hline
+		Correct elements per task & Task 1 & Task 2 & Task 3 \\ \hline
+		Sample number & 14 & 15  & 16   \\
 		Number of observations & 81    & 84      & 82   \\
 		Sample mean $\overline{x}$ & 10.23  &  9.69  &  9.51   \\
+		Sample median & 11.0  &  10.0  &  10.0  \\
 		Standard deviation of $\overline{x}$ & 1.30  & 1.62  & 1.46   \\
 		Standard error of $\overline{x}$ & 0.14  & 0.18  & 0.16   \\
 		Minimum in sample & 7.00 & 5.00 &  5.00 \\
@@ -393,9 +187,10 @@ Table \ref{tab:totaltime_tasks_inexperienced} are mean time, standard deviation,
 \begin{table}[H]
 	\centering
 	\begin{tabular}{l|l|l|l}
-		Total time per task (seconds) & One element task & Three elements task & Six elements task \\ \hline
+		Total time per task (seconds) & Task 1 & Task 2 & Task 3 \\ \hline
 		Number of observations & 71    & 69  & 70   \\
 		Sample mean $\overline{x}$  & 159.28  &  174.42  &  169.50  \\
+		Sample median & 150.0  &  155.5  &  157.0  \\
 		Standard deviation of $\overline{x}$  & 68.24  & 106.69  & 83.17   \\
 		Standard error of $\overline{x}$  & 8.10  & 12.84  & 9.94   \\
 		Minimum in sample & 47.00 & 26.00 &  38.00 \\
@@ -408,9 +203,10 @@ Table \ref{tab:totaltime_tasks_inexperienced} are mean time, standard deviation,
 \begin{table}[H]
 	\centering
 	\begin{tabular}{l|l|l|l}
-		Correct elements per task & One element task & Three elements task & Six elements task \\ \hline
+		Correct elements per task & Task 1 & Task 2 & Task 3 \\ \hline
 		Number of observations & 71    & 69  & 70  \\
 		Sample mean $\overline{x}$  & 9.99  &  9.65  &  9.60  \\
+		Sample median  & 10.0  & 10.0  &  10.0  \\
 		Standard deviation of $\overline{x}$  & 1.50  & 1.45  & 1.56   \\
 		Standard error of $\overline{x}$  & 0.18 & 0.17 & 0.19  \\
 		Minimum in sample  & 5.00 & 6.00 &  4.00  \\
@@ -654,10 +450,9 @@ The D'Agostino and Pearson normality test confirms the visual conclusion. The da
  Sample 5, 6 and 7 are normally distributed after the transformation and the assumptions of parametric tests are met. 
  
  \subsubsection[Sample 8, 9 and 10]{All participants - Task 1, Task 2 and Task 3 - correct elements per task}\label{sec:task123_correct}
+ In this section the data is also separated in three samples, each sample containing one of the tasks. Task 1 is the one element task, task 2 is the three elements task and task 3 is the six elements task. The three samples are named sample 8, 9 and 10. These samples will be used to test weather there are an significant difference between the three tasks when looking at the number of correctly chosen elements variable. This variable tells us how many correct elements each participants chose on each of the three tasks. Total number of elements is twelve, six in each question. Before doing the hypothesis tests, sample 8, 9 and 10 will be normality tested. 
  
- In this section the data is also separated in three samples, each sample containing one of the tasks. Task 1 is the one element task, task 2 is the three elements task and task 3 is the six elements task. The three samples are named sample 8, 9 and 10. These samples will be used to test weather there are an significant difference between the three tasks when looking at the number of correctly chosen elements variable. This variable tells us how many correct elements each participants chose on each of the three tasks. Total number of elements is 12, 6 in each question, so the maximum correct is 12.  First sample 8, 9 and 10 will be normality tested. 
- 
-  Visual analysis of the three histograms in figure \ref{fig:correctallnotinterupted_task1}, \ref{fig:correctallnotinterupted_task2} and \ref{fig:correctallnotinterupted_task3} show a negative skewness, just like the histograms in section \ref{sec:correct_ex_inex}. This give an indication that the three samples are not normally distributed. 
+ A visual analysis of the three histograms in figure \ref{fig:correctallnotinterupted_task1}, \ref{fig:correctallnotinterupted_task2} and \ref{fig:correctallnotinterupted_task3} show a negative skewness, just like the histograms in section \ref{sec:correct_ex_inex}. This give an indication that the three samples are not normally distributed. 
  
  \begin{figure}[H]
  	\centering
@@ -682,7 +477,7 @@ The D'Agostino and Pearson normality test confirms the visual conclusion. The da
  \caption{Histogram with normal distribution fit showing samples with number of correct elements per task}
  \end{figure}
  
- D'Agostino and Pearson normality test confirms our visual inspection of the histograms in two of three samples. Sample 9 actually passes the normality test, even though the p-value (0.099) is close to the significance level (0.05). Sample 8 and sample 10 do not pass the normality test with a confidence interval of 95\%. 
+ D'Agostino and Pearson normality test confirms our visual analysis of the histograms in two of three samples. Sample 9 actually passes the normality test, even though the p-value (0.099) is close to the significance level (0.05). Sample 8 and sample 10 do not pass the normality test with a confidence interval of 95\%. \\[0.2cm]
  
  \begin{center}
  	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
@@ -690,21 +485,23 @@ The D'Agostino and Pearson normality test confirms the visual conclusion. The da
  		\textit{D'Agostino and Pearson normality test}\\
  		Significance level: 5\%  \\[0.5cm]
  		
- 		Sample 8: All, correct elements in task 1 \\
+ 		Sample 8 \\
  		P-value: $0.00022$\\
  		The p-value is lower than the significance level (0.05), the null hypothesis is \underline{rejected} and $H_1$ accepted.\\[0.5cm]
  		
- 		Sample 9: All, correct elements in task 2 \\
+ 		Sample 9 \\
  		P-value: $0.099$ \\
  		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}. \\[0.5cm]
  		
- 		Sample 10: All, correct elements in task 3 \\
+ 		Sample 10 \\
  		P-value: $0.0047$ \\
  		The p-value is lower than the significance level (0.05), the null hypothesis is \underline{rejected} and $H_1$ accepted.\\[0.5cm]
  	\end{tcolorbox} 
  \end{center}
 
-To try to get all the samples approved in the normality test the Box-Cox transformation is applied to all three samples. The transformation changes the data, at to correctly compare the samples, sample 9 also has to be transformed. 
+\vspace{0.2cm}
+
+To try to get all the samples approved in the normality test the Box-Cox transformation is applied to all three samples. The transformation changes the data, at to correctly compare the samples, sample 9 also has to be transformed. \\[0.2cm]
 
 
 \begin{figure}[h!]
@@ -730,8 +527,6 @@ To try to get all the samples approved in the normality test the Box-Cox transfo
 	\caption{Histogram with normal distribution fit showing samples with number of correct elements per task - after Box-Cox transformation}
 \end{figure}
 
-
-
  \begin{center}
 	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
 		\centering
@@ -753,11 +548,112 @@ To try to get all the samples approved in the normality test the Box-Cox transfo
 	\end{tcolorbox} 
 \end{center}
 
+\vspace{0.4cm}
+
+\subsubsection[Sample 11, 12 and 13]{Experienced participants - task 1, 2 and 3, total time variable}
+ In this section the data is divided in experienced participants and also into task 1, 2 and 3. Task 1 is the one element task, task 2 is the three elements task and task 3 is the six elements task. The three samples are named sample 11, 12 and 13. These samples will be used to test whether there are an significant difference between the three tasks total time results when looking at only experienced participants. Before testing the hypothesis the samples need to be normality tested. 
+ 
+  A visual interpretation of the histograms in \ref{fig:sample11_12_13_histogram} show that all three samples are positively skewed (figure \ref{fig:skew}). This is a fairly strong evidence that the samples are not normally distributed.
+ 
+ \begin{figure}[H]
+ 	\centering
+	 \begin{subfigure}[b]{0.32\textwidth}
+	 	\centering
+	 	\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task1/totaltime_experienced}
+	 	\caption{Sample 11 - task 1}
+	 	\label{fig:totaltimeexperienced_task1}
+	 \end{subfigure}
+	 \begin{subfigure}[b]{0.32\textwidth}
+	 	\centering
+	 	\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task2/totaltime_experienced}
+	 	\caption{Sample 12 - task 2}
+	 	\label{fig:totaltimeexperienced_task2}
+	 \end{subfigure}
+	 \begin{subfigure}[b]{0.32\textwidth}
+	 	\centering
+	 	\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task3/totaltime_experienced}
+	 	\caption{Sample 13 - task 3}
+	 	\label{fig:totaltimeexperienced}
+	 \end{subfigure}
+ 	\caption{Histograms with normal distribution fit with samples containing total time to complete each task}
+ 	\label{fig:sample11_12_13_histogram}
+ \end{figure}
+ 
+  D'Agostino and Pearson normality test confirms our visual interpretation of the three histograms. All three p-values is lower than the significant level (0.05). Sample 11 ,12 and 13 do not pass the normality test with a confidence interval of 95\%. 
+ 
+  \begin{center}
+ 	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
+ 		\centering
+ 		\textit{D'Agostino and Pearson normality test}\\
+ 		Significance level: 5\%  \\[0.5cm]
+ 		
+ 		Sample 11 \\
+ 		P-value: $6.258 * 10^{-14}$\\
+ 		The p-value is lower than the significance level (0.05), the null hypothesis is \underline{rejected} and $H_A$ accepted.\\[0.5cm]
+ 		
+ 		Sample 12 \\
+ 		P-value: $4.566 * 10^{-6}$ \\
+		The p-value is lower than the significance level (0.05), the null hypothesis is \underline{rejected} and $H_A$ accepted.\\[0.5cm]
+ 		
+ 		Sample 13 \\
+ 		P-value: $1.179 * 10^{-13}$ \\
+ 		The p-value is lower than the significance level (0.05), the null hypothesis is \underline{rejected} and $H_A$ accepted.\\[0.5cm]
+ 	\end{tcolorbox} 
+ \end{center}
+
+A Box-Cox transformation is applied to all three samples. Histograms with normal distribution fit containing the transformed data is shown in figure \ref{fig:sample11_12_13_boxcox_histogram}. Visually, the histograms looks normally distributed with minimal skewness. \\
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.32\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task1/totaltime_experienced_boxcox}
+		\caption{Sample 11 - task 1}
+		\label{fig:totaltimeexperiencedboxcox_task1}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.32\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task2/totaltime_experienced_boxcox}
+		\caption{Sample 12 - task 2}
+		\label{fig:totaltimeexperiencedboxcox_task2}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.32\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task3/totaltime_experienced_boxcox}
+		\caption{Sample 13 - task 3}
+		\label{fig:totaltimeexperiencedboxcox_task3}
+	\end{subfigure}
+	\caption{Histograms with normal fit containing Box-Cox transformed data}
+	\label{fig:sample11_12_13_boxcox_histogram}
+\end{figure}
+
+The Box-Cox transformed data is tested with D'Agostino and Pearson normality test. All three samples has a p-value larger than the significance level (0.05). Within a confidence interval of 95\% the test concludes that sample 11, 12 and 13 is normally distributed.
+
+ \begin{center}
+	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
+		\centering
+		\textit{D'Agostino and Pearson normality test}\\
+		(After Box-Cox transformation) \\
+		Significance level: 5\%  \\[0.5cm]
+		
+		Sample 11 \\
+		P-value: $0.674$\\
+		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}. \\[0.5cm]
+		
+		Sample 12 \\
+		P-value: $0.943$ \\
+		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}. \\[0.5cm]
+		
+		Sample 13 \\
+		P-value: $0.614$ \\
+		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}. \\[0.5cm]
+	\end{tcolorbox} 
+\end{center}
+
 \subsubsection{Normality test summary}\label{sec:normaltest_summary}
 
-\begin{table}[H]
-	\centering
-	\begin{tabular}{l|l|l|l}
+	\begin{longtable}{p{0.30\textwidth}|l|p{2cm}|p{0.25\textwidth}}
+	\caption[Summary, normality tests]{Summary of normality tests done in section \ref{sec:normality_results}} \label{tab:normaltest_summary} \\
 		  & Sample & Normally distributed  & Normally distributed after Box-Cox  \\ \hline
 		\textit{Total time} & & & \\
 		Experienced & 1 &No   & \textbf{Yes}   \\
@@ -773,10 +669,11 @@ To try to get all the samples approved in the normality test the Box-Cox transfo
 		Task 1 & 8 & No  & No  \\
 		Task 2 & 9 &\textbf{Yes}  & \textbf{Yes}   \\
 		Task 3 & 10 & No & \textbf{Yes}  \\ \hline
-	\end{tabular}
-	\caption[Summary, normality tests]{Summary of normality tests done in section \ref{sec:normality_results}}
-	\label{tab:normaltest_summary}
-\end{table}
+		\textit{Total time, experienced participants} & & & \\
+		Task 1 & 11 & No  & \textbf{Yes}  \\
+		Task 2 & 12 & No  & \textbf{Yes}   \\
+		Task 3 & 13 & No & \textbf{Yes}  \\ \hline
+	\end{longtable}
 
 \subsection{Levene's test}
 As mentioned in section \ref{sec:normaltesting} and \ref{sec:anova}, the two sample t-test and \textit{ANOVA} assumes that the samples come from a population with equal variances. This assumption will be examined with levene's test. The hypothesis in this test is: \\[0.5cm]
@@ -784,8 +681,8 @@ As mentioned in section \ref{sec:normaltesting} and \ref{sec:anova}, the two sam
 \centerline{$H_{0}$: Input samples are from populations with equal variances} 
 \centerline{$H_{A}$: Input samples are from populations that do not have equal variances}
 
-\subsubsection[Sample 1 and 2]{Sample 1 and 2 - experienced and inexperienced}\label{sec:sample1,2}
-Since sample 1 and 2 was normal distributed accepted after the Box-Cox transformation, will the Levene's test use the transformed data in the analysis. 
+\subsubsection[Sample 1 and 2]{Sample 1 and 2}\label{sec:sample1,2}
+Since sample 1 and 2 was normal distributed accepted after the Box-Cox transformation, will the Levene's test use the transformed data in the analysis. Both samples contain total time spent on each task where sample 1 is for experienced and sample 2 is for inexperienced participants.
 
  \begin{center}
 	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
@@ -795,19 +692,34 @@ Since sample 1 and 2 was normal distributed accepted after the Box-Cox transform
 		
 		P-value: $1.258 * 10^{-25}$\\[0.2cm]
 		
-		$P-value$ is smaller than the significance level ($1.258*10^{-25}$ < $0.05$) and the null hypothesis is \underline{rejected} and $H_1$ accepted.\\[0.5cm]
+		$P-value$ is smaller than the significance level ($1.258*10^{-25}$ < $0.05$) and the null hypothesis is \underline{rejected} and $H_A$ accepted.\\[0.5cm]
 	\end{tcolorbox} 
 \end{center}
 
-We cannot assume that sample 1 and sample 2 comes from populations with equal variances. 
+We cannot assume that sample 1 and sample 2 comes from populations with equal variances. This has to be handled when testing hypothesis with these samples.
 
-\subsubsection{Sample 5, 6 and 7 - task 1, 2 and 3}\label{sec:sample5,6,7}
-Sample 5, 6 and 7 was normal distributed accepted after the Box-Cox transformation. Before using the samples in a \textit{ANOVA test} they need to be equal variance tested. 
+\subsubsection{Sample 5, 6 and 7}\label{sec:sample5,6,7}
+Sample 5, 6 and 7 was normal distributed accepted after the Box-Cox transformation. Before using the samples in a \textit{ANOVA test} they need to be equal variance tested. All samples contain total time spent on each task, separated in task 1 (sample 5), task 2 (sample 6) and task 3 (sample 7). 
 
  \begin{center}
 	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
 		\centering
-		\textit{Levene's test, sample 1 and 2}\\
+		\textit{Levene's test, sample 5, 6 and 7}\\
+		Significance level: 5\%  \\[0.5cm]
+		
+		P-value: $0.636$\\[0.2cm]
+		
+		$P-value$ is larger than the significance level ($0.636$ > $0.05$) and the null hypothesis is \underline{accepted}.\\[0.5cm]
+	\end{tcolorbox} 
+\end{center}
+
+\subsubsection{Sample 11, 12 and 13}\label{sec:sample5,6,7}
+Sample 11, 12 and 13 was normal distributed accepted after the Box-Cox transformation. Before using the samples in a \textit{ANOVA test} they need to be equal variance tested. All samples contain experienced participants total time spent on each task, separated in task 1 (sample 11), task 2 (sample 12) and task 3 (sample 13). 
+
+ \begin{center}
+	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
+		\centering
+		\textit{Levene's test, sample 5, 6 and 7}\\
 		Significance level: 5\%  \\[0.5cm]
 		
 		P-value: $0.636$\\[0.2cm]
@@ -851,7 +763,7 @@ Since we cannot assume equal variances in the two samples, this test will use th
 		Significance level ($\alpha$): 0.05 \\
 		Critical value: 1.960\\[0.2cm]
 		
-		Using equation \ref{eq:ttest_twoway}, the absolute value of the $T-statistic$ is larger than the critical value ($|60.442|$ > $1.960$) and the null hypothesis is \underline{rejected} and $H_1$ accepted.\\[0.5cm]
+		Using equation \ref{eq:ttest_twoway}, the absolute value of the $T-statistic$ is larger than the critical value ($|60.442|$ > $1.960$) and the null hypothesis is \underline{rejected} and $H_A$ accepted.\\[0.5cm]
 
 	\end{tcolorbox} 
 \end{center}
@@ -891,7 +803,7 @@ This test gives the same T-statistics as the previous test, but the critical val
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/boxplot/mean_std_participants_time}
-	\caption{Error plot - mean (green dot) and standard deviation (blue line)}
+	\caption{Sample 1 and 2 - mean (green dot) and standard deviation (blue line)}
 	\label{fig:meanstdparticipantstime}
 \end{figure}
 
@@ -904,7 +816,7 @@ Since we know that there is a significant difference between the two sample mean
 
 This section will test if there is a difference between experienced- and inexperienced participants when looking at the number of correctly chosen elements. Sample 3 and 4 is the correct samples to use in this test. Both samples are not normally distributed, we need to use a non-parametric method. The Mann-Whitey U test is the preferred test to use on these samples. As mentioned in section \ref{sec:Wilcoxon}, the Mann-Whitey U test is preferred when the samples are ties (identical observations) in the data. From histogram \ref{fig:correctelementswasnotinterupter_ex} and \ref{fig:correctelementswasnotinterupted_inex} we see that the samples for both independent variables are similar. Mann-Whitey U test can therefore be used to compare the population medians. The hypothesis to be tested is:\\[0.3cm]
 
-\centerline{$H_{A}$: $median_3$ = $median_4$}
+\centerline{$H_{0}$: $median_3$ = $median_4$}
 \centerline{$H_{A}$: $median_3$ $\neq$ $median_4$}
 
 The results from the test, the statistical value and finding the critical value in the Mann-Whitey U table is shown in the box under. Using equation \ref{eq:mannwhitey-ciritcalvalue} we conclude that there are not enough evidence to reject the null hypothesis with an confidence interval of 95\%. The $U-statistic$ is larger than the critical value. 
@@ -912,7 +824,7 @@ The results from the test, the statistical value and finding the critical value 
  \begin{center}
 	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
 		\centering
-		\textit{Two sample t-test, sample 1 and 2}\\
+		\textit{Two sample t-test, sample 3 and 4}\\
 		Significance level: 5\%  \\[0.5cm]
 		
 		$U-statistic$: 17012 \\
@@ -928,7 +840,7 @@ The results from the test, the statistical value and finding the critical value 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/boxplot/mean_std_participants_correct}
-	\caption{Error plot - mean (green dot) and standard deviation (blue line)}
+	\caption{Sample 3 and 4 - mean (green dot) and standard deviation (blue line)}
 	\label{fig:meanstdparticipantscorrect}
 \end{figure}
 
@@ -962,7 +874,7 @@ Using the one-way \textit{ANOVA} test to answer the hypothesis. Using equation \
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/boxplot/mean_std_task123png_time}
-	\caption{Error plot - mean (green dot) and standard deviation (blue line)}
+	\caption{Sample 5, 6 and 7 - mean (green dot) and standard deviation (blue line)}
 	\label{fig:meanstdtask123pngtime}
 \end{figure}
 
@@ -970,12 +882,12 @@ Using \textit{Tukey's test} to make compared comparisons between task one, two a
 
 \subsubsection{Kruskal-Wallis test results}
 
-The Kruskal-Wallis test is the non-parametric eqvivalent to one-way \textit{ANOVA} (\ref{sec:kruskal-w-test}). It is used to test equality of medians when the samples are not normally distributed. This method will test if there are any difference between task 1, 2 and 3 when looking at the dependent variable number of correctly chosen elements. The test will use sample 8, 9 and 10. Since sample 8 are not normally distributed a non-parametric test should be used. The hypothesis tested is:
+The Kruskal-Wallis test is the non-parametric eqvivalent to one-way \textit{ANOVA} (\ref{sec:kruskal-w-test}). It is used to test equality of medians when the samples are not normally distributed. This method will test if there is any difference between task 1, 2 and 3 when looking at the dependent variable number of correctly chosen elements. The test will use sample 8, 9 and 10. Since sample 8 are not normally distributed a non-parametric test should be used. The hypothesis tested is: \\[0.2cm]
 
 \centerline{$H_{0}$: $median_8$ = $median_9$ = $median_10$}
 \centerline{$H_{A}$: Number of correctly chosen elements is different between at least two of the tasks}
 
-Using equation \ref{eq:kruskapw-accept}, the Kruskal-Wallis test rejects the null hypothesis. P-value is approximately zero and this gives a good indication that the result is significant. With a confidence interval of 95\% the author claim that there is a difference between the median value of the three tasks.
+Using equation \ref{eq:kruskapw-accept}, the Kruskal-Wallis test rejects the null hypothesis. P-value is approximately zero and this gives a good indication that the result is significant. With a confidence interval of 95\% the author claim that there is a difference between the median value of the three tasks. \\[0.2cm]
 
  \begin{center}
 	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
@@ -983,42 +895,57 @@ Using equation \ref{eq:kruskapw-accept}, the Kruskal-Wallis test rejects the nul
 		\textit{Kruskal-Wallis test, sample 8, 9 and 10}\\
 		Significance level: 5\%  \\[0.5cm]
 		
-		$P-value$: $1.661* 10^{-81}$ \\
-		$H-value$: $372.004$ \\
+		$P-value$: $3.967* 10^{-72}$ \\
+		$H-value$: $328.816$ \\
 		Significance level ($\alpha$): 0.05 \\
-		$v_1$ = 2, $v_2$ = 426
-		Critical-value: 124.342 \\[0.2cm] %http://web.utk.edu/~cwiek/TwoSampleDoF
+		$v$ = 2\\ %k-1 = 3-1 = 2
+		Critical-value:  5.991\\[0.2cm] %http://web.utk.edu/~cwiek/TwoSampleDoF
 		
-		$H-value$ is significantly lower than the critical value ($372.004$ > $124.342$) and the null hypothesis is \underline{rejected}, $H_A$ is accepted\\[0.5cm]
+		$H-value$ is significantly lower than the critical value ($328.816$ > $5.991$) and the null hypothesis is \underline{rejected}, $H_A$ is accepted\\[0.5cm]
 	\end{tcolorbox} 
 \end{center}
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/boxplot/mean_std_task123png_correct}
-	\caption{Error plot - mean (green dot) and standard deviation (blue line)}
+	\caption{Sample 8, 9 and 10 - mean (green dot) and standard deviation (blue line)}
 	\label{fig:meanstdtask123pngcorrect}
 \end{figure}
 
-Like in one-way \textit{ANOVA}, a \textit{post hoc} test should be used to make paired comparisons to determine which groups differs. 
+Like in one-way \textit{ANOVA}, a \textit{post hoc} test should be used to make paired comparisons to determine which groups differs. Tukey's test resulted in a significant difference in the number of correctly chosen elements between task 1 and task 2, and task 1 and task 3. Figure \ref{fig:meanstdtask123pngcorrect} show that task 1 has a higher mean value than the other two tasks. Task 1 also has a smaller standard deviation than the other tasks. 
+
+ \begin{center}
+	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
+		\centering
+		\textit{Tukey's test, sample 8, 9 and 10}\\
+		Significance level: 5\%  \\[0.5cm]
+		
+		Task 1 and Task 2 differs significantly \\
+		Task 1 and Task 3 differs significantly \\
+		Task 2 and Task 3 do not differ significantly \\[0.2cm]
+	\end{tcolorbox} 
+\end{center}
+
+\vspace{0.5cm}
 
 \subsubsection{Hypothesis test summary}
 
-\begin{table}[H]
-	\begin{tabular}{l|l|l|l}
-		\multicolumn{1}{c}{Hypothesis (\textcolor{cyan}{Dependent variable}, \textcolor{blue}{Independent variable})} & Sample & Accepted \\[0.2cm] \hline
+	\begin{longtable}{p{0.65\textwidth}|l|p{0.15\textwidth}}  %\multicolumn{1}{c}{}
+	\caption[Summary, normality tests]{Summary of hypothesis tests done in section \ref{sec:hypothesis_results}} \label{tab:hypothesistest_summary} \\
+		Hypothesis (\textcolor{cyan}{Dependent variable}, \textcolor{blue}{Independent variable}) & Sample & Hypothesis is accepted \\[0.2cm] \hline
 		\textcolor{cyan}{Total time}, \textcolor{blue}{Experienced} and \textcolor{blue}{Inexperienced} & &  \\
-		There are a difference between experienced and inexperienced  & 1 and 2 & \textbf{Yes} \\
-		Experienced finish the tasks faster than inexperienced  & 1 and 2 & No   \\ \hline
+		There are a difference between experienced and inexperienced participants & 1 and 2 & \textbf{Yes} \\
+		Experienced participants finish the tasks faster than inexperienced  & 1 and 2 & No   \\ \hline
 		\textcolor{cyan}{Correct elements}, \textcolor{blue}{Experienced} and \textcolor{blue}{Inexperienced} & &  \\
-		There are a difference between experienced and inexperienced & 3 and 4 & No   \\ \hline
+		There are a difference between experienced and inexperienced participants & 3 and 4 & No   \\ \hline
 		\textcolor{cyan}{Total time}, \textcolor{blue}{Task 1}, \textcolor{blue}{Task 2} and \textcolor{blue}{Task 3}& &  \\
-		 Total time is different between at least two of the tasks & 5, 6 and 7 & \textbf{Yes}   \\ \hline
+		 Total time is different between at least two of the tasks & 5, 6 and 7 & \textbf{Yes}   \\
+		 Task 1 significantly differs from Task 2 & 5, 6 and 7 & No  \\ 
+		 Task 1 significantly differs from Task 3 & 5, 6 and 7 & No  \\ 
+		 Task 2 significantly differs from Task 3 & 5, 6 and 7 & No  \\ \hline
 		\textcolor{cyan}{Correct elements}, \textcolor{blue}{Task 1}, \textcolor{blue}{Task 2}, \textcolor{blue}{Task 3} & &  \\
-		Task 1 & 8 & No  \\
-		Task 2 & 9 &\textbf{Yes}  \\
-		Task 3 & 10 & No  \\ \hline
-	\end{tabular}
-	\caption[Summary, normality tests]{Summary of hypothesis tests done in section \ref{sec:hypothesis_results}}
-	\label{tab:normaltest_summary}
-\end{table}
+		The number of correctly chosen elements is different between at least two of the tasks & 8, 9 and 10 & \textbf{Yes}  \\
+		Task 1 significantly differs from Task 2 & 8, 9 and 10 & \textbf{Yes}  \\ 
+		Task 1 significantly differs from Task 3 & 8, 9 and 10 & \textbf{Yes}  \\ 
+		Task 2 significantly differs from Task 3 & 8, 9 and 10 & No  \\ \hline
+	\end{longtable}
