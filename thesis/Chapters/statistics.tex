@@ -150,7 +150,6 @@ Dividing task 1, task 2 and task 3 results into experienced and inexperienced. T
 	\centering
 	\begin{tabular}{l|l|l|l}
 		Total time per task & Task 1 & Task 2 & Task 3 \\ \hline
-		Sample number & 11  & 12  & 13   \\
 		Number of observations & 81    & 84      & 82   \\
 		Sample mean $\overline{x}$  & 187.74  &  174.65  &  191.93   \\
 		Sample median  & 162.5  &  153.0  &  165.0  \\
@@ -158,6 +157,7 @@ Dividing task 1, task 2 and task 3 results into experienced and inexperienced. T
 		Standard error of $\overline{x}$ & 13.64  & 9.20 & 12.79   \\
 		Minimum in sample   & 57.00  & 52.00 &  44.00  \\
 		Maximum in sample  & 657.00 & 492.00  & 752.00 \\ \hline
+		Sample number & 11  & 12  & 13   \\ \hline
 	\end{tabular}
 	\caption[Total time, task and experienved divided]{Experienced total time per task, divided by task}
 	\label{tab:totaltime_tasks_experienced}
@@ -167,7 +167,6 @@ Dividing task 1, task 2 and task 3 results into experienced and inexperienced. T
 	\centering
 	\begin{tabular}{l|l|l|l}
 		Correct elements per task & Task 1 & Task 2 & Task 3 \\ \hline
-		Sample number & 14 & 15  & 16   \\
 		Number of observations & 81    & 84      & 82   \\
 		Sample mean $\overline{x}$ & 10.23  &  9.69  &  9.51   \\
 		Sample median & 11.0  &  10.0  &  10.0  \\
@@ -175,6 +174,7 @@ Dividing task 1, task 2 and task 3 results into experienced and inexperienced. T
 		Standard error of $\overline{x}$ & 0.14  & 0.18  & 0.16   \\
 		Minimum in sample & 7.00 & 5.00 &  5.00 \\
 		Maximum in sample  & 12.00 & 12.00  & 12.00 \\ \hline
+		Sample number & 14 & 15  & 16   \\
 	\end{tabular}
 	\caption[Correct elements, task and experienved divided]{Experienced participant's number of correct elements per task, divided by task}
 	\label{tab:totalcorrect_tasks_experienced}
@@ -588,15 +588,15 @@ To try to get all the samples approved in the normality test the Box-Cox transfo
  		Significance level: 5\%  \\[0.5cm]
  		
  		Sample 11 \\
- 		P-value: $6.258 * 10^{-14}$\\
+ 		P-value: $1.229 * 10^{-14}$\\
  		The p-value is lower than the significance level (0.05), the null hypothesis is \underline{rejected} and $H_A$ accepted.\\[0.5cm]
  		
  		Sample 12 \\
- 		P-value: $4.566 * 10^{-6}$ \\
+ 		P-value: $2.678 * 10^{-5}$ \\
 		The p-value is lower than the significance level (0.05), the null hypothesis is \underline{rejected} and $H_A$ accepted.\\[0.5cm]
  		
  		Sample 13 \\
- 		P-value: $1.179 * 10^{-13}$ \\
+ 		P-value: $0.000884$ \\
  		The p-value is lower than the significance level (0.05), the null hypothesis is \underline{rejected} and $H_A$ accepted.\\[0.5cm]
  	\end{tcolorbox} 
  \end{center}
@@ -637,17 +637,69 @@ The Box-Cox transformed data is tested with D'Agostino and Pearson normality tes
 		Significance level: 5\%  \\[0.5cm]
 		
 		Sample 11 \\
-		P-value: $0.674$\\
+		P-value: $0.694$\\
 		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}. \\[0.5cm]
 		
 		Sample 12 \\
-		P-value: $0.943$ \\
+		P-value: $0.955$ \\
 		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}. \\[0.5cm]
 		
 		Sample 13 \\
-		P-value: $0.614$ \\
+		P-value: $0.887$ \\
 		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}. \\[0.5cm]
 	\end{tcolorbox} 
+\end{center}
+
+\subsubsection[Sample 14, 15 and 16]{Experienced participants - task 1, 2, 3, correct elements variable}
+
+In this section the data is also divided in experienced participants and also into task 1, 2 and 3. The three samples are named sample 14, 15 and 16. These samples will be used to test whether there are an significant difference between the three tasks number of correct elements results when looking at only experienced participants. Before testing the hypothesis the samples need to be normality tested. 
+
+A visual interpretation of the histograms in \ref{fig:sample14,15,16_normhistogram} show that all three samples are slightly negatively skewed (figure \ref{fig:skew}). The skew is not as much as other histograms in this chapter. Sample 15 (\ref{fig:correctexperienced_task1}) and sample 16 (\ref{fig:correctexperienced_task2}) has less skew than sample 14 (\ref{fig:correctexperienced_task3}).  
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.32\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task1/correct_experienced}
+		\caption{Sample 14 - Task 1}
+		\label{fig:correctexperienced_task1}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.32\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task2/correct_experienced}
+		\caption{Sample 15 - Task 2}
+		\label{fig:correctexperienced_task2}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.32\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task3/correct_experienced}
+		\caption{Sample 16 - Task 3}
+		\label{fig:correctexperienced_task3}
+	\end{subfigure}
+	\caption{Histogram with normal distribution fit showing samples with number of correct elements results for experienced participants}
+	\label{fig:sample14,15,16_normhistogram}
+\end{figure}
+
+  D'Agostino and Pearson normality test confirms our visual interpretation of the three histograms. All three p-values is lower than the significant level (0.05), notice that sample 14 has a lower p-value than the two other samples. Sample 14 ,15 and 16 pass the normality test with a confidence interval of 95\%. 
+
+  \begin{center}
+	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
+		\centering
+		\textit{D'Agostino and Pearson normality test}\\
+		Significance level: 5\%  \\[0.5cm]
+		
+		Sample 14 \\
+		P-value: $0.0588$\\
+		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}.\\[0.5cm]
+		
+		Sample 15 \\
+		P-value: $0.2067$ \\
+		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}.\\[0.5cm]
+		
+		Sample 16 \\
+		P-value: $0.2975$ \\
+		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}.\\[0.5cm]
+	\end{tcolorbox}
 \end{center}
 
 \subsubsection{Normality test summary}\label{sec:normaltest_summary}
@@ -673,6 +725,10 @@ The Box-Cox transformed data is tested with D'Agostino and Pearson normality tes
 		Task 1 & 11 & No  & \textbf{Yes}  \\
 		Task 2 & 12 & No  & \textbf{Yes}   \\
 		Task 3 & 13 & No & \textbf{Yes}  \\ \hline
+		\textit{Correct elements, experienced participants} & & & \\
+		Task 1 & 14 & \textbf{Yes}  & \textit{not tested} \\
+		Task 2 & 15 & \textbf{Yes}  &  \textit{not tested} \\
+		Task 3 & 16 & \textbf{Yes} & \textit{not tested} \\ \hline
 	\end{longtable}
 
 \subsection{Levene's test}
@@ -682,7 +738,7 @@ As mentioned in section \ref{sec:normaltesting} and \ref{sec:anova}, the two sam
 \centerline{$H_{A}$: Input samples are from populations that do not have equal variances}
 
 \subsubsection[Sample 1 and 2]{Sample 1 and 2}\label{sec:sample1,2}
-Since sample 1 and 2 was normal distributed accepted after the Box-Cox transformation, will the Levene's test use the transformed data in the analysis. Both samples contain total time spent on each task where sample 1 is for experienced and sample 2 is for inexperienced participants.
+Since sample 1 and 2 was normal distributed accepted after the Box-Cox transformation, will the Levene's test use the transformed data in the analysis. Both samples contain total time spent on each task where sample 1 is for experienced and sample 2 is for inexperienced participants. The results is shown in the box under. Levene's test accepts the null hypothesis with a confidence interval of 95\%.
 
  \begin{center}
 	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
@@ -699,7 +755,7 @@ Since sample 1 and 2 was normal distributed accepted after the Box-Cox transform
 We cannot assume that sample 1 and sample 2 comes from populations with equal variances. This has to be handled when testing hypothesis with these samples.
 
 \subsubsection{Sample 5, 6 and 7}\label{sec:sample5,6,7}
-Sample 5, 6 and 7 was normal distributed accepted after the Box-Cox transformation. Before using the samples in a \textit{ANOVA test} they need to be equal variance tested. All samples contain total time spent on each task, separated in task 1 (sample 5), task 2 (sample 6) and task 3 (sample 7). 
+Sample 5, 6 and 7 was normal distributed accepted after the Box-Cox transformation. Before using the samples in a \textit{ANOVA test} they need to be equal variance tested. All samples contain total time spent on each task, separated in task 1 (sample 5), task 2 (sample 6) and task 3 (sample 7). Using \textit{Levene's test} to determine this statement. The results is shown in the box under. Levene's test accepts the null hypothesis with a confidence interval of 95\%.
 
  \begin{center}
 	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
@@ -713,27 +769,41 @@ Sample 5, 6 and 7 was normal distributed accepted after the Box-Cox transformati
 	\end{tcolorbox} 
 \end{center}
 
-\subsubsection{Sample 11, 12 and 13}\label{sec:sample5,6,7}
-Sample 11, 12 and 13 was normal distributed accepted after the Box-Cox transformation. Before using the samples in a \textit{ANOVA test} they need to be equal variance tested. All samples contain experienced participants total time spent on each task, separated in task 1 (sample 11), task 2 (sample 12) and task 3 (sample 13). 
+\subsubsection{Sample 11, 12 and 13}\label{sec:sample11,12,13_levene}
+Sample 11, 12 and 13 was normal distributed accepted after the Box-Cox transformation. Before using the samples in a \textit{ANOVA test} they need to be equal variance tested. All samples contain experienced participants total time spent on each task, separated in task 1 (sample 11), task 2 (sample 12) and task 3 (sample 13). Using \textit{Levene's test} to determine this statement. The results is shown in the box under. Levene's test accepts the null hypothesis with a confidence interval of 95\%.
 
  \begin{center}
 	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
 		\centering
-		\textit{Levene's test, sample 5, 6 and 7}\\
+		\textit{Levene's test, sample 11, 12 and 13}\\
 		Significance level: 5\%  \\[0.5cm]
 		
-		P-value: $0.636$\\[0.2cm]
+		P-value: $0.9715$\\[0.2cm]
 		
-		$P-value$ is larger than the significance level ($0.636$ > $0.05$) and the null hypothesis is \underline{accepted}.\\[0.5cm]
+		$P-value$ is larger than the significance level ($0.9715$ > $0.05$) and the null hypothesis is \underline{accepted}.\\[0.5cm]
 	\end{tcolorbox} 
 \end{center}
 
+\subsubsection{Sample 14, 15 and 16}\label{sec:sample14,15,16_levene}
+Sample 14, 15 and 16 is normally distributed. The samples will be used in a hypothesis test, and therefore the samples need to be tested for the equal variance assumption. Using \textit{Levene's test} to determine this statement. The results is shown in the box under. Levene's test accepts the null hypothesis with a confidence interval of 95\%.
+
+ \begin{center}
+	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
+		\centering
+		\textit{Levene's test, sample 11, 12 and 13}\\
+		Significance level: 5\%  \\[0.5cm]
+		
+		P-value: $0.724$\\[0.2cm]
+		
+		$P-value$ is larger than the significance level ($0.724$ > $0.050$) and the null hypothesis is \underline{accepted}.\\[0.5cm]
+	\end{tcolorbox} 
+\end{center}
 
 \subsection{Hypothesis testing}\label{sec:hypothesis_results}
 
-\subsubsection{Two sample t-test results}\label{sec:t-test_result}
+\subsubsection[Sample 1, 2]{Test differences in total time between experienced and inexperienced participants}\label{sec:t-test_result} %Two sample t-test results
 
-\textbf{Test differences between experienced and inexperienced participants}\\
+%\textbf{Test differences between experienced and inexperienced participants}\\
 \textit{Sample 1 and 2}\newline
 
 First hypothesis tested with the two sample t-test is: \\[0.3cm]
@@ -809,9 +879,9 @@ This test gives the same T-statistics as the previous test, but the critical val
 
 Since we know that there is a significant difference between the two sample means, the author concludes that the inexperienced participants finished the task faster than the experienced participants. This can also be seen in plot \ref{fig:meanstdparticipantstime}. Inexperienced participants finished the tasks 16 seconds faster than experienced participants. \newline
 
-\subsubsection{Mann-Whitey U Test results}
+\subsubsection[Sample 3, 4]{Test if there is a difference between experienced and inexperienced participants in total correct elements} %Mann-Whitey U Test results
 
-\textbf{Test differences between experienced and inexperienced participants}\\
+%\textbf{Test differences between experienced and inexperienced participants}\\
 \textit{Sample 3 and 4}\newline
 
 This section will test if there is a difference between experienced- and inexperienced participants when looking at the number of correctly chosen elements. Sample 3 and 4 is the correct samples to use in this test. Both samples are not normally distributed, we need to use a non-parametric method. The Mann-Whitey U test is the preferred test to use on these samples. As mentioned in section \ref{sec:Wilcoxon}, the Mann-Whitey U test is preferred when the samples are ties (identical observations) in the data. From histogram \ref{fig:correctelementswasnotinterupter_ex} and \ref{fig:correctelementswasnotinterupted_inex} we see that the samples for both independent variables are similar. Mann-Whitey U test can therefore be used to compare the population medians. The hypothesis to be tested is:\\[0.3cm]
@@ -846,14 +916,15 @@ The results from the test, the statistical value and finding the critical value 
 
 There is not enough evidence to conclude that there are any difference between experienced- and inexperienced participants when we use the dependent variable number of correctly chosen elements. 
 
-\subsubsection{One-way \textit{ANOVA} test results}\label{sec:anova_result}
+\subsubsection[Sample 5, 6 and 7]{Test if total time differs between the three tasks}\label{sec:anova_result} %One-way \textit{ANOVA} test results
+\textit{Sample 5, 6 and 7}\newline
 
 The one-way \textit{ANOVA} test will be used to test population means between the three task samples. This test is used when there is more than two samples being compared, see section \ref{sec:anova}. The assumption that sample 5, 6 and 7 come from populations with equal variances are met ()\ref{sec:sample5,6,7}). The hypothesis tested here is: \\
 
 \centerline{$H_{0}$: $\overline{x}_5$ = $\overline{x}_6$ = $\overline{x}_7$}
 \centerline{$H_{A}$: Total time is different between at least two of the tasks}
 
-Using the one-way \textit{ANOVA} test to answer the hypothesis. Using equation \ref{eq:anova_reject}, the \textit{ANOVA} test rejects the null hypothesis. P-value is approximately zero and this gives a good indication that the result is significant. With a confidence interval of 95\% the author claim that there is a difference between the mean value of the three tasks.
+Using equation \ref{eq:anova_reject} and results shown in the box under, the \textit{ANOVA} test rejects the null hypothesis. The $f-value$ is lower than the critical value. P-value is also approximately zero and gives a good indication that the result are significant. With a confidence interval of 95\% the author claim that there is a difference between the mean value of the three tasks.
 
  \begin{center}
 	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
@@ -878,9 +949,10 @@ Using the one-way \textit{ANOVA} test to answer the hypothesis. Using equation \
 	\label{fig:meanstdtask123pngtime}
 \end{figure}
 
-Using \textit{Tukey's test} to make compared comparisons between task one, two and three since the null hypothesis. This test did not find any significant difference between the three tasks. 
+Using \textit{Tukey's test} to make compared comparisons between task one, two and three since the null hypothesis was rejected. This test did not find any significant difference between the three tasks. The author then concludes that there is a difference in total time between the three tasks, but the difference is not enough that \textit{Tukey's test} find an significant difference. 
 
-\subsubsection{Kruskal-Wallis test results}
+\subsubsection[Sample 8, 9, and 10]{Test if the number of correct elements differs between the three tasks}\label{sec:sample_8_9_10_kruskal)} %Kruskal-Wallis test results
+\textit{Sample 8, 9, and 10}\newline
 
 The Kruskal-Wallis test is the non-parametric eqvivalent to one-way \textit{ANOVA} (\ref{sec:kruskal-w-test}). It is used to test equality of medians when the samples are not normally distributed. This method will test if there is any difference between task 1, 2 and 3 when looking at the dependent variable number of correctly chosen elements. The test will use sample 8, 9 and 10. Since sample 8 are not normally distributed a non-parametric test should be used. The hypothesis tested is: \\[0.2cm]
 
@@ -928,24 +1000,114 @@ Like in one-way \textit{ANOVA}, a \textit{post hoc} test should be used to make 
 
 \vspace{0.5cm}
 
+\subsubsection[Sample 11, 12 and 13]{Test differenced in total time for experienced participants between task 1, 2 and 3}\label{sec:sample_11_12_13_anova}
+
+Using sample 11, 12 and 13, which contain the results from experienced participants in task 1, 2 and 3. All three samples are normally distributed after a Box-Cox transformation (\ref{tab:normaltest_summary}) and the samples also come from populations with equal variances (\ref{sec:sample11,12,13_levene}). Then a one-way \textit{ANOVA} test can be used. The hypothesis tested is: 
+
+\centerline{$H_{0}$: $\overline{x}_11$ = $\overline{x}_12$ = $\overline{x}_13$}
+\centerline{$H_{A}$: Total time is different between at least two of the tasks}
+
+Using equation \ref{eq:anova_reject} and results shown in the box under, the \textit{ANOVA} test rejects the null hypothesis. The $f-value$ is lower than the critical value. P-value is also approximately zero and gives a good indication that the result are significant. With a confidence interval of 95\% the author claim that there is a difference between the mean value of the three tasks.
+
+\begin{center}
+	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
+		\centering
+		\textit{One-way \textit{ANOVA}, sample 11, 12 and 13}\\
+		Significance level: 5\%  \\[0.5cm]
+		
+		$P-value$: $1.012 * 10^{-121}$ \\
+		$f-value$: $1216.919$ \\
+		Significance level ($\alpha$): 0.05 \\
+		$v_1$ = 2, $v_2$ = 244 %k-1  ,  N-k
+		Critical-value: 3.00 \\[0.2cm] %http://web.utk.edu/~cwiek/TwoSampleDoF
+		
+		$f-value$ is significantly higher than the critical value ($1216.919$ > $3.00$) and the null hypothesis is \underline{rejected}, $H_A$ is accepted\\[0.5cm]
+	\end{tcolorbox} 
+\end{center}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/boxplot/mean_std_experienced_task123_time}
+	\caption{Sample 11, 12 and 13 - mean (green dot) and standard deviation (blue line)}
+	\label{fig:meanstdexperiencedtask123time}
+\end{figure}
+
+Using \textit{Tukey's test} to make compared comparisons between task one, two and three since the null hypothesis was rejected. This test did not find any significant difference between the three tasks. Figure \ref{fig:meanstdexperiencedtask123time} show a pretty similar mean in all three tasks, but task 2 has a lover mean and less standard deviation. The author concludes that there is a siginifcant difference when looking at experienced participants time spent on the three tasks, but the difference is not enough so that \textit{Tukey's test} find which tasks rhat differs. 
+
+\subsubsection[Sample 14, 15 and 16]{Test if number of corect elements differs between task 1, 2 and 3, only experienced participants}
+Using sample 14, 15 and 16, which contain the results from experienced participants in task 1, 2 and 3. All three samples are normally distributed (\ref{tab:normaltest_summary}) and the samples also come from populations with equal variances (\ref{sec:sample14,15,16_levene}). Then a one-way \textit{ANOVA} test can be used. The hypothesis tested is: 
+
+\centerline{$H_{0}$: $\overline{x}_11$ = $\overline{x}_12$ = $\overline{x}_13$}
+\centerline{$H_{A}$: Correct elements in each task is different between at least two of the tasks}
+
+Using equation \ref{eq:anova_reject} and results shown in the box under, the \textit{ANOVA} test rejects the null hypothesis. The $f-value$ is lower than the critical value. P-value is also approximately zero and gives a good indication that the result are significant. With a confidence interval of 95\% the author claim that there is a difference between the mean value of the three tasks.
+
+\begin{center}
+	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
+		\centering
+		\textit{One-way \textit{ANOVA}, sample 14, 15 and 16}\\
+		Significance level: 5\%  \\[0.5cm]
+		
+		$P-value$: $0.00036$ \\
+		$f-value$: $8.210$ \\
+		Significance level ($\alpha$): 0.05 \\
+		$v_1$ = 2, $v_2$ = 244 %k-1  ,  N-k
+		Critical-value: 3.00 \\[0.2cm] %http://web.utk.edu/~cwiek/TwoSampleDoF
+		
+		$f-value$ is higher than the critical value ($8.201$ > $3.00$) and the null hypothesis is \underline{rejected}, $H_A$ is accepted\\[0.5cm]
+	\end{tcolorbox} 
+\end{center}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/boxplot/mean_std_experienced_task123_correct}
+	\caption{Sample 14, 15 and 16 - mean (green dot) and standard deviation (blue line)}
+	\label{fig:meanstdexperiencedtask123correct}
+\end{figure}
+
+Since the null hypothesis was rejected, a \textit{post hoc} test should be used to make paired comparisons to determine which groups differs. Tukey's test resulted in a significant difference in the number of correctly chosen elements between task 1 and task 2, and task 1 and task 3. Figure \ref{fig:meanstdexperiencedtask123correct} show that task 1 has a higher mean value than the other two tasks. Task 1 also has a smaller standard deviation than the other tasks. 
+
+ \begin{center}
+	\begin{tcolorbox}[box align=center,width=\textwidth-5cm]
+		\centering
+		\textit{Tukey's test, sample 14, 15 and 16}\\
+		Significance level: 5\%  \\[0.5cm]
+		
+		Task 1 and Task 2 differs significantly \\
+		Task 1 and Task 3 differs significantly \\
+		Task 2 and Task 3 do not differ significantly \\[0.2cm]
+	\end{tcolorbox} 
+\end{center}
+
 \subsubsection{Hypothesis test summary}
 
-	\begin{longtable}{p{0.65\textwidth}|l|p{0.15\textwidth}}  %\multicolumn{1}{c}{}
+	\begin{longtable}{p{0.65\textwidth}|p{0.15\textwidth}|p{0.15\textwidth}}  %\multicolumn{1}{c}{}
 	\caption[Summary, normality tests]{Summary of hypothesis tests done in section \ref{sec:hypothesis_results}} \label{tab:hypothesistest_summary} \\
-		Hypothesis (\textcolor{cyan}{Dependent variable}, \textcolor{blue}{Independent variable}) & Sample & Hypothesis is accepted \\[0.2cm] \hline
-		\textcolor{cyan}{Total time}, \textcolor{blue}{Experienced} and \textcolor{blue}{Inexperienced} & &  \\
+		Hypothesis (\textcolor{cyan}{Dependent variable}, \textcolor{blue}{Independent variable}) & Sample, \textit{Participants} & Hypothesis is accepted \\[0.2cm] \hline
+		\textcolor{cyan}{Total time}, \textcolor{blue}{Experienced} and \textcolor{blue}{Inexperienced} & \textit{All} &  \\
 		There are a difference between experienced and inexperienced participants & 1 and 2 & \textbf{Yes} \\
-		Experienced participants finish the tasks faster than inexperienced  & 1 and 2 & No   \\ \hline
-		\textcolor{cyan}{Correct elements}, \textcolor{blue}{Experienced} and \textcolor{blue}{Inexperienced} & &  \\
+		Experienced participants finish the tasks faster than inexperienced  & 1 and 2 & No   \\ 
+		Inexperienced participants finish the tasks faster than experienced  & 1 and 2 & \textbf{Yes}   \\ \hline
+		\textcolor{cyan}{Correct elements}, \textcolor{blue}{Experienced} and \textcolor{blue}{Inexperienced} & \textit{All} &  \\
 		There are a difference between experienced and inexperienced participants & 3 and 4 & No   \\ \hline
-		\textcolor{cyan}{Total time}, \textcolor{blue}{Task 1}, \textcolor{blue}{Task 2} and \textcolor{blue}{Task 3}& &  \\
+		\textcolor{cyan}{Total time}, \textcolor{blue}{Task 1}, \textcolor{blue}{Task 2} and \textcolor{blue}{Task 3}& \textit{All} &  \\
 		 Total time is different between at least two of the tasks & 5, 6 and 7 & \textbf{Yes}   \\
 		 Task 1 significantly differs from Task 2 & 5, 6 and 7 & No  \\ 
 		 Task 1 significantly differs from Task 3 & 5, 6 and 7 & No  \\ 
 		 Task 2 significantly differs from Task 3 & 5, 6 and 7 & No  \\ \hline
-		\textcolor{cyan}{Correct elements}, \textcolor{blue}{Task 1}, \textcolor{blue}{Task 2}, \textcolor{blue}{Task 3} & &  \\
+		\textcolor{cyan}{Correct elements}, \textcolor{blue}{Task 1}, \textcolor{blue}{Task 2}, \textcolor{blue}{Task 3} & \textit{All} &  \\
 		The number of correctly chosen elements is different between at least two of the tasks & 8, 9 and 10 & \textbf{Yes}  \\
 		Task 1 significantly differs from Task 2 & 8, 9 and 10 & \textbf{Yes}  \\ 
 		Task 1 significantly differs from Task 3 & 8, 9 and 10 & \textbf{Yes}  \\ 
+		Task 2 significantly differs from Task 3 & 8, 9 and 10 & No  \\ \hline
+		\textcolor{cyan}{Total time}, \textcolor{blue}{Task 1}, \textcolor{blue}{Task 2}, \textcolor{blue}{Task 3} & \textit{Experienced}  &  \\
+		Total time is different between at least two of the tasks & 8, 9 and 10 & \textbf{Yes}  \\
+		Task 1 significantly differs from Task 2 & 8, 9 and 10 & No  \\ 
+		Task 1 significantly differs from Task 3 & 8, 9 and 10 & No  \\ 
+		Task 2 significantly differs from Task 3 & 8, 9 and 10 & No  \\ \hline
+		\textcolor{cyan}{Correct elements}, \textcolor{blue}{Task 1}, \textcolor{blue}{Task 2}, \textcolor{blue}{Task 3} & \textit{Experienced}  &  \\
+		Number of correct elements differs between at least two of the tasks & 8, 9 and 10 & \textbf{Yes}  \\
+		Task 1 significantly differs from Task 2 & 8, 9 and 10 & \textbf{Yes}  \\ 
+		Task 1 significantly differs from Task 3 & 8, 9 and 10 & \textbf{Yes} \\ 
 		Task 2 significantly differs from Task 3 & 8, 9 and 10 & No  \\ \hline
 	\end{longtable}
