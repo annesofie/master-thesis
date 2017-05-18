@@ -284,33 +284,16 @@ A visual inspection of the samples histogram \ref{fig:correctelementswasnotinter
 	\caption{Histograms with normal distribution fit with samples containing the number of correctly chosen elements in each task}
 \end{figure}
 
-D'Agostino and Pearson normality test confirm our visual analysis. Both samples accept the alternative hypothesis with p-values lower than the significant level $0.05$. \\[0.3cm]
-
-\begin{center}
-	\begin{tcolorbox}[width=0.8\textwidth]
-		\centering
-		\textit{D'Agostino and Pearson normality test}\\
-		Significance level: 5\%  \\[0.5cm]
-		
-		Sample 3\\
-		P-value: $0.00443$\\
-		The p-value is lower than the significance level (0.05), the null hypothesis is \underline{rejected} and $H_A$ accepted.\\[0.5cm]
-		
-		Sample 4\\
-		P-value: $0.00013$ \\
-		The p-value is lower than the significance level (0.05), the null hypothesis is \underline{rejected} and $H_A$ accepted.\\[0.5cm]
-	\end{tcolorbox} 
-\end{center}
-
+D'Agostino and Pearson normality test confirm our visual analysis. Both samples accept the alternative hypothesis with p-values ($0.00443$, $0.00013$) lower than the significant level $0.05$. The null hypothesis is \underline{rejected} and $H_A$ accepted for sample 3 and 4. \\[0.3cm]
 \vspace{0.3cm}
 
-Sample 3 and 4 was then Box-Cox transformed. After the transformation, a new D'Agostino and Pearson normality test was done. Both samples also failed this test. Sample 3 and 4 are not normally distributed and need to be tested with non-parametric methods. 
+Sample 3 and 4 was Box-Cox power transformed because the null hypothesis was rejected. After the transformation, a new D'Agostino and Pearson normality test was done. Both samples also failed this test. Sample 3 and 4 are not normally distributed and need to be tested with non-parametric methods. 
 
 \subsubsection[Sample 5, 6 and 7]{All participants - Task 1, Task 2 and Task 3 - total time per task}\label{sec:task123_time_normaltest}
 
 In this section sample 5, 6 and 7 (table \ref{tab:totaltime_tasks}) is normality tested. These samples will be used to test whether there is a significant difference between the three tasks when looking at the total time variable. 
 
-A visual analysis of the three histograms in figure \ref{fig:totaltimeallnotinterupted_task1}, \ref{fig:totaltimeallnotinterupted_task2} and \ref{fig:totaltimeallnotinterupted_task3} show a positive skewness, just like the time histograms in section \ref{sec:totaltime_ex_inex}. This gives an indication that the three samples are not normally distributed. 
+A visual analysis of the three histograms in figure \ref{fig:totaltimeallnotinterupted_task1}, \ref{fig:totaltimeallnotinterupted_task2} and \ref{fig:totaltimeallnotinterupted_task3} show a positive skewness, just like the histograms in section \ref{sec:totaltime_ex_inex}. This gives an indication that the three samples are not normally distributed. 
 
 \begin{figure}[h!]
 	\centering
@@ -335,31 +318,9 @@ A visual analysis of the three histograms in figure \ref{fig:totaltimeallnotinte
 	\caption{Histogram with normal distribution fit - sample with total time per task}
 \end{figure}
 
-The D'Agostino and Pearson normality test agreed with the visual analysis. P-values for all samples are smaller than the significance level 0.05, and the null hypothesis is rejected. The samples are not normally distributed with a confidence level of 95\%.\\[0.2cm]
+The D'Agostino and Pearson normality test agreed with the visual analysis. Obtained p-values for all three samples ($2.39 * 10^{-24}$, $2.57 * 10^{-9}$ and $1.71 * 10^{-11}$) are smaller than the significance level 0.05, and the null hypothesis is rejected. The samples are not normally distributed with a significant level of 5\%.\\[0.2cm]
 
-\begin{center}
-	\begin{tcolorbox}[width=0.8\textwidth]
-		\centering
-		\textit{D'Agostino and Pearson normality test}\\
-		Significance level: 5\%  \\[0.5cm]
-		
-		Sample 5 \\
-		P-value: $2.39 * 10^{-24}$\\
-		The p-value is lower than the significance level (0.05), the null hypothesis is \underline{rejected} and $H_A$ accepted.\\[0.5cm]
-		
-		Sample 6 \\
-		P-value: $2.57 * 10^{-9}$ \\
-		The p-value is lower than the significance level (0.05), the null hypothesis is \underline{rejected} and $H_A$ accepted.\\[0.5cm]
-		
-		Sample 7 \\
-		P-value: $1.71 * 10^{-11}$ \\
-		The p-value is lower than the significance level (0.05), the null hypothesis is \underline{rejected} and $H_A$ accepted.\\[0.5cm]
-	\end{tcolorbox} 
-\end{center}
-
-\vspace{0.3cm}
-
-The samples are then Box-Cox transformed. Histograms of each sample after the transformation is shown in figure \ref{fig:totaltimeallnotinteruptedboxcox_task1}, \ref{fig:totaltimeallnotinteruptedboxcox_task2} and \ref{fig:totaltimeallnotinteruptedboxcox_task3}. A visual analysis of the histograms gives a good indication that the transformed data is approximately normally distributed. The histograms have a skewness of approximately zero. 
+Because the null hypothesis was rejected the samples are Box-Cox power transformed. Histograms of each sample after the transformation is shown in figure \ref{fig:totaltimeallnotinteruptedboxcox_task1}, \ref{fig:totaltimeallnotinteruptedboxcox_task2} and \ref{fig:totaltimeallnotinteruptedboxcox_task3}. A visual analysis of the histograms gives a good indication that the transformed data is approximately normally distributed. The histograms have a skewness of approximately zero. 
 
 \begin{figure}[h!]
 	\centering
@@ -384,34 +345,9 @@ The samples are then Box-Cox transformed. Histograms of each sample after the tr
 	\caption{Histogram with normal distribution fit after Box-Cox transformation, sample with total time per task}
 \end{figure}
 
-The D'Agostino and Pearson normality test confirms the visual interpretation. The data is normally distributed after the Box-Cox transformation with a confidence interval of 95\%. The p-values of all three samples are higher than the significance level (0.05). \\[0.2cm]
-
-\begin{center}
-	\begin{tcolorbox}[width=0.8\textwidth]
-		\centering
-		\textit{D'Agostino and Pearson normality test}\\
-		(After Box-Cox transformation)\\
-		Significance level: 5\%  \\[0.5cm]
-		
-		Sample 5 \\
-		P-value: $0.164$\\
-		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}. \\[0.5cm]
-		
-		Sample 6 \\
-		P-value: $0.982$ \\
-		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}. \\[0.5cm]
-		
-		Sample 7 \\
-		P-value: $0.354$ \\
-		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}. \\[0.5cm]
-	\end{tcolorbox} 
-\end{center}
-
-\vspace{0.3cm}
-
- Sample 5, 6 and 7 are normally distributed after the transformation and the assumptions of normality is met. 
+The D'Agostino and Pearson normality test confirms the visual interpretation. The data is normally distributed after the Box-Cox transformation with a confidence interval of 95\%. The p-values ($0.164$, $0.982$ and $0.354$) of all three samples are higher than the significance level (0.05). \\[0.2cm]. Sample 5, 6 and 7 are normally distributed after the transformation and the assumptions of normality is met. 
  
- \subsubsection[Sample 8, 9 and 10]{All participants - Task 1, Task 2 and Task 3 - correct elements per task}\label{sec:task123_correct_normaltest}
+ \subsubsection[Sample 8, 9 and 10]{All participants divided by task,  correct element variable}\label{sec:task123_correct_normaltest}
  In this section sample 8, 9 and 10 will be normality tested. These samples will be used to test whether there is a significant difference between the three tasks when looking at the number of correctly chosen elements variable. This variable tells us how many correct elements each participant chose on each of the three tasks. 
 
 A visual analysis of the three histograms in figure \ref{fig:correctallnotinterupted_task1}, \ref{fig:correctallnotinterupted_task2} and \ref{fig:correctallnotinterupted_task3} show a negative skewness, just like the histograms in section \ref{sec:correct_ex_inex}. This give an indication that the three samples are not normally distributed. 
@@ -439,31 +375,9 @@ A visual analysis of the three histograms in figure \ref{fig:correctallnotinteru
  \caption{Histogram with normal distribution fit showing samples with number of correct elements per task}
  \end{figure}
  
- D'Agostino and Pearson normality test confirms our visual analysis of the histograms in two of three samples. Sample 9 actually passes the normality test, even though the p-value (0.099) is close to the significance level (0.05). Sample 8 and sample 10 do not pass the normality test with a confidence interval of 95\%. \\[0.2cm]
- 
- \begin{center}
- 	\begin{tcolorbox}[width=0.8\textwidth]
- 		\centering
- 		\textit{D'Agostino and Pearson normality test}\\
- 		Significance level: 5\%  \\[0.5cm]
- 		
- 		Sample 8 \\
- 		P-value: $0.00022$\\
- 		The p-value is lower than the significance level (0.05), the null hypothesis is \underline{rejected} and $H_A$ accepted.\\[0.5cm]
- 		
- 		Sample 9 \\
- 		P-value: $0.099$ \\
- 		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}. \\[0.5cm]
- 		
- 		Sample 10 \\
- 		P-value: $0.0047$ \\
- 		The p-value is lower than the significance level (0.05), the null hypothesis is \underline{rejected} and $H_A$ accepted.\\[0.5cm]
- 	\end{tcolorbox} 
- \end{center}
+ D'Agostino and Pearson normality test confirms our visual analysis of the histograms in two of three samples. Sample 9 passes the normality test, even though the p-value (0.099) is close to the significance level (0.05). Sample 8 and sample 10 do not pass the normality test with a confidence interval of 95\%. Both samples obtained a p-value ($0.00022$ and $0.0047$) smaller than the significant level. The null hypothesis is rejected for sample 8 and 10, and the alternative hypothesis is accepted. The null hypothesis is accepted for sample 9. \\[0.2cm]
 
-\vspace{0.2cm}
-
-A Box-Cox transformation is applied to all three samples. The transformation changes the data, and to correctly compare the samples, sample 9 also has to be transformed even though it's original data is normally distributed. The transformed samples are shown in histogram \ref{fig:correctboxcox_task1}, \ref{fig:correctboxcox_task2} and \ref{fig:correctboxcox_task3}. All three are negatively skewed, sample 9 and 10 less than sample 8. A visual conclusion is difficult in this case. \\[0.2cm]
+A Box-Cox power transformation is applied to all three samples. The transformation changes the data, and to correctly compare the samples, sample 9 also has to be transformed even though it's original data is normally distributed. The transformed samples are shown in histogram \ref{fig:correctboxcox_task1}, \ref{fig:correctboxcox_task2} and \ref{fig:correctboxcox_task3}. All three are negatively skewed, sample 9 and 10 less than sample 8. A visual conclusion is difficult in this case. \\[0.2cm]
 
 
 \begin{figure}[h!]
@@ -489,35 +403,10 @@ A Box-Cox transformation is applied to all three samples. The transformation cha
 	\caption{Histogram with normal distribution fit showing samples with number of correct elements per task - after Box-Cox transformation}
 \end{figure}
 
-D'Agostino and Pearson normality test accepts null hypothesis on sample 9 and 10 and rejects it on sample 8. Sample 9 and 10 has p-values higher than the significance level, while sample 8 p-value is significantly lower. 
+D'Agostino and Pearson normality test accepts null hypothesis on sample 9 and 10 and rejects it on sample 8. Sample 9 and 10 has p-values ($0.0752$ and$0.2104$) higher than the significance level , while sample 8 p-value ($0.2104$) is significantly lower. When using these three samples in hypothesis tests a non-parametric method should be used. This is because sample 8 is not normally distributed. 
 
- \begin{center}
-	\begin{tcolorbox}[width=0.80\textwidth]
-		\centering
-		\textit{D'Agostino and Pearson normality test}\\
-		(After Box-Cox transformation) \\
-		Significance level: 5\%  \\[0.5cm]
-		
-		Sample 8\\
-		P-value: $0.00269$\\
-		The p-value is lower than the significance level (0.05), the null hypothesis is \underline{rejected} and $H_1$ accepted.\\[0.5cm]
-		
-		Sample 9 \\
-		P-value: $0.0752$ \\
-		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}. \\[0.5cm]
-		
-		Sample 10 \\
-		P-value: $0.2104$ \\
-		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}. \\[0.5cm]
-	\end{tcolorbox} 
-\end{center}
-
-\vspace{0.4cm}
-
-When using these three samples in hypothesis tests a non-parametric method should be used. This is because sample 8 is not normally distributed. 
-
-\subsubsection[Sample 11, 12 and 13]{Experienced participants - task 1, 2 and 3, total time variable}
-In this section sample 11, 12 and 13 are normality tested. These samples will be used to test whether there is s significant difference between the three tasks total time results when looking at only experienced participants. 
+\subsubsection[Sample 11, 12 and 13]{Experienced participants divided by task, total time variable}
+In this section, sample 11, 12 and 13 are normality tested. These samples will be used to test whether there is s significant difference between the three tasks total time results when looking at only experienced participants. 
 
 A visual interpretation of the histograms in \ref{fig:sample11_12_13_histogram} show that all three samples are positively skewed (figure \ref{fig:skew}). This is a fairly strong evidence that the samples are not normally distributed.
 
@@ -545,31 +434,9 @@ A visual interpretation of the histograms in \ref{fig:sample11_12_13_histogram} 
  	\label{fig:sample11_12_13_histogram}
  \end{figure}
  
-D'Agostino and Pearson normality test confirms our visual interpretation of the three histograms. All three p-values are lower than the significance level (0.05). Sample 11, 12 and 13 do not pass the normality test with a confidence interval of 95\%. \\[0.2cm]
- 
-  \begin{center}
- 	\begin{tcolorbox}[width=0.80\textwidth]
- 		\centering
- 		\textit{D'Agostino and Pearson normality test}\\
- 		Significance level: 5\%  \\[0.5cm]
- 		
- 		Sample 11 \\
- 		P-value: $1.229 * 10^{-14}$\\
- 		The p-value is lower than the significance level (0.05), the null hypothesis is \underline{rejected} and $H_A$ accepted.\\[0.5cm]
- 		
- 		Sample 12 \\
- 		P-value: $2.678 * 10^{-5}$ \\
-		The p-value is lower than the significance level (0.05), the null hypothesis is \underline{rejected} and $H_A$ accepted.\\[0.5cm]
- 		
- 		Sample 13 \\
- 		P-value: $0.000884$ \\
- 		The p-value is lower than the significance level (0.05), the null hypothesis is \underline{rejected} and $H_A$ accepted.\\[0.5cm]
- 	\end{tcolorbox} 
- \end{center}
+D'Agostino and Pearson normality test confirms our visual interpretation of the three histograms. All three p-values ($1.229 * 10^{-14}$, $2.678 * 10^{-5}$ and $0.000884$) are lower than the significance level (0.05). Sample 11, 12 and 13 do not pass the normality test with a confidence interval of 95\%. The null hypothesis is rejected. \\[0.2cm]
 
-\vspace{0.3cm}
-
-A Box-Cox transformation is applied to all three samples. Histograms with normal distribution fit containing the transformed data is shown in figure \ref{fig:sample11_12_13_boxcox_histogram}. Visually, the histograms look normally distributed with minimal skewness. \\
+A Box-Cox power transformation is applied to all three samples because the null hypothesis was rejected. Histograms with normal distribution fit containing the transformed data is shown in figure \ref{fig:sample11_12_13_boxcox_histogram}. Visually, the histograms look normally distributed with minimal skewness. \\
 
 \begin{figure}[H]
 	\centering
@@ -595,34 +462,10 @@ A Box-Cox transformation is applied to all three samples. Histograms with normal
 	\label{fig:sample11_12_13_boxcox_histogram}
 \end{figure}
 
-The Box-Cox transformed data is tested with D'Agostino and Pearson normality test. All three samples have a p-value larger than the significance level (0.05). Within a confidence interval of 95\%, the test concludes that sample 11, 12 and 13 is normally distributed.\\[0.2cm]
+The Box-Cox power transformed data is tested with D'Agostino and Pearson normality test. All three samples obtained p-values ($0.694$, $0.955$ and $0.887$) larger than the significance level (0.05). Within a confidence interval of 95\%, the test concludes that sample 11, 12 and 13 is normally distributed. Sample 11, 12 and 13 can be used in methods assuming normally distributed samples. 
 
- \begin{center}
-	\begin{tcolorbox}[width=0.80\textwidth]
-		\centering
-		\textit{D'Agostino and Pearson normality test}\\
-		(After Box-Cox transformation) \\
-		Significance level: 5\%  \\[0.5cm]
-		
-		Sample 11 \\
-		P-value: $0.694$\\
-		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}. \\[0.5cm]
-		
-		Sample 12 \\
-		P-value: $0.955$ \\
-		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}. \\[0.5cm]
-		
-		Sample 13 \\
-		P-value: $0.887$ \\
-		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}. \\[0.5cm]
-	\end{tcolorbox} 
-\end{center}
-\vspace{0.3cm}
-
-Sample 11, 12 and 13 can be used in methods assuming normally distributed samples. 
-
-\subsubsection[Sample 14, 15 and 16]{Experienced participants - task 1, 2, 3, correct elements variable}
-This section will test if sample 14, 15 and 16 follows the normal distribution. These samples will be used to test whether there is a significant difference in the number of correct elements results between the three tasks when looking at only experienced participants. Before testing the hypothesis the samples need to be normality tested. 
+\subsubsection[Sample 14, 15 and 16]{Experienced participants divided by task, correct elements variable}
+This section will test if sample 14, 15 and 16 follows the normal distribution. These samples will be used to test whether there is a significant difference in the number of correct elements between the three tasks when looking at only experienced participants. Before testing the hypothesis the samples need to be normality tested. 
 
 A visual interpretation of the histograms in \ref{fig:sample14,15,16_normhistogram} show that all three samples are slightly negatively skewed (figure \ref{fig:skew}). The skew is not as much as other histograms in this chapter. Sample 15 (\ref{fig:correctexperienced_task1}) and sample 16 (\ref{fig:correctexperienced_task2}) has less skew than sample 14 (\ref{fig:correctexperienced_task3}).  
 
@@ -650,35 +493,12 @@ A visual interpretation of the histograms in \ref{fig:sample14,15,16_normhistogr
 	\label{fig:sample14,15,16_normhistogram}
 \end{figure}
 
-  D'Agostino and Pearson normality test confirms our visual interpretation of the three histograms. All three p-values are lower than the significant level (0.05), notice that sample 14 has a lower p-value than the two other samples. This sample is not as significant as the two other samples. Sample 14, 15 and 16 pass the normality test with a confidence interval of 95\%. \\[0.2cm]
+  D'Agostino and Pearson normality test confirms our visual interpretation of the three histograms. All three p-values ($0.0588$, $0.2067$ and $0.2975$) are higher than the significant level (0.05), notice that sample 14 has a lower p-value than the two other samples. This sample is not as significant as the two other samples. Sample 14, 15 and 16 pass the normality test with a confidence interval of 95\%. The null hypothesis is accepted. Sample 14, 15 and 16 can be used in tests that assume normally distributed samples.
 
-  \begin{center}
-	\begin{tcolorbox}[width=0.80\textwidth]
-		\centering
-		\textit{D'Agostino and Pearson normality test}\\
-		Significance level: 5\%  \\[0.5cm]
-		
-		Sample 14 \\
-		P-value: $0.0588$\\
-		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}.\\[0.5cm]
-		
-		Sample 15 \\
-		P-value: $0.2067$ \\
-		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}.\\[0.5cm]
-		
-		Sample 16 \\
-		P-value: $0.2975$ \\
-		The p-value is higher than the significance level (0.05), the null hypothesis is \underline{accepted}.\\[0.5cm]
-	\end{tcolorbox}
-\end{center}
-\vspace{0.3cm}
+\subsubsection[Sample 17, 18 and 19]{Inexperienced participants divided by task, total time variable}\label{sec:sample_17,18,19_normalitytest}
+This section will test if sample 17, 18 and 19 follows the normal distribution. These samples will be used to test whether there is a significant difference in total time between the three tasks when looking at only inexperienced participants. Before testing the hypothesis the samples need to be normality tested. 
 
-Sample 14, 15 and 16 can be used in tests that assume normally distributed samples.
-
-\subsubsection[Sample 17, 18 and 19]{Inexperienced participants - task 1, 2 and 3, total time variable}\label{sec:sample_17,18,19_normalitytest}
-This section will test if sample 17, 18 and 19 follows the normal distribution. These samples will be used to test whether there is a significant difference in the total time results between the three tasks when looking at only inexperienced participants. Before testing the hypothesis the samples need to be normality tested. 
-
-A visual analysis of the histograms \ref{fig:totaltimeinexperienced_task1}, \ref{fig:totaltimeinexperienced_task2} and \ref{fig:totaltimeinexperienced_task3} shows positive skew. 
+A visual analysis of the histograms \ref{fig:totaltimeinexperienced_task1}, \ref{fig:totaltimeinexperienced_task2} and \ref{fig:totaltimeinexperienced_task3} shows a positive skew. The skew is less than the histograms in figure \ref{fig:sample11_12_13_histogram}, but is probably still too large for the samples to be normally distributed.  
 
 \begin{figure}[H]
 	\centering
@@ -703,30 +523,9 @@ A visual analysis of the histograms \ref{fig:totaltimeinexperienced_task1}, \ref
 	\caption{Histogram with normal distribution fit}
 \end{figure}
 
-The D'Agostino and Pearson normality test agrees with the visual analysis. The three sample's p-values are all significantly lower than the significance level of 0.05. Sample 17, 18 and 19 is not normally distributed with a confidence interval of 95\%. \\[0.2cm]
+The D'Agostino and Pearson normality test agrees with the visual analysis. The three obtained p-values ($1.586 * 10^{-11}$, $1.773 * 10^{-6}$ and $2.312 * 10 ^{-11}$) are all significantly lower than the significance level of 0.05. Sample 17, 18 and 19 is not normally distributed with a confidence interval of 95\%. The null hypothesis is rejected. \\[0.2cm]
 
-  \begin{center}
-	\begin{tcolorbox}[width=0.80\textwidth]
-		\centering
-		\textit{D'Agostino and Pearson normality test}\\
-		Significance level: 5\%  \\[0.5cm]
-		
-		Sample 17 \\
-		P-value: $1.586 * 10^{-11}$\\
-		The p-value is lower than the significance level ($1.586 * 10^{-11}$ < $0.05$), the null hypothesis is \underline{rejected}, $H_{A}$ is accepted.\\[0.5cm]
-		
-		Sample 18 \\
-		P-value: $1.773 * 10^{-6}$ \\
-		The p-value is lower than the significance level ($1.773 * 10^{-6}$ < $0.05$), the null hypothesis is \underline{rejected}, $H_{A}$ is accepted.\\[0.5cm]
-		
-		Sample 19 \\
-		P-value: $2.312 * 10 ^{-11}$ \\
-		The p-value is lower than the significance level ($2.312 * 10 ^{-11}$ < $0.05$), the null hypothesis is \underline{rejected}, $H_{A}$ is accepted.\\[0.5cm]
-	\end{tcolorbox}
-\end{center}
-\vspace{0.3cm}
-
-The samples is Box-Cox transformed. The sample histograms after transformation (\ref{fig:totaltimeinexperiencedboxcox_task1}, \ref{fig:totaltimeinexperiencedboxcox_task2} and \ref{fig:totaltimeinexperiencedboxcox_task2}) looks normal distributed. 
+The samples is Box-Cox power transformed. The histograms after transformation (\ref{fig:totaltimeinexperiencedboxcox_task1}, \ref{fig:totaltimeinexperiencedboxcox_task2} and \ref{fig:totaltimeinexperiencedboxcox_task3}) looks normal distributed. 
 
 \begin{figure}[H]
 	\centering
@@ -751,33 +550,12 @@ The samples is Box-Cox transformed. The sample histograms after transformation (
 	\caption{Histogram with normal distribution fit after Box-Cox transformation}
 \end{figure}
 
-A new D'Agostino and Pearson normality test on the transformed data concludes with that all three samples are normally distributed with a significance level of 0.05. Sample 17, 18 and 19 are normally distributed after Box-Cox transformation. \\[0.2cm]
+A new D'Agostino and Pearson normality test on the transformed data confirms that all three samples are normally distributed with a significance level of 5\%. The obtained p-values ($0.139$, $0.909$ and $0.067$) are smaller than 0.05, the null hypothesis is accepted. Sample 17, 18 and 19 are normally distributed after Box-Cox power transformation. \\[0.2cm]
 
-  \begin{center}
-	\begin{tcolorbox}[width=0.80\textwidth]
-		\centering
-		\textit{D'Agostino and Pearson normality test}\\
-		(After Box-Cox transformation)\\
-		Significance level: 5\%  \\[0.5cm]
-		
-		Sample 17 \\
-		P-value: $0.139$\\
-		The p-value is higher than the significance level ($0.138$ > $0.05$), the null hypothesis is \underline{accepted}.\\[0.5cm]
-		
-		Sample 18 \\
-		P-value: $0.909$ \\
-		The p-value is higher than the significance level ($0.909$ > $0.05$), the null hypothesis is \underline{accepted}.\\[0.5cm]
-		
-		Sample 19 \\
-		P-value: $0.067$ \\
-		The p-value is higher than the significance level ($0.067$ > $0.05$), the null hypothesis is \underline{accepted}.\\[0.5cm]
-	\end{tcolorbox}
-\end{center}
-\vspace{0.3cm}
-
-\subsubsection[Sample 20, 21 and 22]{Inexperienced participants - task 1, 2 and 3, correct elements variable}\label{sec:sample_20,21,22_normalitytest}
-
+\subsubsection[Sample 20, 21 and 22]{Inexperienced participants  divided by task, correct elements variable}\label{sec:sample_20,21,22_normalitytest}
 Sample 20, 21 and 22 contains the number of correct elements in each of the three tasks from only inexperienced participants. The samples will be used to test if inexperienced participants do better in one of the tasks. Before analysing, the samples needs to be normally tested. 
+
+A visual interpretation of 
 
 \begin{figure}[H]
 	\centering
@@ -802,9 +580,9 @@ Sample 20, 21 and 22 contains the number of correct elements in each of the thre
 	\caption{Histogram with normal distribution fit}
 \end{figure}
 
-The D'Agostino and Pearson normality test rejects the null hypothesis on sample 20 and 22 and accepts the null hypothesis on sample 21. The test concludes that sample 21 are normally distributed and sample 20 and 22 is not normally distributed with a significant level of 0.05. \newline
+The D'Agostino and Pearson normality test rejects the null hypothesis on sample 20 and 22 and accepts the null hypothesis on sample 21. Obtained p-values ($0.007$ and $0.004$) are lower than 0.05 for sample 20 and 22 and for sample 21 ($0.523$) higher than 0.05 The test concludes that sample 21 are normally distributed and sample 20 and 22 is not normally distributed with a significant level of 5\%. \newline
 
-All three sample's data are Box-Cox transformed. The resulting histograms is shown in figure \ref{fig:correctinexperiencedboxcox_task1}, \ref{fig:correctinexperiencedboxcox_task2} and \ref{fig:correctinexperiencedboxcox_task3}. All three histograms are less skewed that the original histograms.
+A Box-Cox power transformation is applied to all three samples. The transformation changes the data, and to correctly compare the samples, sample 21 also has to be transformed even though it's original data is normally distributed. The transformed samples are shown in histogram \ref{fig:correctinexperiencedboxcox_task1}, \ref{fig:correctinexperiencedboxcox_task2} and \ref{fig:correctinexperiencedboxcox_task3}. All three are slightly negatively skewed. The resulting histograms is shown in figure \ref{fig:correctinexperiencedboxcox_task1}, \ref{fig:correctinexperiencedboxcox_task2} and \ref{fig:correctinexperiencedboxcox_task3}. All three histograms are less skewed than the original histograms.
 
 \begin{figure}[H]
 	\centering
@@ -829,7 +607,7 @@ All three sample's data are Box-Cox transformed. The resulting histograms is sho
 	\caption{Histogram with normal distribution fit after Box-Cox transformation}
 \end{figure}
 
-The D'Agostino and Pearson normality method is tested on the transformed sample data. The three samples has p-values lower than 0.05 (0.061, 0.714 and 0.311). Sample 20, 21 and 22 are normally distributed with a confidence interval of 95\%. 
+The D'Agostino and Pearson normality method is tested on the transformed sample data. The three obtained p-values ($0.061$, $0.714$ and $0.311$) is lower than 0.05. Sample 20, 21 and 22 are normally distributed with a significant level of 5\%. The null hypothesis is accepted. 
 
 \subsubsection{Normality test summary}\label{sec:normaltest_summary}
 
@@ -1080,7 +858,7 @@ The results of the test, the statistical value and finding the critical value in
 	\label{fig:meanstdparticipantscorrect}
 \end{figure}
 
-There is not enough evidence to conclude that there is any difference between experienced- and inexperienced participants when looking at the number of correctly chosen elements per task. 
+Results from til section show that there is is not enough evidence to conclude that there is any difference between experienced- and inexperienced participants when looking at the number of correctly chosen elements per task. The author concludes that experienced- and inexperienced participants did equally well on the task. 
 
 \subsubsection[Sample 5, 6 and 7]{Test if total time differs between the three tasks}\label{sec:anova_result} %One-way \textit{ANOVA} test results
 \textit{Sample 5, 6 and 7}\newline
@@ -1115,7 +893,7 @@ Using equation \ref{eq:anova_reject} and results shown in the box under, the \te
 	\label{fig:meanstdtask123pngtime}
 \end{figure}
 
-Since the null hypothesis was rejected \textit{Tukey's method} will be used to make compared comparisons between task one, two and three. This test did not find any significant difference between the three tasks. The author then concludes that there is a difference in total time between the three tasks, but the difference is not enough that \textit{Tukey's test} find a significant difference. 
+Since the null hypothesis was rejected \textit{Tukey's method} will be used to make comparisons between task one, two and three. This test did not find any significant difference between the three tasks. Visual evaluation of figure \ref{fig:meanstdtask123pngtime} show that task 1 was competed slightly faster than the two other tasks. 
 
  \begin{center}
 	\begin{tcolorbox}[width=0.8\textwidth]
@@ -1130,7 +908,8 @@ Since the null hypothesis was rejected \textit{Tukey's method} will be used to m
 	\end{tcolorbox} 
 \end{center}
 
-\vspace{0.5cm}
+\vspace{0.3cm}
+Based on the results from this section the author concludes that there is a difference in total time between at least two of the tasks, but the difference is not enough. \textit{Tukey's test} can't find a significant difference. 
 
 \subsubsection[Sample 8, 9, and 10]{Test if the number of correct elements differs between the three tasks}\label{sec:sample_8_9_10_kruskal)} %Kruskal-Wallis test results
 \textit{Sample 8, 9, and 10}\newline
@@ -1140,7 +919,7 @@ This section will test if there is a difference in the number of correctly chose
 \centerline{$H_{0}$: $median_8$ = $median_9$ = $median_10$}
 \centerline{$H_{A}$: Number of correctly chosen elements is different between at least two of the tasks}
 
-Using equation \ref{eq:kruskapw-accept}, the Kruskal-Wallis test rejects the null hypothesis. $H-value$ is smaller than the critical value found. P-value is approximately zero and this gives a good indication that the result is significant. With a confidence interval of 95\% the author claim that there is a difference between the median value of the three tasks. \\[0.2cm]
+Using equation \ref{eq:kruskapw-accept}, the Kruskal-Wallis test rejects the null hypothesis. The obtained $H-value$ is smaller than the critical value found. P-value is approximately zero and this gives a good indication that the result is significant. With a confidence interval of 95\% the author claim that there is a difference between the median value of the three tasks. \\[0.2cm]
 
  \begin{center}
 	\begin{tcolorbox}[width=0.8\textwidth]
@@ -1182,16 +961,18 @@ Like in one-way \textit{ANOVA}, a \textit{post hoc} test should be used to make 
 
 \vspace{0.3cm}
 
-The results in this section find significant evidence that experienced participants had a higher number of correct elements in task 1 than in the other tasks. 
+The results in this section find significant evidence that the participants had a higher number of correct elements in task 1 than in the two other tasks. 
 
-\subsubsection[Sample 11, 12 and 13]{Test differenced in results from experienced participants between task 1, 2 and 3}\label{sec:sample_11_12_13_anova}
-This section will answer two hypothesis about experienced participant's results divided in task 1, 2 and 3. Sample 11, 12 and 13 will be used on the first hypothesis. The three samples are normally distributed after a Box-Cox transformation (\ref{tab:normaltest_summary}) and the samples also come from populations with equal variances (\ref{sec:sample11,12,13_levene}). Sample 14, 15 and 16 will be used on the second hypothesis. All three samples are normally distributed (\ref{tab:normaltest_summary}) and the samples also come from populations with equal variances (\ref{sec:sample14,15,16_levene}). The one-way \textit{ANOVA} will be used to test both hypotheses. The first hypothesis will test if time spent on each task differ when including only results from experienced participants and the second hypothesis will test if the number of correct elements in each task differs when including only results from experienced participants. 
+\subsubsection[Sample 11 - 16]{Test differenced in results from experienced participants between task 1, 2 and 3}\label{sec:sample_11_12_13_anova}
+This section will answer two hypothesis about experienced participant's results divided in task 1, 2 and 3. Sample 11, 12 and 13 will be used to answer the first hypothesis. These three samples are normally distributed after a Box-Cox transformation (\ref{tab:normaltest_summary}) and also come from populations with equal variances (\ref{sec:sample11,12,13_levene}). Sample 14, 15 and 16 will be used on the second hypothesis. All three samples are normally distributed (\ref{tab:normaltest_summary}) and also come from populations with equal variances (\ref{sec:sample14,15,16_levene}). The one-way \textit{ANOVA} method will be used to test both hypotheses. The first hypothesis will test if time spent on each of the three tasks differ and the second hypothesis will test if the number of correct elements in each of the three tasks differs when the samples only include results from experienced participants. 
 
 The first hypothesis is:\\
 \centerline{$H_{0}$: $\overline{x}_{11}$ = $\overline{x}_{12}$ = $\overline{x}_{13}$}
 \centerline{$H_{A}$: Total time is different between at least two of the tasks}
 
-Using equation \ref{eq:anova_reject}, the one-way \textit{ANOVA} test rejects the null hypothesis. The $f-value$ calculated ($1216.919$) is higher than the critical value ($3.00$) on all three samples. P-value is also approximately zero and gives a good indication that the result is significant. With a confidence interval of 95\% the author claim that there is a time difference between the three tasks. When the null hypothesis is rejected a \textit{post hoc} test is used to compare each task with each other. Tukey's test did not find any significant difference between the three tasks with a significant level of 5\%. Figure \ref{fig:meanstdexperiencedtask123time} show an approximately similar mean in all three tasks, task 2 has a lower mean and less standard deviation. 
+Using equation \ref{eq:anova_reject}, the one-way \textit{ANOVA} test rejects the null hypothesis. The obtained $f-value$ ($1216.919$) is higher than the critical value ($3.00$). The calculated p-value is also approximately zero and this gives a good indication that the result is significant. With a confidence interval of 95\% the author claim that there is a time difference between the three tasks. 
+
+When the null hypothesis is rejected a \textit{post hoc} test is used to compare each task with each other. Tukey's \textit{post hos} test did not find any significant difference between the three tasks with a significant level of 5\%. Figure \ref{fig:meanstdexperiencedtask123time} show an approximately similar mean value in all three tasks. %task 2 has a lower mean and less standard deviation. 
 
 \begin{figure}[H]
 	\centering
@@ -1200,13 +981,15 @@ Using equation \ref{eq:anova_reject}, the one-way \textit{ANOVA} test rejects th
 	\label{fig:meanstdexperiencedtask123time}
 \end{figure}
 
-The author concludes that there is a significant difference when looking at experienced participants time spent on the three tasks, but the difference is not enough so that \textit{Tukey's test} find which tasks that differ. \newline
+The author concludes that there is a significant difference between at least two of the tasks when looking at experienced participants mean task time, but the difference is not enough so that \textit{Tukey's test} can find which tasks that differ. \newline
 
 The second hypothesis is:\\
 \centerline{$H_{0}$: $\overline{x}_11$ = $\overline{x}_12$ = $\overline{x}_13$}
 \centerline{$H_{A}$: Correct elements in each task is different between at least two of the tasks}
 
-Using equation \ref{eq:anova_reject}, the \textit{ANOVA} test rejects the null hypothesis. The $f-value$ calculated ($8.210$) is higher than the critical value ($3.00$). P-value is also approximately zero and gives a good indication that the result is significant. With a confidence interval of 95\% the author claim that there is a difference between the mean value of the three tasks. Since the null hypothesis was rejected, a \textit{post hoc} test should be used to make paired comparisons to determine which groups differ. Tukey's test resulted in a significant difference in the number of correctly chosen elements between task 1 and task 2, and task 1 and task 3. Figure \ref{fig:meanstdexperiencedtask123correct} show that task 1 has a higher mean value than the two other tasks. Task 1 also has a smaller standard deviation. 
+Using equation \ref{eq:anova_reject}, the one-way \textit{ANOVA} test rejects the null hypothesis. The obtained $f-value$ ($8.210$) is higher than the critical value ($3.00$). The p-value is also approximately zero and this gives a good indication that the result is significant. With a confidence interval of 95\% the author claim that there is a difference between the mean value of at least two of the tasks. 
+
+Since the null hypothesis was rejected, a \textit{post hoc} test should be used to make paired comparisons to determine which groups differ. Tukey's \textit{post-hoc} test resulted in a significant difference in the number of correctly chosen elements between task 1 and task 2, and task 1 and task 3. Figure \ref{fig:meanstdexperiencedtask123correct} show that task 1 has a higher mean value than the two other tasks. Task 1 also has a smaller standard deviation. 
 
 \begin{figure}[H]
 	\centering
@@ -1217,17 +1000,18 @@ Using equation \ref{eq:anova_reject}, the \textit{ANOVA} test rejects the null h
 
 \vspace{0.3cm}
 
-With the results found in this section the author concludes that there is a significant difference in the number of correctly chosen elements between the three tasks. The experienced participants got the best result in task 1. 
+With the results found in this section, the author concludes that there is a significant difference in the number of correctly chosen elements between the three tasks. The experienced participants got the best result on task 1. Time spent on each task also differ between at least two of the tasks, but the difference is not significant enough so that Tukey's test can determine a difference. Figure \ref{fig:meanstdexperiencedtask123time} show that task 2 has the lowest mean time value of the three tasks.  
 
-\subsubsection[Sample 17, 18 and 19, 20, 21 and 22]{Test differenced for both variables, inexperienced participants between task 1, 2 and 3}\label{sec:sample_17_18_19_anova}
 
-This section will answer the same hypothesis at the two previous sections, only with results from inexperienced participants. Sample 17, 18 and 19 will be used on the first hypothesis. The samples are normally distributed (\ref{sec:sample_17,18,19_normalitytest}) and come from populations with equal variances (\ref{sec:sample17,18,19_levene}). Sample 20, 21 and 22 will be used on the second hypothesis. All three samples are normally distributed (\ref{sec:sample_20,21,22_normalitytest}) and also come from populations with equal variances (\ref{sec:sample20,21,22_levene}). The one-way \textit{ANOVA} will be used to test both hypotheses. The first hypothesis will test if time spent on each task differ when including only results from inexperienced participants and the second hypothesis will test if the number of correct elements in each task differs when including only results from inexperienced participants. 
+\subsubsection[Sample 17 -  22]{Test differenced in results from inexperienced participants between task 1, 2 and 33}\label{sec:sample_17_18_19_anova}
+
+This section will answer the same hypothesis at the previous section, only with results from inexperienced participants. Sample 17, 18 and 19 will be used on the first hypothesis. These samples are normally distributed (\ref{sec:sample_17,18,19_normalitytest}) and come from populations with equal variances (\ref{sec:sample17,18,19_levene}). Sample 20, 21 and 22 will be used on the second hypothesis. All three samples are normally distributed (\ref{sec:sample_20,21,22_normalitytest}) and also come from populations with equal variances (\ref{sec:sample20,21,22_levene}). The one-way \textit{ANOVA} will be used to test both hypotheses. The first hypothesis will test if time spent on each task differ and the second hypothesis will test if the number of correct elements in each task differs.
 
 The first hypothesis is:\\
 \centerline{$H_{0}$: $\overline{x}_{17}$ = $\overline{x}_{18}$ = $\overline{x}_{19}$}
 \centerline{$H_{A}$: Total time is different between at least two of the tasks}
 
-The one-way \textit{ANOVA} test rejects the null hypothesis and accepts the alternative hypothesis ($H_{A}$) with a significant level of 5\%. Tukey's \textit{post hoc} test is used to make compared comparisons between task 1, task 2 and task 3. The test doesn't find a significant difference when comparing each of the three tasks with a significant level of 5\%. Figure \ref{fig:meanstdinexperiencedtask123time} show that inexperienced participants spent more time on task 2 than the other tasks, but the difference is not significant according to Tukey's test.
+The one-way \textit{ANOVA} test rejects the null hypothesis and accepts the alternative hypothesis ($H_{A}$) with a significant level of 5\%. The obtained f-value from the test is higher than the critical value ($905.34$ > $3.00$). Since the alternative hypothesis was accepted, Tukey's \textit{post hoc} test is used to make compared comparisons between task 1, task 2 and task 3. The test doesn't find a significant difference when comparing each of the three tasks with a significant level of 5\%. Figure \ref{fig:meanstdinexperiencedtask123time} show that inexperienced participants spent more time on task 2 than the other tasks, but the difference is not significant according to Tukey's test.
 
 \begin{figure}[H]
 	\centering
@@ -1240,7 +1024,7 @@ The seconds hypothesis is:\\
 \centerline{$H_{0}$: $\overline{x}_{20}$ = $\overline{x}_{21}$ = $\overline{x}_{22}$}
 \centerline{$H_{A}$: Number of correct elements is different between at least two of the tasks}
 
-The one-way \textit{ANOVA} test rejects the null hypothesis ($H_0$) and accepts the alternative hypothesis ($H_{A}$) with a significance level of 5\%. Since the null hypothesis was rejected Tukey's \textit{post hoc} test will be used to make comparisons between the three tasks. This test cannot find a significant difference when comparing the tasks with a significant level of 5\%. Looking at figure \ref{fig:meanstdinexperiencedtask123correct}, task 1 has a higher mean than the two other tasks, also task 2 has a higher mean than task 3. Even though there are differences in the number of correct elements between the tasks, it is not significant according to Tukey's test. 
+The one-way \textit{ANOVA} test rejects the null hypothesis ($H_0$) and accepts the alternative hypothesis ($H_{A}$) with a significance level of 5\%. The obtained f-value from the test is higher than the critical value ($189.05$ > $3.00$). Since the null hypothesis was rejected Tukey's \textit{post hoc} test will be used to make comparisons between the three tasks. This test cannot find a significant difference when comparing the tasks with a significant level of 5\%. Looking at figure \ref{fig:meanstdinexperiencedtask123correct}, task 1 has a higher mean time value than the two other tasks, also task 2 has a higher mean than task 3. Even though there are differences in the number of correct elements between the tasks, it is not significant according to Tukey's test. 
 
 \begin{figure}[H]
 	\centering
@@ -1249,6 +1033,7 @@ The one-way \textit{ANOVA} test rejects the null hypothesis ($H_0$) and accepts 
 	\label{fig:meanstdinexperiencedtask123correct}
 \end{figure}
 
+With the results found in this section, the author concludes that there is a significant difference in both total time spent on each task and the number of correctly chosen elements between at least two of the tasks. The differences are not significant enough so that Tukey's test can determine which task differs. Figure \ref{fig:meanstdinexperiencedtask123time} and \ref{fig:meanstdinexperiencedtask123correct} show that task 1 has the lowest mean time value and the highest mean correct value. 
 
 \subsubsection{Hypothesis test summary}
 
