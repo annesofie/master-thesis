@@ -7,13 +7,11 @@
 Can use it to explain the data
 
 \subsection{Gathered data}\label{sec:gathereddata}
+The gathered data is analyzed on the two dependent variables: 1) total time used to complete each task and 2) number of correctly chosen elements per task. Both variables sum the participants time spent and correct elements on question one and question two together. The gathered data is also divided by the two independent variable pairs: 1) experienced- and inexperienced participants and 2) the three survey tasks. Combining the dependent- and independent variables create the foundation of the 22 different samples in this thesis. The samples are listed in the tables in this section. Sample mean $\overline{x}$, sample median, standard deviation of $\overline{x}$, standard error ($\frac{standard deviation}{\sqrt{sample size}}$) of $\overline{x}$, minimum in sample and maximum in sample is listed in the tables. The sample number is also written in the tables and is used in the analysis of the data, to easier distinguish which sample is used in the different analyses. In all the samples, results from the training task and from participants that were disturbed during the survey is removed.
+% The tables in this section, (\ref{sec:gathereddata}), are task results from all participants and all three tasks, excluding the training task. Task results with a total time longer than 2160 seconds are filtered out. This is to remove four outliers that spend more than twice the approximated time (average time on the survey was 1080 seconds in the pilot test). These 4 participants also answered that they were disturbed during the test.
 
-The gathered data will be analyzed on the two dependent variables: 1) total time used to complete each task and 2) number of correctly chosen elements per task. Total time and the number of correct elements sums the time and correctly chosen elements on question one and question two. Sample mean $\overline{x}$, sample median, standard deviation of $\overline{x}$, standard error ($\frac{standard deviation}{\sqrt{sample size}}$) of $\overline{x}$, minimum in sample and maximum in sample are listed in the tabled in this section. The sample number is also written in the tables. These numbers are used in the analysis of the data, to easier understand which sample is used in the different analysis. In all samples, results from the training task are removed. Only results from the three tasks are used. Results from participants that was disturbed during the survey were also removed, four of the participants spent more than twice the estimated time on the survey. Maximum possible correct elements per task are twelve. There are six elements in question one and six elements in question two, and the number of correctly chosen elements in each task is added together maximum twelve correctly chosen elements.
+The gathered data are in the first subsection (\ref{sec:alltasks}) divided into experienced and inexperienced. In subsection \ref{sec:taskdivided_all} the data is divided by the three tasks, containing all participants. Section \ref{sec:taskdivided_experienced}  and \ref{sec:taskdivided_inexperienced} divides the data by the three tasks and also in experienced and inexperienced participants. 
 
-% The tables in this section, (\ref{sec:gathereddata}), are task results from all participants and all three tasks, excluding the training task. Task results with total time longer than 2160 seconds are filtered out. This is to remove 4 outliers that spend more than twice the approximated time (average time on the survey was 1080 seconds in the pilot test). These 4 participants also answered that they were disturbed during the test.
-
- The gathered data are in the first subsection (\ref{sec:alltasks}) divided into experienced and inexperienced. In subsection \ref{sec:taskdivided_all} the data is divided into the three tasks, containing all participants. Section \ref{sec:taskdivided_experienced}  and \ref{sec:taskdivided_inexperienced} divides the data into the three tasks and also in experienced and inexperienced participants. 
- 
 %Removed all participants that said they was distracted. 26 task results was removed, 10 inexperienced and 18 experienced results.
 
 \subsubsection{All,  experienced and inexperienced participants}\label{sec:alltasks}
@@ -94,7 +92,7 @@ In table \ref{tab:totaltime_tasks} and \ref{tab:totalcorrect_tasks} the task res
 
 \subsubsection{Experienced participants, divided by task}\label{sec:taskdivided_experienced}
 
-In the tables in this section, only task results from experienced participants are included and the result is also divided into the three survey tasks. Table \ref{tab:totaltime_tasks_experienced} is data gathered about experienced participants total time per task. Table \ref{tab:totalcorrect_tasks_experienced} is data gathered about experienced participants number of correctly chosen elements per task.
+In the tables in this section, only task results from experienced participants are included, and the result is also divided into the three survey tasks. Table \ref{tab:totaltime_tasks_experienced} is data gathered about experienced participants total time per task. Table \ref{tab:totalcorrect_tasks_experienced} is data gathered about experienced participants number of correctly chosen elements per task.
 
 \begin{table}[H]
 	\centering
@@ -132,8 +130,7 @@ In the tables in this section, only task results from experienced participants a
 \end{table}
 
 \subsubsection{Inexperienced participants, divided by task}\label{sec:taskdivided_inexperienced}
-
-In this section, the task results from only inexperienced participants are included and the result is also divided into the three survey tasks. 
+In this section, the task results from only inexperienced participants are included, and the result is also divided into the three survey tasks. 
 Table \ref{tab:totaltime_tasks_inexperienced} is the total time variable and \ref{tab:totalcorrect_tasks_inexperienced} the number of correctly chosen elements. 
 
 \begin{table}[H]
@@ -169,18 +166,20 @@ Table \ref{tab:totaltime_tasks_inexperienced} is the total time variable and \re
 	\caption[Correct elements, inexperienced per task]{Inexperienced number of correct elements per task, divided by task}
 	\label{tab:totalcorrect_tasks_inexperienced}
 \end{table}
+\vspace{0.5cm}
 
 \subsection{Normality tests}\label{sec:normality_results}
-To check if a two-sample t-test (subsection \ref{sec:t-test}) and \textit{ANOVA}-test (subsection \ref{sec:anova}) can be used, the samples need to be tested if they are normally distributed or not. Both tests assume normally distributed samples. The normality section \ref{sec:normaltesting} concluded that the D'Agostino and Person normality test should be used in this thesis. A visual interpretation of histograms will also be a part of the normality tests. The D'Agostino-Pearson test uses the following hypothesis:\newline
+%To check if a two-sample t-test (subsection \ref{sec:t-test}) and \textit{ANOVA}-test (subsection \ref{sec:anova}) can be used, the samples need to be tested if they are normally distributed or not. Both tests assume normally distributed samples. 
+The samples need to be tested if they follow a normal distribution. This test is important for determining if a parametric or a non-parametric test should be used when including the different samples in the hypothesis tests. The section about normal testing (\ref{sec:normaltesting}) concluded that the D'Agostino and Person normality test should be used in this thesis. A visual interpretation of histograms will also be a part of the normality test. D'Agostino-Pearson uses the following hypothesis:\newline
 
 \centerline{$H_{0}$: The data follows the normal distribution} 
 \centerline{$H_{A}$: The data do not follow the normal distribution}
 
 
 \subsubsection[Sample 1 and 2]{Experienced and inexperienced participants, total time variable}\label{sec:sample1,2_normresult}
-This section will test if sample 1 and 2 (table \ref{tab:totaltime_all}) are normally distributed. Sample 1 and 2 will be used to test if there are any difference on time spent per task between experienced and inexperienced participants. 
+This section will test if sample 1 and 2 (table \ref{tab:totaltime_all}) follow a normal distribution. Sample 1 and 2 will be used to determine if there are a significant difference in time spent on the tasks between experienced and inexperienced participants. 
 
-A visual interpretation of the histograms \ref{fig:totaltimeexclude4_experienced} and \ref{fig:totaltimeexclude4_inexperienced} gives an indication that sample 1 and 2 are not normally distributed. Both histograms are positively skewed (figure \ref{fig:skew}). Samples involving time measurements are rarely normally distributed. This is because the samples will always be skewed since it is impossible to have negative time and there will always be a limit to how fast a participant can finish the task. 
+A visual interpretation of histogram \ref{fig:totaltimeexclude4_experienced} and \ref{fig:totaltimeexclude4_inexperienced} gives an indication that sample 1 and 2 are not normally distributed. Both histograms are positively skewed (figure \ref{fig:skew}). Samples involving time measurements are rarely normally distributed. This is because the samples will always be skewed since it is impossible to have negative time and there will always be a limit to how fast a participant can finish the task. 
 
 \begin{figure}[H]
 	\centering
@@ -197,9 +196,10 @@ A visual interpretation of the histograms \ref{fig:totaltimeexclude4_experienced
 		\label{fig:totaltimeexclude4_inexperienced}
 	\end{subfigure}
 \caption{Histograms with normal distribution fit with samples containing total time to complete each task}
+\label{fig:sample1,2_histo_original}
 \end{figure}
 
-A D'Agostino and Pearson normality test confirmed the visual interpretation with an significance level of 5\% (0.05). Both samples have p-values lower than the significance level. They are not normally distributed with a confidence level of 95\%. \\[0.5cm]
+A D'Agostino and Pearson normality test confirmed the visual interpretation with a significance level of 5\%. Both samples obtained p-values lower than the significance level, and the null hypothesis is rejected. Sample 1 and 2 are not normally distributed with a confidence level of 95\%. \\[0.5cm]
 
 \begin{center}
 	\begin{tcolorbox}[width=0.80\textwidth]
@@ -217,12 +217,11 @@ A D'Agostino and Pearson normality test confirmed the visual interpretation with
 	\end{tcolorbox} 
 \end{center}
 %Boc-Cox Transformation? https://docs.scipy.org/doc/scipy-0.19.0/reference/generated/scipy.stats.boxcox.html https://www.isixsigma.com/tools-templates/normality/dealing-non-normal-data-strategies-and-tools/
+In both sample 1 and 2, the p-value was significantly lower than the significance level of 5\%. Data transformations are commonly used tools to improve normality of a sample's distributions, but there are many types of data transformations. \cite{Osborne2010} claim that almost all tests, even non-parametric tests, benefit from improving the normality of the samples, especially when the normality test is significantly denied. Typical traditional transformations are square root, inverse or converting to logarithmic scales  \citep{Osborne2010}. 
 
-In both sample 1 and 2, the p-value was significantly lower than the significance level of 0.05. Data transformations are commonly used tools to improve normality of a sample's distributions, but there are many types of data transformations. \cite{Osborne2010} claim that almost all tests, even non-parametric tests, benefit from improving the normality of the samples, especially when the normality test is significantly denied. Common traditional transformations are square root, inverse or converting to logarithmic scales  \citep{Osborne2010}. 
+A Box-Cox power transformation (Box-Cox) is used in this thesis. This transformation can only be used on positive data and the data gathered in this thesis will never be below zero. Box-Cox takes the idea of having a range of power transformations (square root $x^{\frac{1}{2}}$, inverse $x^{-1}$, etc.) available to improve the effectiveness of normalizing and variance equalizing for both positively- and negatively-skewed variables \citep{Osborne2010}. This transformation will always use the appropriate conversion to be maximally effective in moving each sampled data towards normality. This is the reason why this thesis will use the Box-Cox transformation.
 
-A Box-Cox power transformation is used in this thesis. This transformation can be used on positive data and the data used in this thesis will never negative. Box-Cox takes the idea of having a range of power transformations (square root $x^{\frac{1}{2}}$, inverse $x^{-1}$ etc.) available to improve the effectiveness of normalizing and variance equalizing for both positively- and negatively-skewed variables \citep{Osborne2010}. This transformation will always use the appropriate transformation to be maximally effective in moving each sampled data towards normality. This is the reason why this thesis will use the Box-Cox transformation.
-
-Sample 1 and 2 after Box-Cox transformation is shown in histogram \ref{fig:totaltimeboxcoxtransformation_experienced} and \ref{fig:totaltimeboxcoxtransformedtitle_inexperienced}. A visual inspection gives a good indication that the transformed data is normally distributed.
+Sample 1 and 2 after a Box-Cox is shown in histogram \ref{fig:totaltimeboxcoxtransformation_experienced} and \ref{fig:totaltimeboxcoxtransformedtitle_inexperienced}. A visual inspection gives a good indication that the transformed data is normally distributed. The skewness looks approximately zero.
 
 \begin{figure}[H]
 	\centering
@@ -238,10 +237,10 @@ Sample 1 and 2 after Box-Cox transformation is shown in histogram \ref{fig:total
 		\caption[Inexperienced, Box-Cox]{Sample 2 - Inexperienced participants}
 		\label{fig:totaltimeboxcoxtransformedtitle_inexperienced}
 	\end{subfigure}
-\caption{Histograms with normal distribution fit after Box-Cox transformation}
+\caption{Histograms with normal distribution fit after Box-Cox power transformation}
 \end{figure}
 
-The D'Agostino and Pearson normality method is then tested on the transformed data. This test confirms the visual analysis, both sample 1 and sample 2 are normally distributed after the Box-Cox transformation with a confidence level of 95\%. The calculated p-value is larger than the significance level (0.05). \\[0.5cm] 
+The transformed data is then applied to the D'Agostino and Pearson test. This test confirms the visual analysis, both sample 1 and sample 2 are normally distributed after the Box-Cox with a confidence level of 95\%. The calculated p-value is larger than the significance level of 5\%. \\[0.5cm] 
 
 \begin{center}
 	\begin{tcolorbox}[width=0.8\textwidth]
@@ -260,13 +259,13 @@ The D'Agostino and Pearson normality method is then tested on the transformed da
 	\end{tcolorbox}
 \end{center}
 
-The assumption that sample 1 and sample 2 are normally distributed is now accepted and can be used in parametric methods when using these samples.
+The assumption that sample 1 and sample 2 are normally distributed is now accepted and the transformed data can be used in parametric methods.
 
 \subsubsection[Sample 3 and 4]{Experienced and inexperienced participants, number of correctly chosen elements variable}\label{sec:correct_ex_inex}
 %DIscrete variables http://stattrek.com/probability-distributions/discrete-continuous.aspx
-This section will test if sample 3 and 4 (table \ref{tab:totalcorrect_all}) are normally distributed. Sample 3 and 4 will be used to test if there are any difference on the number of correct elements per task between experienced and inexperienced participants. 
+This section will test if sample 3 and 4 (table \ref{tab:totalcorrect_all}) are normally distributed. Sample 3 and 4 will be used to test if there are any difference in the number of correctly chosen elements per task between experienced and inexperienced participants. 
 
-A visual inspection of the samples histogram \ref{fig:correctelementswasnotinterupter_ex} and \ref{fig:correctelementswasnotinterupted_inex} gives a good indication that sample 3 and 4 are not normally distributed. Both are negatively skewed (figure \ref{fig:skew}).   
+A visual inspection of the samples histogram \ref{fig:correctelementswasnotinterupter_ex} and \ref{fig:correctelementswasnotinterupted_inex} gives a good indication that sample 3 and 4 are not normally distributed. Both are negatively skewed (figure \ref{fig:skew}). 
 
 \begin{figure}[h!]
 	\centering
@@ -288,13 +287,13 @@ A visual inspection of the samples histogram \ref{fig:correctelementswasnotinter
 D'Agostino and Pearson normality test confirm our visual analysis. Both samples accept the alternative hypothesis with p-values ($0.00443$, $0.00013$) lower than the significant level $0.05$. The null hypothesis is \underline{rejected} and $H_A$ accepted for sample 3 and 4. \\[0.3cm]
 \vspace{0.3cm}
 
-Sample 3 and 4 was Box-Cox power transformed because the null hypothesis was rejected. After the transformation, a new D'Agostino and Pearson normality test was done. Both samples also failed this test. Sample 3 and 4 are not normally distributed and need to be tested with non-parametric methods. 
+Sample 3 and 4 is Box-Cox power transformed because the null hypothesis was rejected. After the transformation, a new D'Agostino and Pearson normality test was performed. Both samples also failed this test. Sample 3 and 4 are not normally distributed and need to be tested with non-parametric methods. 
 
 \subsubsection[Sample 5, 6 and 7]{All participants divided by task, total time variable}\label{sec:task123_time_normaltest}
 
 In this section sample 5, 6 and 7 (table \ref{tab:totaltime_tasks}) is normality tested. These samples will be used to test whether there is a significant difference between the three tasks when looking at the total time variable. 
 
-A visual analysis of the three histograms in figure \ref{fig:totaltimeallnotinterupted_task1}, \ref{fig:totaltimeallnotinterupted_task2} and \ref{fig:totaltimeallnotinterupted_task3} show a positive skewness, just like the histograms in section \ref{sec:totaltime_ex_inex}. This gives an indication that the three samples are not normally distributed. 
+A visual analysis of the three histograms in figure \ref{fig:totaltimeallnotinterupted_task1}, \ref{fig:totaltimeallnotinterupted_task2} and \ref{fig:totaltimeallnotinterupted_task3} show a positive skewness, just like the histograms in figure \ref{fig:sample1,2_histo_original}. This gives an indication that the three samples are not normally distributed. 
 
 \begin{figure}[h!]
 	\centering
@@ -321,7 +320,7 @@ A visual analysis of the three histograms in figure \ref{fig:totaltimeallnotinte
 
 The D'Agostino and Pearson normality test agreed with the visual analysis. Obtained p-values for all three samples ($2.39 * 10^{-24}$, $2.57 * 10^{-9}$ and $1.71 * 10^{-11}$) are smaller than the significance level 0.05, and the null hypothesis is rejected. The samples are not normally distributed with a significant level of 5\%.\\[0.2cm]
 
-Because the null hypothesis was rejected the samples are Box-Cox power transformed. Histograms of each sample after the transformation is shown in figure \ref{fig:totaltimeallnotinteruptedboxcox_task1}, \ref{fig:totaltimeallnotinteruptedboxcox_task2} and \ref{fig:totaltimeallnotinteruptedboxcox_task3}. A visual analysis of the histograms gives a good indication that the transformed data is approximately normally distributed. The histograms have a skewness of approximately zero. 
+Because the null hypothesis was rejected, the samples are Box-Cox power transformed. Histograms of each sample after the transformation is shown in figure \ref{fig:totaltimeallnotinteruptedboxcox_task1}, \ref{fig:totaltimeallnotinteruptedboxcox_task2} and \ref{fig:totaltimeallnotinteruptedboxcox_task3}. A visual analysis of the histograms gives a good indication that the transformed data is approximately normally distributed. The histograms have a skewness of approximately zero. 
 
 \begin{figure}[h!]
 	\centering
@@ -346,12 +345,12 @@ Because the null hypothesis was rejected the samples are Box-Cox power transform
 	\caption{Histogram with normal distribution fit after Box-Cox transformation, sample with total time per task}
 \end{figure}
 
-The D'Agostino and Pearson normality test confirms the visual interpretation. The data is normally distributed after the Box-Cox transformation with a confidence interval of 95\%. The p-values ($0.164$, $0.982$ and $0.354$) of all three samples are higher than the significance level (0.05). \\[0.2cm]. Sample 5, 6 and 7 are normally distributed after the transformation and the assumptions of normality is met. 
+The D'Agostino and Pearson normality test confirms the visual interpretation. The data is normally distributed after Box-Cox with a confidence interval of 95\%. The p-values ($0.164$, $0.982$ and $0.354$) of all three samples are higher than the significance level (0.05). Sample 5, 6 and 7 are normally distributed after the transformation, and the assumptions of normality are met. 
  
  \subsubsection[Sample 8, 9 and 10]{All participants divided by task,  correct element variable}\label{sec:task123_correct_normaltest}
- In this section sample 8, 9 and 10 will be normality tested. These samples will be used to test whether there is a significant difference between the three tasks when looking at the number of correctly chosen elements variable. This variable tells us how many correct elements each participant chose on each of the three tasks. 
+ In this section sample 8, 9 and 10 will be normal distribution examined. These samples will be used to test whether there is a significant difference between the three tasks when looking at the number of correctly chosen elements variable. 
 
-A visual analysis of the three histograms in figure \ref{fig:correctallnotinterupted_task1}, \ref{fig:correctallnotinterupted_task2} and \ref{fig:correctallnotinterupted_task3} show a negative skewness, just like the histograms in section \ref{sec:correct_ex_inex}. This give an indication that the three samples are not normally distributed. 
+A visual analysis of the three histograms in figure \ref{fig:correctallnotinterupted_task1}, \ref{fig:correctallnotinterupted_task2} and \ref{fig:correctallnotinterupted_task3} show a negative skewness, just like the histograms in section \ref{sec:correct_ex_inex}. This give an indication that the three samples are not normally distributed.
  
  \begin{figure}[H]
  	\centering
@@ -376,9 +375,9 @@ A visual analysis of the three histograms in figure \ref{fig:correctallnotinteru
  \caption{Histogram with normal distribution fit showing samples with number of correct elements per task}
  \end{figure}
  
- D'Agostino and Pearson normality test confirms our visual analysis of the histograms in two of three samples. Sample 9 passes the normality test, even though the p-value (0.099) is close to the significance level (0.05). Sample 8 and sample 10 do not pass the normality test with a confidence interval of 95\%. Both samples obtained a p-value ($0.00022$ and $0.0047$) smaller than the significant level. The null hypothesis is rejected for sample 8 and 10, and the alternative hypothesis is accepted. The null hypothesis is accepted for sample 9. \\[0.2cm]
+ D'Agostino and Pearson normality test confirms our visual analysis of the histograms in two of three samples. Sample 9 passes the normality test, even though the p-value ($0.099$) is close to the significance level (0.05). Sample 8 and sample 10 do not pass the normality test with a confidence interval of 95\%. Both samples obtained a p-value ($0.00022$ and $0.0047$) smaller than the significant level. The null hypothesis is rejected for sample 8 and 10, and the alternative hypothesis is accepted. The null hypothesis is accepted for sample 9. The significance level is 5\%. \\[0.2cm]
 
-A Box-Cox power transformation is applied to all three samples. The transformation changes the data, and to correctly compare the samples, sample 9 also has to be transformed even though it's original data is normally distributed. The transformed samples are shown in histogram \ref{fig:correctboxcox_task1}, \ref{fig:correctboxcox_task2} and \ref{fig:correctboxcox_task3}. All three are negatively skewed, sample 9 and 10 less than sample 8. A visual conclusion is difficult in this case. \\[0.2cm]
+A Box-Cox power transformation is applied to all three samples. The transformation changes the data, and to correctly compare the results, sample 9 also has to be transformed even though it's original data is normally distributed. The transformed samples are shown in histogram \ref{fig:correctboxcox_task1}, \ref{fig:correctboxcox_task2} and \ref{fig:correctboxcox_task3}. All three are negatively skewed, sample 9 and 10 less than sample 8. A visual conclusion is difficult in this case. \\[0.2cm]
 
 
 \begin{figure}[h!]
@@ -401,15 +400,15 @@ A Box-Cox power transformation is applied to all three samples. The transformati
 		\caption{Sample 10 - Task 3}
 		\label{fig:correctboxcox_task3}
 	\end{subfigure}
-	\caption{Histogram with normal distribution fit showing samples with number of correct elements per task - after Box-Cox transformation}
+	\caption{Histogram with normal distribution fit after Box-Cox}
 \end{figure}
 
-D'Agostino and Pearson normality test accepts null hypothesis on sample 9 and 10 and rejects it on sample 8. Sample 9 and 10 has p-values ($0.0752$ and$0.2104$) higher than the significance level , while sample 8 p-value ($0.2104$) is significantly lower. When using these three samples in hypothesis tests a non-parametric method should be used. This is because sample 8 is not normally distributed. 
+D'Agostino and Pearson normality test accepts the null hypothesis on sample 9 and 10 and rejects it on sample 8. Sample 9 and 10 has p-values ($0.0752$ and$0.2104$) higher than the significance level, while sample 8's p-value ($0.2104$) is significantly lower. When using these three samples in hypothesis tests, a non-parametric method should be used. This is because sample 8 is not normally distributed. 
 
 \subsubsection[Sample 11, 12 and 13]{Experienced participants divided by task, total time variable}
-In this section, sample 11, 12 and 13 are normality tested. These samples will be used to test whether there is s significant difference between the three tasks total time results when looking at only experienced participants. 
+In this section, sample 11, 12, and 13, shown in table \ref{tab:totaltime_tasks_experienced}, is normal distribution tested. The three samples will be used to test whether there is a significant difference between the three tasks total time results when considering only experienced participants. 
 
-A visual interpretation of the histograms in \ref{fig:sample11_12_13_histogram} show that all three samples are positively skewed (figure \ref{fig:skew}). This is a fairly strong evidence that the samples are not normally distributed.
+A visual interpretation of the histograms in \ref{fig:sample11_12_13_histogram} show that all three samples are positively skewed (figure \ref{fig:skew}). Skew gives a fairly strong evidence that the samples are not normally distributed.
 
  \begin{figure}[H]
  	\centering
@@ -435,9 +434,9 @@ A visual interpretation of the histograms in \ref{fig:sample11_12_13_histogram} 
  	\label{fig:sample11_12_13_histogram}
  \end{figure}
  
-D'Agostino and Pearson normality test confirms our visual interpretation of the three histograms. All three p-values ($1.229 * 10^{-14}$, $2.678 * 10^{-5}$ and $0.000884$) are lower than the significance level (0.05). Sample 11, 12 and 13 do not pass the normality test with a confidence interval of 95\%. The null hypothesis is rejected. \\[0.2cm]
+D'Agostino and Pearson normality test confirms our visual interpretation of the three histograms. All three p-values ($1.229 * 10^{-14}$, $2.678 * 10^{-5}$ and $0.000884$) are lower than the significance level (5\%). Sample 11, 12 and 13 do not pass the normality test with a confidence interval of 95\%. The null hypothesis is rejected. \\[0.2cm]
 
-A Box-Cox power transformation is applied to all three samples because the null hypothesis was rejected. Histograms with normal distribution fit containing the transformed data is shown in figure \ref{fig:sample11_12_13_boxcox_histogram}. Visually, the histograms look normally distributed with minimal skewness. \\
+A Box-Cox power transformation is applied to all three samples since the null hypothesis was rejected. Histograms with normal distribution fit containing the transformed data is shown in figure \ref{fig:sample11_12_13_boxcox_histogram}. Visually, the histograms look normally distributed with minimal skewness. \\
 
 \begin{figure}[H]
 	\centering
@@ -459,16 +458,16 @@ A Box-Cox power transformation is applied to all three samples because the null 
 		\caption{Sample 13 - task 3}
 		\label{fig:totaltimeexperiencedboxcox_task3}
 	\end{subfigure}
-	\caption{Histograms with normal fit containing Box-Cox transformed data}
+	\caption{Histograms with normal distribution fit containing Box-Cox transformed data}
 	\label{fig:sample11_12_13_boxcox_histogram}
 \end{figure}
 
-The Box-Cox power transformed data is tested with D'Agostino and Pearson normality test. All three samples obtained p-values ($0.694$, $0.955$ and $0.887$) larger than the significance level (0.05). Within a confidence interval of 95\%, the test concludes that sample 11, 12 and 13 is normally distributed. Sample 11, 12 and 13 can be used in methods assuming normally distributed samples. 
+The Box-Cox transformed data is tested with D'Agostino and Pearson normality test. All three samples obtained p-values ($0.694$, $0.955$ and $0.887$) larger than the significance level (0.05). Within a confidence interval of 95\%, the test concludes that sample 11, 12 and 13 is normally distributed. Sample 11, 12 and 13 can be used in methods assuming normally distributed samples. 
 
 \subsubsection[Sample 14, 15 and 16]{Experienced participants divided by task, correct elements variable}
-This section will test if sample 14, 15 and 16 follows the normal distribution. These samples will be used to test whether there is a significant difference in the number of correct elements between the three tasks when looking at only experienced participants. Before testing the hypothesis the samples need to be normality tested. 
+This section will test if sample 14, 15 and 16, shown in table \ref{tab:totalcorrect_tasks_experienced}, follows the normal distribution. The three samples will be used to test whether there is a significant difference in the number of correct elements between the three tasks when comparing only experienced participants. 
 
-A visual interpretation of the histograms in \ref{fig:sample14,15,16_normhistogram} show that all three samples are slightly negatively skewed (figure \ref{fig:skew}). The skew is not as much as other histograms in this chapter. Sample 15 (\ref{fig:correctexperienced_task1}) and sample 16 (\ref{fig:correctexperienced_task2}) has less skew than sample 14 (\ref{fig:correctexperienced_task3}).  
+A visual interpretation of the histograms in \ref{fig:sample14,15,16_normhistogram} show that all three samples are slightly negatively skewed (figure \ref{fig:skew}). Sample 15 (\ref{fig:correctexperienced_task1}) and sample 16 (\ref{fig:correctexperienced_task2}) has less skew than sample 14 (\ref{fig:correctexperienced_task3}).  
 
 \begin{figure}[H]
 	\centering
@@ -494,12 +493,12 @@ A visual interpretation of the histograms in \ref{fig:sample14,15,16_normhistogr
 	\label{fig:sample14,15,16_normhistogram}
 \end{figure}
 
-  D'Agostino and Pearson normality test confirms our visual interpretation of the three histograms. All three p-values ($0.0588$, $0.2067$ and $0.2975$) are higher than the significant level (0.05), notice that sample 14 has a lower p-value than the two other samples. This sample is not as significant as the two other samples. Sample 14, 15 and 16 pass the normality test with a confidence interval of 95\%. The null hypothesis is accepted. Sample 14, 15 and 16 can be used in tests that assume normally distributed samples.
+ D'Agostino and Pearson normality test confirms our visual interpretation of the three histograms. All three p-values ($0.0588$, $0.2067$ and $0.2975$) are higher than the significant level (0.05), notice that sample 14 has a lower p-value than the two other samples. This sample is not as significant as the two other samples. Sample 14, 15 and 16 pass the normality test with a confidence interval of 95\%. The null hypothesis is accepted. Sample 14, 15 and 16 can be used in tests that assume normally distributed samples.
 
 \subsubsection[Sample 17, 18 and 19]{Inexperienced participants divided by task, total time variable}\label{sec:sample_17,18,19_normalitytest}
-This section will test if sample 17, 18 and 19 follows the normal distribution. These samples will be used to test whether there is a significant difference in total time between the three tasks when looking at only inexperienced participants. Before testing the hypothesis the samples need to be normality tested. 
+This section will test if sample 17, 18 and 19, shown in table \ref{tab:totaltime_tasks_inexperienced}, follows the normal distribution. These samples will be used to test whether there is a significant difference in total time between the three tasks when looking at only inexperienced participants.
 
-A visual analysis of the histograms \ref{fig:totaltimeinexperienced_task1}, \ref{fig:totaltimeinexperienced_task2} and \ref{fig:totaltimeinexperienced_task3} shows a positive skew. The skew is less than the histograms in figure \ref{fig:sample11_12_13_histogram}, but is probably still too large for the samples to be normally distributed.  
+A visual analysis of the histograms \ref{fig:totaltimeinexperienced_task1}, \ref{fig:totaltimeinexperienced_task2} and \ref{fig:totaltimeinexperienced_task3} show a positive skew. The skew is less than the histograms in figure \ref{fig:sample11_12_13_histogram}, but is most likely too large for the samples to be normally distributed.
 
 \begin{figure}[H]
 	\centering
@@ -526,7 +525,7 @@ A visual analysis of the histograms \ref{fig:totaltimeinexperienced_task1}, \ref
 
 The D'Agostino and Pearson normality test agrees with the visual analysis. The three obtained p-values ($1.586 * 10^{-11}$, $1.773 * 10^{-6}$ and $2.312 * 10 ^{-11}$) are all significantly lower than the significance level of 0.05. Sample 17, 18 and 19 is not normally distributed with a confidence interval of 95\%. The null hypothesis is rejected. \\[0.2cm]
 
-The samples is Box-Cox power transformed. The histograms after transformation (\ref{fig:totaltimeinexperiencedboxcox_task1}, \ref{fig:totaltimeinexperiencedboxcox_task2} and \ref{fig:totaltimeinexperiencedboxcox_task3}) looks normal distributed. 
+The samples are Box-Cox power transformed. The histograms after transformation (\ref{fig:totaltimeinexperiencedboxcox_task1}, \ref{fig:totaltimeinexperiencedboxcox_task2} and \ref{fig:totaltimeinexperiencedboxcox_task3}) are visually evaluated to be normal distributed. 
 
 \begin{figure}[H]
 	\centering
@@ -548,15 +547,15 @@ The samples is Box-Cox power transformed. The histograms after transformation (\
 		\caption{Sample 19 - Task 3}
 		\label{fig:totaltimeinexperiencedboxcox_task3}
 	\end{subfigure}
-	\caption{Histogram with normal distribution fit after Box-Cox transformation}
+	\caption{Histogram with normal distribution fit after Box-Cox}
 \end{figure}
 
-A new D'Agostino and Pearson normality test on the transformed data confirms that all three samples are normally distributed with a significance level of 5\%. The obtained p-values ($0.139$, $0.909$ and $0.067$) are smaller than 0.05, the null hypothesis is accepted. Sample 17, 18 and 19 are normally distributed after Box-Cox power transformation. \\[0.2cm]
+A new D'Agostino and Pearson normality test on the transformed data confirms that all three samples are normally distributed with a significance level of 5\%. The obtained p-values ($0.139$, $0.909$ and $0.067$) is smaller than 0.05, and the null hypothesis is accepted. Sample 17, 18, and 19 are normally distributed after Box-Cox and can be used in parametric methods \\[0.2cm]
 
 \subsubsection[Sample 20, 21 and 22]{Inexperienced participants  divided by task, correct elements variable}\label{sec:sample_20,21,22_normalitytest}
-Sample 20, 21 and 22 contains the number of correct elements in each of the three tasks from only inexperienced participants. The samples will be used to test if inexperienced participants do better in one of the tasks. Before analysing, the samples needs to be normally tested. 
+Sample 20, 21 and 22, shown in table \ref{tab:totalcorrect_tasks_inexperienced}, contains the number of correctly chosen elements in each of the three tasks from only inexperienced participants. The samples will be used to test if inexperienced participants do better in one of the tasks. 
 
-A visual interpretation of 
+A visual interpretation of histogram \ref{fig:correctinexperienced_task1}, \ref{fig:correctinexperienced_task2} and \ref{fig:correctinexperienced_task3} show a negative skew, similar to the histograms containing results from only experienced participants (\ref{(fig:fig:sample14,15,16_normhistogram}).
 
 \begin{figure}[H]
 	\centering
@@ -579,11 +578,12 @@ A visual interpretation of
 		\label{fig:correctinexperienced_task3}
 	\end{subfigure}
 	\caption{Histogram with normal distribution fit}
+	\label{fig:sample20,21,22_normtest_original}
 \end{figure}
 
-The D'Agostino and Pearson normality test rejects the null hypothesis on sample 20 and 22 and accepts the null hypothesis on sample 21. Obtained p-values ($0.007$ and $0.004$) are lower than 0.05 for sample 20 and 22 and for sample 21 ($0.523$) higher than 0.05 The test concludes that sample 21 are normally distributed and sample 20 and 22 is not normally distributed with a significant level of 5\%. \newline
+The D'Agostino and Pearson normality test rejects the null hypothesis on sample 20 and 22 and accepts the null hypothesis on sample 21. Obtained p-values ($0.007$ and $0.004$) are lower than 0.05 for sample 20 and 22 and sample 21 ($0.523$) higher than 0.05. The test concludes that sample 21 is normally distributed, and sample 20 and 22 is not with a significant level of 5\%. \newline
 
-A Box-Cox power transformation is applied to all three samples. The transformation changes the data, and to correctly compare the samples, sample 21 also has to be transformed even though it's original data is normally distributed. The transformed samples are shown in histogram \ref{fig:correctinexperiencedboxcox_task1}, \ref{fig:correctinexperiencedboxcox_task2} and \ref{fig:correctinexperiencedboxcox_task3}. All three are slightly negatively skewed. The resulting histograms is shown in figure \ref{fig:correctinexperiencedboxcox_task1}, \ref{fig:correctinexperiencedboxcox_task2} and \ref{fig:correctinexperiencedboxcox_task3}. All three histograms are less skewed than the original histograms.
+A Box-Cox power transformation is applied to all three samples. The transformation changes the data, and to correctly compare the data, sample 21 also has to be transformed even though the original data was followed the normal distribution. The transformed samples are shown in histogram \ref{fig:correctinexperiencedboxcox_task1}, \ref{fig:correctinexperiencedboxcox_task2} and \ref{fig:correctinexperiencedboxcox_task3}. All three histograms are less skewed than the original histograms (\ref{fig:sample20,21,22_normtest_original}).
 
 \begin{figure}[H]
 	\centering
@@ -608,7 +608,7 @@ A Box-Cox power transformation is applied to all three samples. The transformati
 	\caption{Histogram with normal distribution fit after Box-Cox transformation}
 \end{figure}
 
-The D'Agostino and Pearson normality method is tested on the transformed sample data. The three obtained p-values ($0.061$, $0.714$ and $0.311$) is lower than 0.05. Sample 20, 21 and 22 are normally distributed with a significant level of 5\%. The null hypothesis is accepted. 
+The D'Agostino and Pearson normality method is executed on the transformed samples. The three obtained p-values ($0.061$, $0.714$ and $0.311$) is lower than 0.05. The null hypothesis is accepted. Sample 20, 21 and 22 are normally distributed with a significant level of 5\% and can be used in parametric methods.  
 
 \subsubsection{Normality test summary}\label{sec:normaltest_summary}
 
@@ -656,7 +656,7 @@ As mentioned in section \ref{sec:t-test}, \ref{sec:anova} and \ref{sec:mannwhite
 \centerline{$H_{A}$: Input samples are from populations that do not have equal variances}
 \vspace{0.3cm}
 
-The null hypothesis is accepted if the obtained p-value is higher than the significance level. Table \ref{tab:levenestest_summary} contains the summary of the Levene's test performed on all sample pairs. All sample pairs accepted the null hypothesis accept sample 1 and 2, who obtained a p-value lower than the significance lecel. The test used a significance level of 5\% on all the tests. \\[0.2cm]
+The null hypothesis is accepted if the obtained p-value is higher than the significance level. Table \ref{tab:levenestest_summary} contains the summary of the Levene's test performed on all sample pairs. All sample pairs accepted the null hypothesis except sample 1 and 2, who obtained a p-value lower than the significance level. The test used a significance level of 5\% on all the tests. \\[0.2cm]
 
 \begin{longtable}{p{0.5\textwidth}|l|p{0.25\textwidth}}
 	\caption[Summary, Levene's tests]{Summary of Levene's tests} \label{tab:levenestest_summary} \\
@@ -682,7 +682,7 @@ The null hypothesis is accepted if the obtained p-value is higher than the signi
 \vspace{0.5cm}
 
 \subsection{Hypothesis testing}\label{sec:hypothesis_results}
-In this section all the hypothesis will be tested. The tests order will be the same as the tables in section \ref{sec:gathereddata}. Which test that is used is determined by the results from the normality tests (section \ref{sec:normality_results} and Levene's test (section \ref{sec:levene_test_results}.
+This section will test all the hypothesis. The tests order will be the same as the tables in section \ref{sec:gathereddata}. Which statistic test that is used is determined by the results from the normality tests (section \ref{sec:normality_results}) and Levene's test (section \ref{sec:levene_test_results}).
 
 \subsubsection[Sample 1, 2]{Test differences in total time between experienced and inexperienced participants}\label{sec:t-test_result} 
 %Two sample t-test results
@@ -701,7 +701,7 @@ If $\overline{x}_1$ equals the mean time for experienced-, and $\overline{x}_2$ 
 
 \vspace{0.3cm}
 
-Since we cannot assume equal variances in the two samples (\ref{sec:sample1,2_levene}), this test will use the Welch's t-test for unequal variances [\citep{Walpole2012}, p. 345]. Equation \ref{eq:ttest_twoway} is still valid. Results are shown under. The T-statistic calculated is smaller than the critical value. The t-test conclude that there is a significant difference between the means of the two population samples with a confidence interval of 95\%.\\[0.2cm]
+Since we cannot assume equal variances in the two samples (table \ref{tab:levenestest_summary}), this test will use the Welch's t-test for unequal variances [\citep{Walpole2012}, p. 345]. Equation \ref{eq:ttest_twoway} is still valid. The obtained values from the test is shown in the gray box. The obtained T-statistic is smaller than the critical value. The t-test then conclude that there is a significant difference between the means of the two population samples with a confidence interval of 95\%.\\[0.2cm]
 
  \begin{center}
 	\begin{tcolorbox}[width=0.8\textwidth]
