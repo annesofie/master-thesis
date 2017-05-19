@@ -177,7 +177,7 @@ To check if a two-sample t-test (subsection \ref{sec:t-test}) and \textit{ANOVA}
 \centerline{$H_{A}$: The data do not follow the normal distribution}
 
 
-\subsubsection[Sample 1 and 2]{Experienced and inexperienced participants, total time variable}\label{sec:totaltime_ex_inex}
+\subsubsection[Sample 1 and 2]{Experienced and inexperienced participants, total time variable}\label{sec:sample1,2_normresult}
 This section will test if sample 1 and 2 (table \ref{tab:totaltime_all}) are normally distributed. Sample 1 and 2 will be used to test if there are any difference on time spent per task between experienced and inexperienced participants. 
 
 A visual interpretation of the histograms \ref{fig:totaltimeexclude4_experienced} and \ref{fig:totaltimeexclude4_inexperienced} gives an indication that sample 1 and 2 are not normally distributed. Both histograms are positively skewed (figure \ref{fig:skew}). Samples involving time measurements are rarely normally distributed. This is because the samples will always be skewed since it is impossible to have negative time and there will always be a limit to how fast a participant can finish the task. 
@@ -647,118 +647,54 @@ The D'Agostino and Pearson normality method is tested on the transformed sample 
 		Task 3 & 22 & No & \textbf{Yes} \\ \hline
 	\end{longtable}
 
-\subsection{Levene's test}
-As mentioned in section \ref{sec:normaltesting} and \ref{sec:anova}, the two sample t-test and \textit{ANOVA} assumes that the samples come from a population with equal variances. This assumption will be examined with Levene's test. The hypothesis in this test is: \\[0.5cm]
+\vspace{0.5cm}
+
+\subsection{Levene's test of Equality of Variance}\label{sec:levene_test_results}
+As mentioned in section \ref{sec:t-test}, \ref{sec:anova} and \ref{sec:mannwhiteyu}, the two sample t-test, one-way \textit{ANOVA} and Mann-Whitey U test assumes that the samples come from populations with equal variances. This assumption will be examined with Levene's test. The hypothesis tested is: \\[0.3cm]
 
 \centerline{$H_{0}$: Input samples are from populations with equal variances} 
 \centerline{$H_{A}$: Input samples are from populations that do not have equal variances}
-
-\subsubsection[Sample 1 and 2]{Experienced and inexperienced participants - total time variable}\label{sec:sample1,2_levene}
-Since sample 1 and 2 was normal distributed accepted after the Box-Cox transformation, will the Levene's test use the transformed data in the analysis. Both samples contain total time spent on each task where sample 1 is for experienced and sample 2 is for inexperienced participants. The results is shown in the box under. Levene's test rejects the null hypothesis with a confidence interval of 95\%. \\[0.2cm]
-
- \begin{center}
-	\begin{tcolorbox}[width=0.8\textwidth]
-		\centering
-		\textit{Levene's test, sample 1 and 2}\\
-		Significance level: 5\%  \\[0.5cm]
-		
-		P-value: $1.258 * 10^{-25}$\\[0.2cm]
-		
-		$P-value$ is smaller than the significance level ($1.258*10^{-25}$ < $0.05$) and the null hypothesis is \underline{rejected} and $H_A$ accepted.\\[0.5cm]
-	\end{tcolorbox} 
-\end{center}
 \vspace{0.3cm}
-We cannot assume that sample 1 and sample 2 comes from populations with equal variances. This has to be handled when testing hypothesis with these samples.
 
-\subsubsection[Sample 5, 6, and 7]{All participants divided by task - total time variable}\label{sec:sample5,6,7}
-Sample 5, 6 and 7 was normally distributed accepted after the Box-Cox transformation. Before using the samples in a \textit{ANOVA test} they need to be equal variance tested. All samples contain total time spent on each task, separated in task 1 (sample 5), task 2 (sample 6) and task 3 (sample 7). Using Levene's test to determine this statement. The results are shown in the box under. Levene's test accepts the null hypothesis with a confidence interval of 95\%. \\[0.2cm]
+The null hypothesis is accepted if the obtained p-value is higher than the significance level. Table \ref{tab:levenestest_summary} contains the summary of the Levene's test performed on all sample pairs. All sample pairs accepted the null hypothesis accept sample 1 and 2, who obtained a p-value lower than the significance lecel. The test used a significance level of 5\% on all the tests. \\[0.2cm]
 
- \begin{center}
-	\begin{tcolorbox}[width=0.8\textwidth]
-		\centering
-		\textit{Levene's test, sample 5, 6 and 7}\\
-		Significance level: 5\%  \\[0.5cm]
-		
-		P-value: $0.636$\\[0.2cm]
-		
-		$P-value$ is larger than the significance level ($0.636$ > $0.05$) and the null hypothesis is \underline{accepted}.\\[0.5cm]
-	\end{tcolorbox} 
-\end{center}
+\begin{longtable}{p{0.5\textwidth}|l|p{0.25\textwidth}}
+	\caption[Summary, Levene's tests]{Summary of Levene's tests} \label{tab:levenestest_summary} \\
+	Sample & Obtained p-value & Samples are from populations with equal variances \\ \hline
+	\textit{Total time, all} & & \\
+	1 and 2 & 0.030 & \textbf{No}  \\ \hline
+	\textit{Correct elements, all} & & \\
+	3 and 4 &0.823& Yes   \\ \hline
+	\textit{Total time, divided by task}& & \\
+	5, 6, and 7 & 0.636 & Yes \\ \hline
+	\textit{Correct elements, divided by task} & & \\
+	8, 9, and 10 & 0.805  & Yes  \\ \hline
+	\textit{Total time, experienced participants divided by task} & & \\
+	11, 12, and 13 & 0.972 & Yes  \\ \hline
+	\textit{Correct elements, experienced participants divided by task} & & \\
+	14, 15, and 16 & 0.724 & Yes \\ \hline
+	\textit{Total time, inexperienced participants divided by task} & & \\
+	17, 18, and 19 & 0.499  & Yes  \\ \hline
+	\textit{Correct elements, inexperienced participants divided by task} & & \\
+	20, 21, and 22 & 0.626 & Yes \\ \hline
+\end{longtable}
 
-\subsubsection[Sample 11, 12 and 13]{Experienced participants divided by task, total time variable}\label{sec:sample11,12,13_levene}
-Sample 11, 12 and 13 was normally distributed accepted after the Box-Cox transformation. Before using the samples in a \textit{ANOVA test} they need to be equal variance tested. All samples contain experienced participants total time spent on each task, separated in task 1 (sample 11), task 2 (sample 12) and task 3 (sample 13). Using \textit{Levene's test} to determine this statement. The results are shown in the box under. Levene's test accepts the null hypothesis with a confidence interval of 95\%. \\[0.2cm]
-
- \begin{center}
-	\begin{tcolorbox}[width=0.8\textwidth]
-		\centering
-		\textit{Levene's test, sample 11, 12 and 13}\\
-		Significance level: 5\%  \\[0.5cm]
-		
-		P-value: $0.9715$\\[0.2cm]
-		
-		$P-value$ is larger than the significance level ($0.9715$ > $0.05$) and the null hypothesis is \underline{accepted}.\\[0.5cm]
-	\end{tcolorbox} 
-\end{center}
-
-\subsubsection[Sample 14, 15 and 16]{Experienced participants divided by task, correct elements variable}\label{sec:sample14,15,16_levene}
-Sample 14, 15 and 16 is normally distributed. The samples will be used in a hypothesis test, and therefore the samples need to be tested for the equal variance assumption. Using \textit{Levene's test} to determine this statement. The results are shown in the box under. Levene's test accepts the null hypothesis with a confidence interval of 95\%. \\[0.2cm]
-
- \begin{center}
-	\begin{tcolorbox}[width=0.8\textwidth]
-		\centering
-		\textit{Levene's test, sample 14, 15 and 16}\\
-		Significance level: 5\%  \\[0.5cm]
-		
-		P-value: $0.724$\\[0.2cm]
-		
-		$P-value$ is larger than the significance level ($0.724$ > $0.050$) and the null hypothesis is \underline{accepted}.\\[0.5cm]
-	\end{tcolorbox} 
-\end{center}
-
-\subsubsection[Sample 17, 18 and 19]{Inexperienced participants divided by task, total time variable}\label{sec:sample17,18,19_levene}
-Sample 17, 18 and 19 is normally distributed. The samples will be used in a hypothesis test, and therefore the samples need to be tested for the equal variance assumption. Using \textit{Levene's test} to determine this statement. The results are shown in the box under. Levene's test accepts the null hypothesis with a confidence interval of 95\%. \\[0.2cm]
-
-\begin{center}
-	\begin{tcolorbox}[width=0.8\textwidth]
-		\centering
-		\textit{Levene's test, sample 17, 18 and 19}\\
-		Significance level: 5\%  \\[0.5cm]
-		
-		P-value: $0.499$\\[0.2cm]
-		
-		$P-value$ is larger than the significance level ($0.499$ > $0.050$) and the null hypothesis is \underline{accepted}.\\[0.5cm]
-	\end{tcolorbox} 
-\end{center}
-
-\subsubsection[Sample 20, 21 and 22]{Inexperienced participants  divided by task, correct elements variable}\label{sec:sample20,21,22_levene}
-Sample 20, 21 and 22 is normally distributed after as Box-Cox transformation. The samples will be used in a hypothesis test, and therefore the samples need to be tested for the equal variance assumption. Using \textit{Levene's test} to determine this statement. The results are shown in the box under. Levene's test accepts the null hypothesis with a confidence interval of 95\%. \\[0.2cm]
-
-\begin{center}
-	\begin{tcolorbox}[width=0.8\textwidth]
-		\centering
-		\textit{Levene's test, sample 20, 21 and 22}\\
-		Significance level: 5\%  \\[0.5cm]
-		
-		P-value: $0.626$\\[0.2cm]
-		
-		$P-value$ is larger than the significance level ($0.626$ > $0.050$) and the null hypothesis is \underline{accepted}.\\[0.5cm]
-	\end{tcolorbox} 
-\end{center}
+\vspace{0.5cm}
 
 \subsection{Hypothesis testing}\label{sec:hypothesis_results}
+In this section all the hypothesis will be tested. The tests order will be the same as the tables in section \ref{sec:gathereddata}. Which test that is used is determined by the results from the normality tests (section \ref{sec:normality_results} and Levene's test (section \ref{sec:levene_test_results}.
 
 \subsubsection[Sample 1, 2]{Test differences in total time between experienced and inexperienced participants}\label{sec:t-test_result} 
 %Two sample t-test results
 %\textbf{Test differences between experienced and inexperienced participants}\\
+This section will test if there are any difference in total time spent on the tasks between experienced and inexperienced participants. This test is covered by sample 1 and sample 2 from section \ref{sec:totaltime_ex_inex}. Sample 1 is experienced participants and sample 2 inexperienced participants. Both samples was normally distributed after a Box-Cox transformation (\ref{sec:sample1,2_normresult}). A two sample t-test will be used to answer this hypothesis since the normality assumption is valid. The hypothesis tested in this section is: \\[0.3cm]
 
-The hypothesis tested in this section is: \\[0.3cm]
-
-\centerline{$H_{0}$: Equal total task time between experienced and inexperienced participants} 
+\centerline{$H_{0}$: Equal task time between experienced and inexperienced participants} 
 \centerline{$H_{A}$: Unequal task time between experienced and inexperienced participants}
 
 \vspace{0.3cm}
 
-This test is covered by sample 1 and sample 2 from section \ref{sec:totaltime_ex_inex}. Sample 1 is experienced participants and sample 2 inexperienced participants. Both samples was normally distributed after a Box-Cox transformation, so a two sample t-test will be used to answer this hypothesis. $\overline{x}_1$ equals the mean total time for experienced-, and $\overline{x}_2$ the mean total time for inexperienced participants, the hypothesis can be written as:\\[0.3cm]
+If $\overline{x}_1$ equals the mean time for experienced-, and $\overline{x}_2$ the mean time for inexperienced participants, the hypothesis can be written as:\\[0.3cm]
 
 \centerline{$H_{0}$: $\overline{x}_1$ = $\overline{x}_2$} 
 \centerline{$H_{A}$: $\overline{x}_1$ $\neq$ $\overline{x}_2$}
@@ -783,22 +719,22 @@ Since we cannot assume equal variances in the two samples (\ref{sec:sample1,2_le
 	\end{tcolorbox} 
 \end{center}
 
-\vspace{0.7cm}
+\vspace{0.5cm}
 
 \textbf{Test if experienced or inexperienced participants finish the task fastest} 
 
-The second hypothesis tested in this section is:\newline
+Because there was a significant difference between time spent on the tasks, this section will also test who finished the task fastest. The second hypothesis tested in this section is:\newline
 
 %\centerline{$H_{0}$: Inexperienced participants has a lower or equal total time compared to experienced participants.}
-\centerline{$H_{0}$: Equal total task time between all participants}
-\centerline{$H_{A}$: Experience participants has a lower total time}
+\centerline{$H_{0}$: Equal task time between all participants}
+\centerline{$H_{A}$: Experience participants finish the task faster}
 
 With sample 1 equals experienced participants and sample 2 equals inexperienced participants we get the hypothesis:\\[0.2cm]
 
 \centerline{$H_{0}$: $\overline{x}_1$ = $\overline{x}_2$}
 \centerline{$H_{A}$: $\overline{x}_1$ < $\overline{x}_2$}
 
-This test gives the same T-statistics as the previous test, but the critical value is changed since the test is changed to a two sample, one-way t-test. Since we cannot assume equal variances in the two samples a Welch's test is performed. The test results are shown under. The $T-statistic$ is still smaller than the critical value (-64.654 < 1.645). Our test is to check if sample 1's mean is significantly larger than sample 2's mean, then we use the test written in equation \ref{eq:ttest_greater}. Our $T-statistic$ is not larger than the critical value, therefore we need to accept the null hypothesis. There is no evidence that experienced participants use less time on the tasks than the inexperienced. \\[0.2cm]
+This test gives the same T-statistics as the previous test, but the critical value is changed since this test is changed to a two sample, one-way t-test. Since we cannot assume equal variances in the two samples a Welch's test is performed. The test results are shown under. The $T-statistic$ is still smaller than the critical value (-64.654 < 1.645). Our test is to check if sample 1's mean is significantly larger than sample 2's mean, then we use the test written in equation \ref{eq:ttest_greater}. Our $T-statistic$ is not larger than the critical value, therefore we need to accept the null hypothesis. There is no evidence that experienced participants use less time on the tasks than the inexperienced. \\[0.2cm]
 
  \begin{center}
 	\begin{tcolorbox}[width=0.8\textwidth]
