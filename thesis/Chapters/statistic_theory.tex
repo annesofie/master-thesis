@@ -15,11 +15,12 @@ Designed the survey so that the observations should be random and independent \\
 - Random which order the metadata was written in the table \\
 
 \subsection{Participants}
-- Who is the participants \\
--age \\
--sex \\
--completion rate, how many completed the survey\\
--why include the data where the participants didn't complete the whole survey \\
+%- Who is the participants, -age, -sex, -completion rate, how many completed the survey, -why include the data where the participants didn't complete the whole survey \\
+The participant's contribution to the survey was contacted through email and Geoforum's channels. All students at \textit{Civil and engineering} was emailed, as well as a mailing list reaching out to the Norwegian OpenStreetMap community. The web application was also published at the Geoforum website (www.geoforum.no) and Facebook page. Geoforum is a Norwegian organization for people and companies working with geomatics. 
+
+There was in total 461 entries in the survey, where each participant contributed with three entries (the training task was removed from the dataset). 402 participants registered on the website during the data gathering period and only 38\% of the registered participants completed the survey. 152 participants completed all three tasks. Results from participants not completing all three tasks are also included in the dataset. Including these result is not a problem. The three tasks were given to each participant in a random order, and the tasks are also independent, containing different buildings. 
+
+The mean participant age was 31.5 years and the median 25 years. The youngest participant was 19 years and the oldest 58 years. 33\% of the participants was female and 66\% male. The average male was 33.5 years old and the average female 31.2 years old. 19\% of the participants that completed the survey said they had heard of micro-tasking before. 53\% of the participants stated that they had experience of working with geospatial data. The distribution between experienced and inexperienced participants was approximately even. A very desirable distribution. 
 
 \section{Statistics theory}\label{sec:statistic_theory}
 This section will give an introduction to the statistics used in this thesis. The thesis will examine the data with parametric methods but also with non-parametric methods if the assumption of a normally distributed samples fails. A nonparametric method is much more efficient than the parametric procedure when the set of data used in the test deviates significantly from the normal distribution \citep{Walpole2012}. There are also some disadvantages using nonparametric methods. The methods will be less efficient, and to acchieve the same power as the corresponding parametric method a larger sample size is required. If parametric and nonparametric tests are both valid on the same set of data, the parametric test should be used \citep{Walpole2012}. 
@@ -61,30 +62,29 @@ For small sample sizes, normality tests have little power to reject the null hyp
 %The computations in the Anderson-Darling test differs based on what is known about the observations. In this study both the expected mean and variance is unknown. In all the Anderson-Darling tests in this study a significance level of $0.05$ is used, which gives a confidence interval of $95$ \% . If the calculated \textit{p-value} is less than the significance level ($0.05$), the null hypothesis is rejected. The larger the \textit{p-value} the closer match is the data to the normal distribution. The Anderson-Darling statistics is used to calculate the \textit{p+value} for the \textit{goodness-of-fit} test. 
 
 \subsection{Hypothesis testing}\label{sec:hypothesistesting}
-The null- and alternative hypothesis are statements regarding a difference or an effect that occur in the population of the study. The alternative hypothesis (Ha) usually represents the question to be answered or the theory to be tested, while the null hypothesis ($H_{0}$) nullifies or opposes Ha \citep{Walpole2012}. The sample collected in the study is used to test which statement is most likely (technically it's testing the evidence against the null hypothesis).  When the hypothesis is identified, both null and alternative, the next step is to find evidence and develop a strategy for or against the null hypothesis \citep{LundResearchLtd2013}.
+The null- and alternative hypothesis are statements regarding a difference or an effect that occur in the population of the study. The alternative hypothesis (Ha) usually represents the question to be answered or the theory to be tested, while the null hypothesis ($H_{0}$) nullifies or opposes Ha \citep{Walpole2012}. The sample collected in the study is used to examine which statement is most likely (technically it is testing the evidence against the null hypothesis).  When the hypothesis is identified, both null and alternative, the next step is to find evidence and develop a strategy for or against the null hypothesis \citep{LundResearchLtd2013}.
 
-The first step, after identifying the hypothesis, is to determine the level of statistical significance, often expressed as the \textit{p-value}. A statistical test will result in the probability (\textit{the p-value}) of observing your sample results given that the null hypothesis is true. A significance level widely used in academic research is 0.05 or 0.01 \citep{Walpole2012}. 
+The next step, after the hypothesis is identified, is to determine the level of statistical significance, often expressed as the \textit{p-value}. A statistical test will result in the probability (\textit{the p-value}) of observing your sample results given that the null hypothesis is true. A significance level widely used in academic research is 0.05 or 0.01 \citep{Walpole2012}. 
 
-You should not report the result as "significant difference", but instead report it as "statistically significant difference". This is because your decision as to whether the result is significant or not should not be based solely on your statistical test. Therefore, to indicate to readers that this "significance" is a statistical one, include this is your sentence \citep{LundResearchLtd2013a}. 
-
+The result should not be reported as "significantly different," but instead report it as "statistically significantly different." This is because the statistical decision as to whether the result is significant should not be based solely on the statistical test. To indicate to readers that the result is a statistical one, include statistically in the conclusion sentence \citep{LundResearchLtd2013a}. 
 %Compare the mean time in experienced and not experienced
 %H0: No time difference, Ha: Experienced use less time
 
-\subsubsection{Two sample t-test}\label{sec:t-test}
+\subsubsection{Two-sample t-test}\label{sec:t-test}
 When estimating the difference between two means a two-sample t-test is used \citep{Walpole2012}. A two sampled test assumes two independent, random samples from distributions with means [$\mu_{1}$ , $\mu_{2}$] and variances [$\sigma_{1}^{2}$, $\sigma_{2}^{2}$]. %*HOW TO DETERMINE IF THEY ARE INDEPENDENT? 
-The hypothesis on two means can be written as:\newline
+The hypothesis tested on two means can be written as\newline
 
 \centerline{$H_{0}$: $\mu_{1}$ - $\mu_{2}$ = 0 or $\mu_{1}$ = $\mu_{2}$} 
 \centerline{$H_{A}$:$\mu_{1}$ - $\mu_{2}$ $\neq$ 0 or $\mu_{1}$ - $\mu_{2}$ > 0 or $\mu_{1}$ > $\mu_{1}$}
 
-The two sample t-test is used to estimate if differences between two means are significant. In a two sample, two sided, t-test ($\mu_{1}$ - $\mu_{2}$ $\neq$ 0) the null hypothesis is rejected when [\citep{Walpole2012}, p. 345]:
+The two-sample t-test is used to estimate if differences between two means are significant. In a two-sample, two-sided, t-test ($\mu_{1}$ - $\mu_{2}$ $\neq$ 0) the null hypothesis is rejected when [\citep{Walpole2012}, p. 345]:
 
 \begin{equation}
 \label{eq:ttest_twoway}
 |T| > t_{\frac{\alpha}{2}, v} 
 \end{equation}
 
-In a two sample, one sided, t-test the null hypothesis is rejected when [\citep{Walpole2012}, p. 350]:
+In a two-sample, one-sided, t-test the null hypothesis is rejected when [\citep{Walpole2012}, p. 350]:
 
 \begin{equation}
 \label{eq:ttest_greater}

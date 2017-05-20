@@ -722,7 +722,7 @@ Since we cannot assume equal variances in the two samples (Table \ref{tab:levene
 
 \textbf{Test if experienced or inexperienced participants finish the task fastest} 
 
-Because there was a significant difference between time spent on each task between the participants, this section will also test who finished the task fastest. The second hypothesis tested in this section is:\newline
+Because there was a statistical significant difference between time spent on each task between the participants, this section will also test who finished the task fastest. The second hypothesis tested in this section is:\newline
 
 %\centerline{$H_{0}$: Inexperienced participants has a lower or equal total time compared to experienced participants.}
 \centerline{$H_{0}$: Equal task time between all participants}
@@ -757,7 +757,7 @@ This test gives the same T-statistics as the previous test, but the critical val
 	\label{fig:meanstdparticipantstime}
 \end{figure}
 
-Since we know that there is a significant difference between the two sample means, the author concludes that the inexperienced participants finished the task faster than the experienced participants. The time difference can also be seen in plot \ref{fig:meanstdparticipantstime}. Inexperienced participants finished the tasks in average 16 seconds faster than experienced participants.\newline
+Since we know that there is a statistical significant difference between the two sample means, the author concludes that the inexperienced participants finished the task faster than the experienced participants. The time difference can also be seen in plot \ref{fig:meanstdparticipantstime}. Inexperienced participants finished the tasks in average 16 seconds faster than experienced participants.\newline
 
 \subsubsection[Sample 3, 4]{Test if there is a difference between experienced and inexperienced participants in total correct elements} %Mann-Whitey U Test results
 %\textbf{Test differences between experienced and inexperienced participants}\\
@@ -818,7 +818,7 @@ Using equation \ref{eq:anova_reject} in section \ref{sec:anova} and results obta
 	\end{tcolorbox} 
 \end{center}
 
-Since the null hypothesis was rejected \textit{Tukey's method,} is used to make comparisons between task one, two, and three. This test did not find any significant difference between the three tasks. Visual evaluation of figure \ref{fig:meanstdtask123pngtime} show that task 1 was completed slightly faster than the two other tasks. 
+Since the null hypothesis was rejected \textit{Tukey's method,} is used to make comparisons between task one, two, and three. This test did not find any statistically significant difference between the three tasks. Visual evaluation of figure \ref{fig:meanstdtask123pngtime} show that task 1 was completed slightly faster than the two other tasks. 
 
  \begin{center}
 	\begin{tcolorbox}[width=0.8\textwidth]
@@ -841,14 +841,14 @@ Since the null hypothesis was rejected \textit{Tukey's method,} is used to make 
 \end{figure}
 
 \vspace{0.3cm}
-Based on the results from this section the author concludes that there is a difference in total time between at least two of the tasks, but the difference is not enough for \textit{Tukey's test} to find a significant difference. 
+Based on the results from this section the author concludes that there is a statistically significant difference in total time between at least two of the tasks, but the difference is not enough for \textit{Tukey's test} to find a significant difference. 
 
 \subsubsection[Sample 8, 9, and 10]{Test if the number of correct elements differs between the three tasks}\label{sec:sample_8_9_10_kruskal)} %Kruskal-Wallis test results
 This section will test if there is a difference in the number of correctly chosen elements between the three tasks. The test will use sample 8, 9 and 10. Since sample 8 are not normally distributed (\ref{sec:task123_correct_normaltest}) a non-parametric test should be applied. The Kruskal-Wallis test is the non-parametric equivalent to one-way \textit{ANOVA} (\ref{sec:kruskal-w-test}). It is used to test equality of medians when the samples are not normally distributed. The hypothesis tested is: \\[0.2cm]
 
 \centerline{$H_{0}$: $median_8$ = $median_9$ = $median_{10}$}
 \centerline{$H_{A}$: Number of correctly chosen elements differ between at least two of the tasks}
-\vspace{0.3cm}
+\vspace{0.2cm}
 
 Using equation \ref{eq:kruskapw-accept} in section \ref{sec:kruskal-w-test}, the Kruskal-Wallis test rejects the null hypothesis. The obtained $H-value$ is smaller than the critical value. The p-value is approximately zero, and this gives a good indication that the result is significant. With a confidence interval of 95\% the author claim that there is a difference between the median value of the three tasks. \\[0.2cm]
 
@@ -864,9 +864,10 @@ Using equation \ref{eq:kruskapw-accept} in section \ref{sec:kruskal-w-test}, the
 		$v$ = 2\\ %k-1 = 3-1 = 2
 		Critical-value:  5.991\\[0.2cm] %http://web.utk.edu/~cwiek/TwoSampleDoF
 		
-		$H-value$ is significantly lower than the critical value ($328.816$ > $5.991$) and the null hypothesis is \underline{rejected}, $H_A$ is accepted\\[0.5cm]
+		$H-value$ is significantly higher than the critical value ($328.816$ > $5.991$) and the null hypothesis is \underline{rejected}, $H_A$ is accepted\\[0.5cm]
 	\end{tcolorbox} 
 \end{center}
+\vspace{0.3cm}
 
 Like in one-way \textit{ANOVA}, a \textit{post hoc} test should be used to make paired comparisons to determine which groups differ. The \textit{post hoc} test applied is Tukey's test. Results from Tukey's test resulted in a significant difference in the number of correctly chosen elements between task 1 and task 2, and task 1 and task 3. Figure \ref{fig:meanstdtask123pngcorrect} show that task 1 has a higher mean value than the other two tasks. Task 1 also has a smaller standard deviation than the other tasks. \\[0.2cm]
 
@@ -892,7 +893,7 @@ Like in one-way \textit{ANOVA}, a \textit{post hoc} test should be used to make 
 
 \vspace{0.3cm}
 
-The results in this section find significant evidence that the participants had a higher number of correct elements in Task 1 than in the two other tasks. 
+The results in this section find statistically significant evidence that the participants had a higher number of correct elements in Task 1 than in the two other tasks. 
 
 \subsubsection[Sample 11 - 16]{Test differenced in results from experienced participants}\label{sec:sample_11_12_13_anova}
 This section will answer two hypothesis about experienced participant's results divided by task. The first hypothesis will test if time spent on each of the three tasks differ and the second hypothesis will test if the number of correct elements in each of the three tasks differs when the samples only include results from experienced participants. Sample 11, 12 and 13 will be used to answer the first hypothesis. These three samples are normally distributed after a Box-Cox transformation (\ref{tab:normaltest_summary}) and also come from populations with equal variances (\ref{sec:sample11,12,13_levene}). Sample 14, 15 and 16 will be used on the second hypothesis. All three samples are normally distributed (\ref{tab:normaltest_summary}) and also come from populations with equal variances (\ref{sec:sample14,15,16_levene}). The one-way \textit{ANOVA} method will be used to test both hypotheses. 
@@ -900,7 +901,7 @@ This section will answer two hypothesis about experienced participant's results 
 The first hypothesis is:\\
 \centerline{$H_{0}$: $\overline{x}_{11}$ = $\overline{x}_{12}$ = $\overline{x}_{13}$}
 \centerline{$H_{A}$: Total time is different between at least two of the tasks}
-\vspace{0.3cm}
+\vspace{0.2cm}
 
 Using equation \ref{eq:anova_reject}  from section \ref{sec:anova}, the one-way \textit{ANOVA} test rejects the null hypothesis. The obtained $f-value$ ($1216.919$) is higher than the critical value ($3.00$). The calculated p-value is also approximately zero, and this gives a good indication that the result is significant. With a confidence interval of 95\% the author claim that there is a time difference between the three tasks. 
 
@@ -917,7 +918,8 @@ When the null hypothesis is rejected, a \textit{post hoc} test is used to compar
 
 The second hypothesis is:\\
 \centerline{$H_{0}$: $\overline{x}_11$ = $\overline{x}_12$ = $\overline{x}_13$}
-\centerline{$H_{A}$: The number of correct elements in each task differs between at least two of the tasks}
+\centerline{$H_{A}$: Number of correct elements in each task differs between at least two of the tasks}
+\vspace{0.2cm}
 
 Using equation \ref{eq:anova_reject}, the one-way \textit{ANOVA} test rejects the null hypothesis. The obtained $f-value$ ($8.210$) is higher than the critical value ($3.00$). The p-value is also approximately zero and this gives a good indication that the result is significant. With a confidence interval of 95\% the author claim that there is a difference between the mean value of at least two of the tasks. 
 
@@ -932,7 +934,7 @@ Since the null hypothesis was rejected, a \textit{post hoc} test should be used 
 
 \vspace{0.3cm}
 
-With the results found in this section, the author concludes that there is a significant difference in the number of correctly chosen elements between the three tasks. The experienced participants got the best result on task 1. Time spent on each task also differ between at least two of the tasks, but the difference is not significant enough so that Tukey's test can determine a difference. Figure \ref{fig:meanstdexperiencedtask123time} show that task 2 has the lowest mean time value of the three tasks.  
+With the results found in this section, the author concludes that there is a statistically significant difference in the number of correctly chosen elements between the three tasks. The experienced participants got the best result on task 1. Time spent on each task also differ between at least two of the tasks, but the difference is not significant enough so that Tukey's test can determine a difference. Figure \ref{fig:meanstdexperiencedtask123time} show that task 2 has the lowest mean time value of the three tasks.  
 
 
 \subsubsection[Sample 17 -  22]{Test differenced in results from inexperienced participants}\label{sec:sample_17_18_19_anova}
@@ -941,8 +943,8 @@ This section will answer the same hypothesis as the previous section, only with 
 
 The first hypothesis is:\\
 \centerline{$H_{0}$: $\overline{x}_{17}$ = $\overline{x}_{18}$ = $\overline{x}_{19}$}
-\centerline{$H_{A}$: Total time is different between at least two of the tasks}
-\vspace{0.3cm}
+\centerline{$H_{A}$: Total time differ between at least two of the tasks}
+\vspace{0.2cm}
 
 The one-way \textit{ANOVA} test rejects the null hypothesis and accepts the alternative hypothesis ($H_{A}$) with a significant level of 5\%. The obtained f-value from the test is higher than the critical value ($905.34$ > $3.00$). Since the alternative hypothesis was accepted, Tukey's \textit{post hoc} test is used to make compared comparisons between task 1, task 2 and task 3. The test does not find a significant difference when comparing each of the three tasks with a significant level of 5\%. Figure \ref{fig:meanstdinexperiencedtask123time} show that inexperienced participants spent more time on task 2 than the other tasks, but the difference is not significant according to Tukey's test.
 
@@ -956,7 +958,7 @@ The one-way \textit{ANOVA} test rejects the null hypothesis and accepts the alte
 The seconds hypothesis is:\\
 \centerline{$H_{0}$: $\overline{x}_{20}$ = $\overline{x}_{21}$ = $\overline{x}_{22}$}
 \centerline{$H_{A}$: Number of correct elements differ between at least two of the tasks}
-\vspace{0.3cm}
+\vspace{0.2cm}
 
 The one-way \textit{ANOVA} test rejects the null hypothesis ($H_0$) and accepts the alternative hypothesis ($H_{A}$) with a significance level of 5\%. The obtained f-value from the test is higher than the critical value ($189.05$ > $3.00$). Since the null hypothesis was rejected, Tukey's \textit{post hoc} test will be used to make comparisons between the three tasks. This test cannot find a significant difference when comparing the tasks with a significant level of 5\%. Looking at figure \ref{fig:meanstdinexperiencedtask123correct}, task 1 has a higher mean time value than the two other tasks, task 2 also has a higher mean than task 3. Even though there are differences in the number of correct elements between the tasks, it is not significant according to Tukey's test. 
 
@@ -967,7 +969,7 @@ The one-way \textit{ANOVA} test rejects the null hypothesis ($H_0$) and accepts 
 	\label{fig:meanstdinexperiencedtask123correct}
 \end{figure}
 
-With the results found in this section, the author concludes that there is a significant difference in both total time spent on each task and the number of correctly chosen elements between at least two of the tasks. The differences are not significant enough so that Tukey's test can determine which task differs. Figure \ref{fig:meanstdinexperiencedtask123time} and \ref{fig:meanstdinexperiencedtask123correct} show that task 1 has the lowest mean time value and the highest mean correct value. 
+With the results found in this section, the author concludes that there is a statistically significant difference in both total time spent on each task and the number of correctly chosen elements between at least two of the tasks. The differences are not significant enough so that Tukey's test can determine which task differs. Figure \ref{fig:meanstdinexperiencedtask123time} and \ref{fig:meanstdinexperiencedtask123correct} show that task 1 has the lowest mean time value and the highest mean correct value. 
 
 \subsubsection{Hypothesis test summary}
 

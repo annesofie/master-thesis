@@ -1,26 +1,43 @@
 \chapter{Methodology and experiment}
+This thesis will try to determine questions regarding micro-tasks involving geospatial data. Little research is done on how well inexperienced individuals solve micro-tasks when the tasks involve map interaction and geospatial data. To the authors best knowledge, little, if any, research has been conducted on micro-tasks involving map interaction and geospatial interpretation and analysis. The experiment will be administered through a Self-Administered Questionnaire, where the questions will be located in a web-application developed and implemented by the author. When doing questionnaire designed survey, a key factor is to keep the questions short, simple, and clearly worded. 
 
-\cite{Gadiraju2015} categorize typically crowdsourced tasks into six top-level classes. Interesting classes within geospatial data is \textit{Verification and validation}, \textit{Interpretation and analysis} and \textit{Content creation}. There are examples of all three task classes in geospatial crowdsourcing. During imports of large datasets into OpenStreetMap, crowdsourcing is used to validate the new data. In humanitarian OpenSteetMap, they map areas during a crisis to support the help organizations through crowdsourcing, creating valuable content to the workers in the field. In a machine learning process, they are starting to use micro-tasks to both validate the created data and also create test data sets to the algorithms. \textit{Interpretation and analysis} tasks rely on the individual to use their interpretation skills during task completion. This is the task class used in this thesis during the survey. Is it safe to assume that individuals, both experienced and inexperienced, can interpret and analyse geospatial data presented to the on both map and in tables correctly? This is the main goal of the survey. 
+\cite{Gadiraju2015} categorize the top-level crowdsourced tasks, after analysing platforms as MTurk and CrowdFlower, into six classes. Relevant classes within geospatial data is \textit{1)Verification and validation}, \textit{2)Interpretation and analysis} and \textit{3)Content creation}. There are examples of all three task classes in geospatial crowdsourcing. During imports of large datasets into OpenStreetMap, crowdsourcing is used to validate the new data. In humanitarian OpenSteetMap, they map areas during crisis to support the help organizations through crowdsourcing, creating valuable content to the workers in the field. In a machine learning process, they are starting to use micro-tasks to both validate the created data and also create test data sets to the algorithms. All are examples mentioned in chapter \ref{chp:background}. \textit{Interpretation and analysis} tasks rely on the individual to use their interpretation skills during task completion. The experiment use these three classes, with emphasis on the \textit{Interpretation and analysis} class, to develop the questions given to the participants. This section will introduce the experiment developed to the reader. The experiment is the basis for the analyses, it is therefore important that the experiment is developed and executed correctly.
 
-\section{Survey}
-This thesis will try to determine questions regarding micro-tasks containing geospatial data. Little research is done on how well inexperienced individuals solve micro-tasks when they involve map interaction and geospatial data. To the authors best knowledge, little, if any, research has been done on micro-tasks involving map interaction and geospatial interpretation and analysis. 
-
-The survey will be administered through a Self-Administered Questionnaire, there the questions will be located in a web-application developed and implemented by the author. When doing questionnaire designed survey, a key factor is to keep the questions short, simple, and clearly worded. 
-
-Our first sample application asks users to identify which object does not belong in a collection of items. This kind of task requires both image- and semantic-classification capability %http://dbarowy.github.io/AutoMan/
+%This thesis will try to answer questions regarding micro-tasks containing geospatial data. Is it safe to assume that individuals, both experienced and inexperienced, can interpret and analyze geospatial data presented to them on both map and in tables correctly? Can individuals with little experience in working with geospatial data and map solve geospatial micro-tasks? To the authors best knowledge, little, if any, research has been done on micro-tasks involving map interaction and geospatial interpretation and analysis. 
+%Our first sample application asks users to identify which object does not belong in a collection of items. This kind of task requires both image- and semantic-classification capability %http://dbarowy.github.io/AutoMan/
 
 \section{Experiment}\label{sec:survey}
-The survey is a part of this thesis. The survey is used to answer different hypothesis around geospatial micro-tasks. To be able to answer the hypothesizes three tasks containing the same two questions was developed. The questions will represent two different micro-tasks involving geospatial data, while the three tasks will vary the number of elements the participant will use to answer the questions with. The participant will always answer the two question's on six elements, but the tasks vary how many element's need to be handled at the same time. The variation of a number of elements in the tasks is to hopefully find out if or how much the number of elements in a micro-task effect how well people solves the task. 
+The experiment is a big part of this thesis. The experiment is used to answer different hypothesis involving geospatial micro-tasks. To be able to answer the hypothesizes a survey containing three tasks answering the same two questions was developed. 
 
-When selecting the number of elements in the three different tasks the author decided to base this on cognitive load theory. Cognitive load theory refers to the total amount of mental effort being used in the working memory. Working memory is determined by the number of information elements that need to be processed simultaneously within a certain amount of time \citep{Barrouillet2007}. A heavy cognitive load can have negative effects on task completion, also the cognitive load that is imposed by a learning task is much higher for novices that for more advanced students \citep{Leppink2014a}.  
+The questions will represent two different micro-tasks involving geospatial data, while the three tasks will vary the number of elements the participant will use to answer the questions with. The participant will always answer the two question's on six elements, but the tasks vary how many element's need to be handled at the same time. The variation of a number of elements in the tasks is to hopefully find out if or how much the number of elements in a micro-task effect how well people solves the task. 
 
-It is stated that the working memory has a limited capacity of seven plus or minus two elements (or chunks) of information when merely holding information and even fewer (ca four) when processing information \citep{Leppink2014a}. By choosing three elements in one task and six elements in the other task this paper can determine if the theories about the limited capacity of the human brain also apply to maps and geospatial data. The last task will only contain one element as a minimum cognitive load task. This can help answer how many elements a human can process when doing micro-tasks containing geospatial data. The goal is to determine a preferred number of elements within a micro-task to use when developing micro-tasks so that they are most efficient and accurate.
+\subsection{Experiment questions}
+The experiment asks two questions, which represents two different geospatial micro-tasks. As mentioned in the introduction in this chapter, the \textit{Interpretation and analysis} task class, listed by \cite{Gadiraju2015}, is emphasised and gives the basis for both determining both questions.  The first question asks the participant to click on the color that fits the shape of the marked building(s) on the map best. This is an analysing task. The participant is given two building footprints on each building and need to determine which of the footprints that fits the building shape shown on the basemap best. Question one presented on the web application is shown in figure \ref{fig:q12}. In this example the participants has three buildings to select. 
 
-The “magical” number of 4 has been demonstrated to limit much of human information processing \citep{Mandler2013}. It is said that polygon comparison demand medium cognitive load \citep{Kiefer2016}, which is what the participants do in the first question in this survey. \cite{Kiefer2016} argues that high cognitive load may lead to less effective map reading and spatial orientation, as well as decreased spatial learning. Since polygon comparison doesn't demand high cognitive load, the task should at least not be too demanding on the one element task and the three elements task. A worry is that the inexperienced participants will have a bigger struggle than the experienced participants. The extraneous cognitive load imposed high for the inexperienced when solving problems, because their lack of prior knowledge of how to solve that type of problem forces them to resort to weak problem-solving strategies \citep{Leppink2014a}. By dividing the participants into experienced and inexperienced categories the results from the survey can help determine if geospatial micro-tasks are too demanding on inexperienced individuals. 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{fig/q1_2}
+	\caption{Question one as it is presented in the web application}
+	\label{fig:q12}
+\end{figure}
 
-The survey will then contain three tasks, each task contains six elements but the tasks vary how many elements the participant need to handle at the same time. One task will serve the participant with one and one element, the task that demands the smallest cognitive load. The other task will serve the participant with three and three elements at the same time. This number is just under the limit of how much information humans can process. The last task will serve the participant with all the elements at the same time. This number exceeds the human capacity when processing information according to \cite{Leppink2014a}. 
+The second question asks the participant to select the 1/3/6 most informative row(s) that describes random buildings best. This is an interpretation task where the participant need to interpret the information written in the table, and need to decide which row(s) gives the most informative information about an arbitrary building. In figure \ref{fig:q22} question two is presented in the web application. In this example the participant has to choose three row's from the table. 
 
-There are two variable types used in this survey, dependent- and independent variables. The dependent variables are: time spent on each question and each task, the number of correctly chosen elements in both questions and also how difficult the participant though the task was. The independent variables are: number of elements in the task, experienced or inexperienced participant, gender, age and if the participant knows micro-tasking. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{fig/q2_2}
+	\caption{Question two as it is presented in the web application}
+	\label{fig:q22}
+\end{figure}
+
+\subsection{Experiment tasks}
+The experiment consists of three different tasks, including a training task. When determining the number of elements in the three tasks the author decided to base this on cognitive load theory. Cognitive load theory refers to the total amount of mental effort being used in the working memory. Working memory is determined by the number of information elements that need to be processed simultaneously within a certain amount of time \citep{Barrouillet2007}. A heavy cognitive load can have negative effects on task completion. The cognitive load that is imposed by a learning task is much higher for beginners than for more advanced students \citep{Leppink2014a}.  
+
+It is stated that the working memory has a limited capacity of seven plus or minus two elements (or chunks) of information when merely holding information and even fewer (ca four) when processing information \citep{Leppink2014a}. By choosing three elements in one task and six elements in the other task, this paper can determine if the theories about the limited capacity of the human brain also apply to maps and geospatial data. The last task will only contain one element as a minimum cognitive load task. The three tasks can help answer how many elements a human can process when doing micro-tasks containing geospatial data. The goal is to determine a preferred number of elements to include in a micro-task. This information can be useful when developing micro-tasks to achieve adequate task progress as well as accurate results.
+
+The “magical” number of 4 has been demonstrated to limit much of human information processing \citep{Mandler2013}. It is said that polygon comparison demand medium cognitive load \citep{Kiefer2016}, which is what the participants do in the first question in this survey. \cite{Kiefer2016} argues that high cognitive load may lead to less efficient map reading and spatial orientation, as well as decreased spatial learning. Since polygon comparison does not demand high cognitive load, the task should at least not be too demanding on the one- and the three elements task. A worry is that the inexperienced participants will have a bigger struggle than the experienced participants. The extraneous cognitive load imposed high for the inexperienced when solving problems because their lack of prior knowledge of how to solve that type of problem forces them to resort to weak problem-solving strategies \citep{Leppink2014a}. By dividing the participants into experienced and inexperienced categories, the results from the survey can help determine if geospatial micro-tasks are too demanding on inexperienced individuals. 
+
+The survey will contain three tasks, each task contains six elements, but the tasks vary how many elements the participant need to handle at the same time. One task will serve the participant with one and one element, the task that demands the smallest cognitive load. The other task will serve the participant with three and three elements at the same time. This number is just under the limit of how much information humans can process. The last task will serve the participant with all the elements at the same time. This number exceeds the human capacity when processing information according to \cite{Leppink2014a}. 
 
 \section[Building shapes]{Determining the building shapes}
 Remote sensing is a tool or technique for extracting information about objects or geographic areas. All remote sensing images are subject to some form of geometric distortions. The distortions depend on how the data are obtained \citep{Toutin2004}.  In Norway, most remote sensing images are analysed manually. This is also the case in OpenStreetMap. When using remotely sensed images to create for instance building footprints, it's important to be aware of the distortions in these images. 
@@ -31,7 +48,7 @@ According to \cite{Fan2014}, there was over 77 million buildings in the OpenStre
 
 %Map matching is the process to identify correspondent features between two geospatial data sets, cannot be used to identify corresponding polygons in two building data sets \citep{Fan2014}.     
 
-In the creation of the elements and conflicts used in the first question in the survey, the quality criterion's shape- and position accuracy were emphasized. The first question asks the participant to select the shape that fits the marked building on the map best. The goal is to create shapes that matches realistic cases that occur for instance in OSM. 
+In the creation of the two footprints on each building used in the first question in the survey, the quality criterion's shape- and position accuracy were emphasized. The first question asks the participant to select the shape that fits the marked building on the map best. The goal is to create shapes that matches realistic cases that occur for instance in OSM. 
 
 Shape accuracy evaluates how well the layer matches the building with reference to an aerial image. \cite{Fan2014} mentions three main reasons to why building footprints are simplified in OSM. First reason is because of the difficulties following building details when looking from a bird's-eye view. Second reason is the limited resolution on the Bing aerial image used during digitalization. The last reason that is mentioned is that the volunteers in OSM don't have the patience to digitalize a complicated footprint exactly as it is. Drawing two layers with one of them matching the building shape better than the other, the participant has to use an aerial image to determine which layer fits the building best. This will test if the participants manage to make correct shape judgements by only using an aerial image as reference. 
 
@@ -42,30 +59,17 @@ This thesis used an online web-based survey to conduct the experiment. An online
 
 In a self selected sample, which is some the case here, there is potentially a bias in the sample \citep{Ben2009}. %s168
 
-\subsection{Technology}
-React \\
-Django \\
-Postgis \\
-AWS \\
+Independence of observations. This is mostly a study design issue and, as such, you will need to determine whether you believe it is possible that your observations are not independent based on your study design (e.g., group work/families/etc). A lack of independence of cases has been stated as the most serious assumption to fail. Often, there is little you can do that offers a good solution to this problem. %https://statistics.laerd.com/statistical-guides/one-way-anova-statistical-guide-2.php
 
-\subsection{Architecture}
+%Indepencence: Chi-square Test of Independence -  researching if two categorical variables are related or associated (i.e. dependent).  https://onlinecourses.science.psu.edu/stat500/node/56
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{fig/uml_diagram_task2}
-	\caption[Task, UML diagram]{UML diagram, Task: Task Element and Task Conflict}
-	\label{fig:umldiagramtask2}
-\end{figure}
+Designed the survey so that the observations should be random and independent \\
+- Random order on the tests \\
+- Random color on the layers \\
+- Random which order the layers was drawn on the map \\
+- Random which order the metadata was written in the table \\
 
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8\linewidth]{fig/uml_diagram_taskresult}
-	\caption[Survey result, UML diagram]{UML diagram, Survey result: Task result and Task survey}
-	\label{fig:umldiagramtaskresult}
-\end{figure}
-
-
+There are two variable types used in this survey, dependent- and independent variables. The dependent variables are: time spent on each question and each task, the number of correctly chosen elements in both questions and also how difficult the participant though the task was. The independent variables are: number of elements in the task, experienced or inexperienced participant, gender, age and if the participant knows micro-tasking. 
 
 \subsection{Graphical Interface}
 
