@@ -1,26 +1,43 @@
 \chapter{Result}
-
 %My hypothesis before start
+%\section{Sample data from Survey}
 
-\section{Sample data from Survey}
 
-Independence of observations. This is mostly a study design issue and, as such, you will need to determine whether you believe it is possible that your observations are not independent based on your study design (e.g., group work/families/etc). A lack of independence of cases has been stated as the most serious assumption to fail. Often, there is little you can do that offers a good solution to this problem. %https://statistics.laerd.com/statistical-guides/one-way-anova-statistical-guide-2.php
-
-%Indepencence: Chi-square Test of Independence -  researching if two categorical variables are related or associated (i.e. dependent).  https://onlinecourses.science.psu.edu/stat500/node/56
-
-Designed the survey so that the observations should be random and independent \\
-- Random order on the tests \\
-- Random color on the layers \\
-- Random which order the layers was drawn on the map \\
-- Random which order the metadata was written in the table \\
-
-\subsection{Participants}
+\section{Participants}
 %- Who is the participants, -age, -sex, -completion rate, how many completed the survey, -why include the data where the participants didn't complete the whole survey \\
-The participant's contribution to the survey was contacted through email and Geoforum's channels. All students at \textit{Civil and engineering} was emailed, as well as a mailing list reaching out to the Norwegian OpenStreetMap community. The web application was also published at the Geoforum website (www.geoforum.no) and Facebook page. Geoforum is a Norwegian organization for people and companies working with geomatics. 
+Benefits of using a online based experiment is that it has potential to reach a huge number of people, the problem is how to reach out to the people to make them aware of the existence of the application. Using mailing threads and sites the researcher had available was the solution. The participant's contribution to the survey was contacted through email and Geoforum's channels. All students at \textit{Civil and engineering} was emailed, as well as a mailing list reaching out to the Norwegian OpenStreetMap community. The web application was also published at the Geoforum website (www.geoforum.no) and Facebook page. Geoforum is a Norwegian organization for people and companies working with geomatics. The participants receiving the email or looking at the Geoforum site could click on the web application URL and access the experiment from there. 
 
-There was in total 461 entries in the survey, where each participant contributed with three entries (the training task was removed from the dataset). 402 participants registered on the website during the data gathering period and only 38\% of the registered participants completed the survey. 152 participants completed all three tasks. Results from participants not completing all three tasks are also included in the dataset. Including these result is not a problem. The three tasks were given to each participant in a random order, and the tasks are also independent, containing different buildings. 
+There was in total 461 task results gathered in the database, where each participant contributed with three results (the training task was removed from the dataset). 402 participants registered on the website during the data gathering period and only 38\% of the registered participants completed the survey. 152 participants completed all three tasks. Results from participants not completing all three tasks are also included in the dataset. Including these result is not a problem. The three tasks were given to each participant in a random order, and the tasks are also independent, containing different buildings. Doing all three or only one or two of the tasks should not effect the result. 
 
 The mean participant age was 31.5 years and the median 25 years. The youngest participant was 19 years and the oldest 58 years. 33\% of the participants was female and 66\% male. The average male was 33.5 years old and the average female 31.2 years old. 19\% of the participants that completed the survey said they had heard of micro-tasking before. 53\% of the participants stated that they had experience of working with geospatial data. The distribution between experienced and inexperienced participants was approximately even. A very desirable distribution. 
+
+To ensure random and independent observations the tasks were given to the participants in a random order. Analysing the task results and the order the tasks was presented in gives a pleasing result. The distribution of how many times the three tasks (Task 1, 2 and 3) was first, second and last task in the gathered data is approximately evenly distributed. This is shown in figure \ref{fig:taskorderdistribution}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.32\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{fig/firsttask}
+		\caption{First task}
+		\label{fig:firsttask}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.32\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{fig/secondtask}
+		\caption{Second task}
+		\label{fig:secondtask}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.32\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{fig/thirdtask}
+		\caption{Third task}
+		\label{fig:thirdtask}
+	\end{subfigure}
+	\caption{The distribution of the task order in the gathered data}
+	\label{fig:taskorderdistribution}
+\end{figure}
+
+
 
 \section{Statistics theory}\label{sec:statistic_theory}
 This section will give an introduction to the statistics used in this thesis. The thesis will examine the data with parametric methods but also with non-parametric methods if the assumption of a normally distributed samples fails. A nonparametric method is much more efficient than the parametric procedure when the set of data used in the test deviates significantly from the normal distribution \citep{Walpole2012}. There are also some disadvantages using nonparametric methods. The methods will be less efficient, and to acchieve the same power as the corresponding parametric method a larger sample size is required. If parametric and nonparametric tests are both valid on the same set of data, the parametric test should be used \citep{Walpole2012}. 
