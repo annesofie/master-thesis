@@ -1,17 +1,17 @@
 \chapter{Result}
 %My hypothesis before start
-%\section{Sample data from Survey}
-
+This chapter will present the result of the experiment conducted. It will summarize who the participants were, the gathered data and then present the statistical results from the analysis performed on the gathered data. The researcher used eight days to collect enough participants completing the experiment. Only 38\% of the registered participants completed the experiment. All task results saved in the database was valid and could be used in the analyses. The analyses were calculated in Python, using statistical packages as SciPy, Numpy, and Panda. The data was extracted from the database using Django Queryset and saved in CSV files. On the authors GitHub, in the repository \textit{thesis-statisticmethods}, the implemented statistical methods are available\footnote{https://github.com/annesofie/thesis-statisticmethods}. 
 
 \section{Participants}
 %- Who is the participants, -age, -sex, -completion rate, how many completed the survey, -why include the data where the participants didn't complete the whole survey \\
-Benefits of using a online based experiment is that it has potential to reach a huge number of people, the problem is how to reach out to the people to make them aware of the existence of the application. Using mailing threads and sites the researcher had available was the solution. The participant's contribution to the survey was contacted through email and Geoforum's channels. All students at \textit{Civil and engineering} was emailed, as well as a mailing list reaching out to the Norwegian OpenStreetMap community. The web application was also published at the Geoforum website (www.geoforum.no) and Facebook page. Geoforum is a Norwegian organization for people and companies working with geomatics. The participants receiving the email or looking at the Geoforum site could click on the web application URL and access the experiment from there. 
+Benefits of using an online based experiment are that it has potential to reach a huge number of people, the problem is how to reach out to the people to make them aware of the existence of the application. Using mailing threads and sites the researcher had available was this studies solution. The participant's contribution to the survey was contacted through email and the organization Geoforum's website and Facebook page. All students at \textit{Civil and engineering} was emailed, as well as a mailing list reaching out to the Norwegian OpenStreetMap community. The web application was also published at the Geoforum website (www.geoforum.no) and Facebook page. 
+Geoforum is a Norwegian association for individuals and companies working in the field of geomatics. The participants receiving the email or looking at the Geoforum site could click on the web application URL and access the experiment from there. 
 
-There was in total 461 task results gathered in the database, where each participant contributed with three results (the training task was removed from the dataset). 402 participants registered on the website during the data gathering period and only 38\% of the registered participants completed the survey. 152 participants completed all three tasks. Results from participants not completing all three tasks are also included in the dataset. Including these result is not a problem. The three tasks were given to each participant in a random order, and the tasks are also independent, containing different buildings. Doing all three or only one or two of the tasks should not effect the result. 
+There was in total 461 task results in the database after the gathering period, where almost all participants contributed with three task results (the training task was removed). 402 participants registered on the website during the data gathering period and only 38\% of the registered participants completed the survey. 152 participants completed all three tasks. Results from participants not completing all three tasks are also included in the dataset. Including these result is not a problem. The three tasks were given to each participant in a random order, and the tasks are also independent, containing different buildings and rows. %Doing all three or only one or two of the tasks should not affect the result. 
 
-The mean participant age was 31.5 years and the median 25 years. The youngest participant was 19 years and the oldest 58 years. 33\% of the participants was female and 66\% male. The average male was 33.5 years old and the average female 31.2 years old. 19\% of the participants that completed the survey said they had heard of micro-tasking before. 53\% of the participants stated that they had experience of working with geospatial data. The distribution between experienced and inexperienced participants was approximately even. A very desirable distribution. 
+The mean participant age was 31.5 years and the median 25 years. The youngest participant was 19 and the oldest 58 years. 33\% of the participants was female and 66\% male. The average male was 33.5 years old and the average female 31.2 years old. 19\% of the participants that completed the survey said they had heard of micro-tasking before. 53\% of the participants stated that they had experience of working with geospatial data. The distribution between experienced and inexperienced participants was approximately even. A very pleasing distribution. 
 
-To ensure random and independent observations the tasks were given to the participants in a random order. Analysing the task results and the order the tasks was presented in gives a pleasing result. The distribution of how many times the three tasks (Task 1, 2 and 3) was first, second and last task in the gathered data is approximately evenly distributed. This is shown in figure \ref{fig:taskorderdistribution}
+Random and independent observations are essential, and a random task order was used to ensure this. Analyzing the task results and the order the tasks was presented in gives a pleasing result. The distribution of how many times the three tasks (Task 1, 2 and 3) was first, second and last task in the analyzed data is approximately evenly distributed. This is shown in figure \ref{fig:taskorderdistribution}.
 
 \begin{figure}[H]
 	\centering
@@ -33,10 +33,9 @@ To ensure random and independent observations the tasks were given to the partic
 		\caption{Third task}
 		\label{fig:thirdtask}
 	\end{subfigure}
-	\caption{The distribution of the task order in the gathered data}
+	\caption{The distribution of the task order in the analysed data}
 	\label{fig:taskorderdistribution}
 \end{figure}
-
 
 
 \section{Statistics theory}\label{sec:statistic_theory}
