@@ -1,17 +1,16 @@
 \chapter{Result}
 %My hypothesis before start
-This chapter will present the result of the experiment conducted. It will summarize who the participants were, the gathered data and then present the statistical results from the analysis performed on the gathered data. The researcher used eight days to collect enough participants completing the experiment. Only 38\% of the registered participants completed the experiment. All task results saved in the database was valid and could be used in the analyses. The analyses were calculated in Python, using statistical packages as SciPy, Numpy, and Panda. The data was extracted from the database using Django Queryset and saved in CSV files. On the authors GitHub, in the repository \textit{thesis-statisticmethods}, the implemented statistical methods are available\footnote{https://github.com/annesofie/thesis-statisticmethods}. 
+This chapter will present the result of the conducted experiment. It will summarize who the participants were, the gathered data and then present the statistical results from the analysis performed on the gathered data. The researcher used eight days to collect enough participants completing the experiment. Only 38\% of the registered participants completed the experiment. All task results saved in the database was valid and could be used in the analyses. The analyses were calculated in Python, using statistical packages as SciPy, Numpy, and Panda. The data was extracted from the database using Django Queryset and saved in CSV files. On the authors GitHub, in the repository \textit{thesis-statisticmethods}, the implemented statistical methods are available\footnote{https://github.com/annesofie/thesis-statisticmethods}. 
 
 \section{Participants}
 %- Who is the participants, -age, -sex, -completion rate, how many completed the survey, -why include the data where the participants didn't complete the whole survey \\
-Benefits of using an online based experiment are that it has potential to reach a huge number of people, the problem is how to reach out to the people to make them aware of the existence of the application. Using mailing threads and sites the researcher had available was this studies solution. The participant's contribution to the survey was contacted through email and the organization Geoforum's website and Facebook page. All students at \textit{Civil and engineering} was emailed, as well as a mailing list reaching out to the Norwegian OpenStreetMap community. The web application was also published at the Geoforum website (www.geoforum.no) and Facebook page. 
-Geoforum is a Norwegian association for individuals and companies working in the field of geomatics. The participants receiving the email or looking at the Geoforum site could click on the web application URL and access the experiment from there. 
+Benefits of using an online based experiment is the potential to reach a huge number of people. The challenge is how to reach out to people and make them aware of the existence of the application. Using mailing threads and sites available to the author was the solution. All students at \textit{Civil and engineering} was emailed, as well as a mailing list reaching out to the Norwegian OpenStreetMap community. The web application was also published at the Geoforum website (www.geoforum.no) and Facebook page. Geoforum is a Norwegian association for individuals and companies working in the field of geomatics. The participants receiving the email or looking at the Geoforum site could click on the web application URL and access the experiment from there. 
 
-There was in total 461 task results in the database after the gathering period, where almost all participants contributed with three task results (the training task was removed). 402 participants registered on the website during the data gathering period and only 38\% of the registered participants completed the survey. This number was surprisingly low, but time to complete the whole experiment can probably explain why so few completed. It probably lasted to long for participants to have the patience to finish. 152 participants completed all three tasks. Results from participants not completing all three tasks are also included in the dataset. Including these result is not a problem. The three tasks were given to each participant in a random order, and the tasks are also independent, containing different buildings and rows. %Doing all three or only one or two of the tasks should not affect the result. 
+After eight days there was in total 461 task results in the database. 402 participants registered on the website during the data gathering period, but only 38\% of the registered participants completed all three tasks. This number was surprisingly low, but time to complete the whole experiment can probably explain why so few completed. It probably lasted to long for participants to have the patience to finish. 152 participants completed all three tasks. Results from participants not completing all three tasks are also included in the dataset. Including these result is not a problem. The three tasks were given to the participant in a random order, and the tasks are also independent, containing different buildings and rows. %Doing all three or only one or two of the tasks should not affect the result. 
 
-The mean participant age was 31.5 years and the median 25 years. The youngest participant was 19 and the oldest 58 years. 33\% of the participants was female and 66\% male. The average male was 33.5 years old and the average female 31.2 years old. 19\% of the participants that completed the survey said they had heard of micro-tasking before. 53\% of the participants stated that they had experience of working with geospatial data. The distribution between experienced and inexperienced participants was approximately even. A very pleasing distribution. 
+The mean participant age was 31.5 years and the median 25 years. The youngest participant was 19 and the oldest 58 years. 33\% of the participants was female and 66\% male. The average male was 33.5 years old and the average female 31.2 years old. 19\% of the participants that completed the survey said they had heard of micro-tasking before. 53\% of the participants stated that they had experience of working with geospatial data. The distribution between experienced and inexperienced participants was approximately even. 
 
-Random and independent observations are essential, and a random task order was used to ensure this. Analyzing the task results and the order the tasks was presented in gives a pleasing result. The distribution of how many times the three tasks (Task 1, 2 and 3) was first, second and last task in the analyzed data is approximately evenly distributed. This is shown in figure \ref{fig:taskorderdistribution}.
+Random and independent observations are essential, and a random task order was used to ensure this. Analyzing the task results and the order the tasks were presented in gives a pleasing result. The distribution of how many times the three tasks (Task A, B and C) were first, second and last task in the analyzed data is approximately evenly distributed. This is shown in figure \ref{fig:taskorderdistribution}.
 
 \begin{figure}[H]
 	\centering
@@ -39,14 +38,14 @@ Random and independent observations are essential, and a random task order was u
 
 
 \section{Statistics theory}\label{sec:statistic_theory}
-This section will give an introduction to the statistics used in this thesis. The thesis will examine the data with parametric methods but also with non-parametric methods if the assumption of a normally distributed samples fails. A nonparametric method is much more efficient than the parametric procedure when the set of data used in the test deviates significantly from the normal distribution \citep{Walpole2012}. There are also some disadvantages using nonparametric methods. The methods will be less efficient, and to acchieve the same power as the corresponding parametric method a larger sample size is required. If parametric and nonparametric tests are both valid on the same set of data, the parametric test should be used \citep{Walpole2012}. 
+This section will give an introduction to the statistics used in this thesis. The thesis will examine the data with parametric methods but also with non-parametric. A nonparametric method is much more efficient than the parametric procedure when the set of data used in the test deviates significantly from the normal distribution \citep{Walpole2012}. There are also some disadvantages using nonparametric methods. The methods will be less efficient, and to acchieve the same power as the corresponding parametric method a larger sample size is required. If parametric and nonparametric tests are both valid on the same set of data, the parametric test should be used \citep{Walpole2012}. 
 
 \subsection{Normal testing}\label{sec:normaltesting}
-The sampling distribution of a statistic depend on the distribution of the population, the size of the samples, and the method of choosing the samples \citep{Walpole2012}. Sampling distibution describes the variability of sample averages around the population mean $\mu$. All parametric statistics assumes normally distributed, independent observations. Parametric tests are preffered in statistics because it got more statistical power than nonparametric tests \citep{Frost2015}. The power of a test is the probability of correctly rejecting a false null hypothesis, which in this case is the ability to detect if the sample comes from a non-normal distribution. To determine if a sample is normally distrubuted there exists both visual methods and normality tests to assess the samples normality. A visual inspection of the sample's distribution is usually unreliable and does not guarantee that the distribution is normal \citep{Pearson2006}. Presenting the data visually gives the reader an opportunity to judge the distribution themselves. In this thesis histograms are used to visually analyse the data for normality. 
+The sampling distribution of a statistic depend on the distribution of the population, the size of the samples, and the method of choosing the samples \citep{Walpole2012}. Sampling distribution describes the variability of sample averages around the population mean $\mu$. All parametric statistics assumes normally distributed, independent observations. Parametric tests are preferred in statistics because it has more statistical power than non parametric tests \citep{Frost2015}. The power of a test is the probability of correctly rejecting a false null hypothesis, which in this case is the ability to detect if the sample comes from a non-normal distribution. To determine if a sample is normally distributed there exists both visual methods and normality tests to assess the samples normality. A visual inspection of the sample's distribution is usually unreliable and does not guarantee that the distribution is normal \citep{Pearson2006}. Presenting the data visually gives the reader an opportunity to judge the distribution themselves. In this thesis histograms are used to visually analyze the data for normality. 
 
-Normality tests compare the scores in the sample to a normally distributed set of scores with the same mean and standard deviation \citep{Ghasemi2012}. There are multiple normality tests, and deciding which test to use is not easy. This study needs a test that doesn't require every value to be unique, a test that can handle ties (identical observations). The application used to collect the samples in this study do not guarantee unique values. 
+Normality tests compare the scores in the sample to a normally distributed set of scores with the same mean and standard deviation \citep{Ghasemi2012}. There are multiple normality tests, and deciding which test to use is not easy. This study needs a test that does not require every value to be unique, in addition to handling ties. The React application do not guarantee unique values. 
 
-The D'Agostino-Pearson omnibus test stand out as the best choice. This test first computes the skewness, figure \ref{fig:skew}, and kurtois, figure \ref{fig:kurtois}, to quantify how far from the normal distribution the sample is from the terms of assymetry and shape. Then it calculates how far each of these values differs from the value expected with a normal distribution \citep{Pearson2006}. It works well even if all values are not unique \citep{Motulsky2013}. The test also works well on both short- and long-tailed distributions \citep{Yap2011}. \newline  %THIS STUDY HAS?? LONG OR SHORT??
+The D'Agostino-Pearson omnibus test stand out as the best choice. This test first computes the skewness, figure \ref{fig:skew}, and kurtosis, figure \ref{fig:kurtois}, to quantify how far from the normal distribution the sample is from the terms of asymmetry and shape. It calculates how far each of these values differ from the value expected with a normal distribution \citep{Pearson2006}. It works well even if all values are not unique \citep{Motulsky2013}. The test also works well on both short- and long-tailed distributions \citep{Yap2011}. \newline  %THIS STUDY HAS?? LONG OR SHORT??
 
 \begin{figure}[h!]
 	\centering
@@ -68,7 +67,7 @@ The D'Agostino-Pearson test uses the following hypothesis:\newline
 \centerline{$H_{0}$: The data follows the normal distribution} 
 \centerline{$H_{A}$: The data do not follow the normal distribution}
 
-For small sample sizes, normality tests have little power to reject the null hypothesis, therefore small sample sizes most often pass normality tests. For large sample sizes, significant results would be derived even in the case of a small deviation from normality \citep{Pearson2006}. When the null hypothesis cannot be rejected, then there are two possible cases. First case is to accept the null hypothesis or the second case is that the sample size is not large enough to either accept or reject the null hypothesis \citep{ThePennsylvaniaStateUniversity2017}. An acceptance of the null hypothesis implies that the evidence was insufficient, the result does not necessary accept $H_{0}$, but fails to reject $H_{0}$ \citep{Walpole2012}.  Therefore will both visual analysis and D'Agostino-Pearson test assess the normality assumption. 
+For small sample sizes, normality tests have little power to reject the null hypothesis, and therefore small sample sizes most often pass normality tests. For large sample sizes, significant results would be derived even in the case of a small deviation from normality \citep{Pearson2006}. When the null hypothesis cannot be rejected, there are two possible cases. First case is to accept the null hypothesis or the second case is that the sample size is not large enough to either accept or reject the null hypothesis \citep{ThePennsylvaniaStateUniversity2017}. An acceptance of the null hypothesis implies that the evidence was insufficient, and the result does not necessary accept $H_{0}$, but fails to reject $H_{0}$ \citep{Walpole2012}. Both visual analysis and D'Agostino-Pearson test will be used to assess the normality assumption in this thesis. 
 
 %A \textit{goodness-of-fit} test is used to determine whether a sample of \textit{n} observations can be considered as a sample from a given specified distribution \citep{Walpole2012}. The Anderson-Darling and the Kolmogorov-Smirow tests stand out as \textit{goodness-of-fit} procedures specialized for small samples \citep{Romeu2003}. The Anderson-Darling test will be used in this study to test if the observations gathered in this study is normally distributed.  %The Kolmogorov-Smirow test is a nonparametric test. The hypothesis for the Anderson-Darling test is: \newline
 
@@ -78,16 +77,16 @@ For small sample sizes, normality tests have little power to reject the null hyp
 %The computations in the Anderson-Darling test differs based on what is known about the observations. In this study both the expected mean and variance is unknown. In all the Anderson-Darling tests in this study a significance level of $0.05$ is used, which gives a confidence interval of $95$ \% . If the calculated \textit{p-value} is less than the significance level ($0.05$), the null hypothesis is rejected. The larger the \textit{p-value} the closer match is the data to the normal distribution. The Anderson-Darling statistics is used to calculate the \textit{p+value} for the \textit{goodness-of-fit} test. 
 
 \subsection{Hypothesis testing}\label{sec:hypothesistesting}
-The null- and alternative hypothesis are statements regarding a difference or an effect that occur in the population of the study. The alternative hypothesis ($H_A$) usually represents the question to be answered or the theory to be tested, while the null hypothesis ($H_{0}$) nullifies or opposes $H_A$ \citep{Walpole2012}. The sample collected in the study is used to examine which statement is most likely (technically it is testing the evidence against the null hypothesis).  When the hypothesis is identified, both null and alternative, the next step is to find evidence and develop a strategy for or against the null hypothesis \citep{LundResearchLtd2013}.
+The null- and alternative hypothesis are statements regarding a difference or an effect that occur in the population of the study. The alternative hypothesis ($H_A$) usually represents the question to be answered or the theory to be tested, while the null hypothesis ($H_{0}$) nullifies or opposes $H_A$ \citep{Walpole2012}. The sample collected in the study is used to examine which statement is most likely. When the hypothesis is identified, both null and alternative, the next step is to find evidence and develop a strategy for or against the null hypothesis \citep{LundResearchLtd2013}.
 
-The next step is to determine the level of statistical significance, often expressed as the \textit{p-value}. A statistical test will result in the probability (\textit{the p-value}) of observing your sample results given that the null hypothesis is true. A significance level widely used in academic research is 0.05 or 0.01 \citep{Walpole2012}. 0.05 significance level will be used in this thesis analyses.
+The next step is to determine the level of statistical significance, often expressed as the \textit{p-value}. A statistical test will result in the probability (\textit{the p-value}) of observing your sample results given that the null hypothesis is true. A significance level widely used in academic research is 0.05 or 0.01 \citep{Walpole2012}. 0.05 significance level will be applied in this thesis analyses.
 
-The result should not be reported as "significantly different," but instead report it as "statistically significantly different." This is because the statistical decision as to whether the result is significant should not be based solely on the statistical test. To indicate to readers that the result is a statistical one, include statistically in the conclusion sentence \citep{LundResearchLtd2013a}. 
+%The result should not be reported as "significantly different," but instead report it as "statistically significantly different." This is because the statistical decision as to whether the result is significant should not be based solely on the statistical test. To indicate to readers that the result is a statistical one, include statistically in the conclusion sentence \citep{LundResearchLtd2013a}. 
 %Compare the mean time in experienced and not experienced
 %H0: No time difference, Ha: Experienced use less time
 
 \subsubsection{Two-sample t-test}\label{sec:t-test}
-When estimating the difference between two means a two-sample t-test is used \citep{Walpole2012}. A two sampled test assumes two independent, random samples from distributions with means [$\mu_{1}$ , $\mu_{2}$] and variances [$\sigma_{1}^{2}$, $\sigma_{2}^{2}$]. %*HOW TO DETERMINE IF THEY ARE INDEPENDENT? 
+When estimating the difference between two means a two-sample t-test is used \citep{Walpole2012}. A two-sampled test assumes two independent, random samples from distributions with means [$\mu_{1}$ , $\mu_{2}$] and variances [$\sigma_{1}^{2}$, $\sigma_{2}^{2}$]. %*HOW TO DETERMINE IF THEY ARE INDEPENDENT? 
 The hypothesis tested on two means can be written as\newline
 
 %\centerline{$H_{0}$: $\mu_{1}$ - $\mu_{2}$ = 0 or $\mu_{1}$ = $\mu_{2}$} 
@@ -120,19 +119,19 @@ Before doing tests on the two means, the Levene's Test is used to test if the sa
 \centerline{$H_{0}$: Input samples are from populations with equal variances} 
 \centerline{$H_{A}$: Input samples are from populations that do not have equal variances}
 \vspace{0.2cm}
-If we can assume equal variances in the two samples and the samples are normal distributed, a two-sampled t-test may be used. 
+If we can assume equal variances in the two samples and the samples are normally distributed, a two-sampled t-test may be used. 
 %There are also formula for Unknown but unequal variances, page 345 in statistics book
 
 %Because the one-sided tests can be backed out from the two-sided tests. (With symmetric distributions one-sided p-value is just half of the two-sided pvalue). It goes on to say that scipy always gives the test statistic as signed. This means that given p and t values from a two-tailed test, you would reject the null hypothesis of a greater-than test when p/2 < alpha and t > 0, and of a less-than test when p/2 < alpha and t < 0. %http://stackoverflow.com/questions/15984221/how-to-perform-two-sample-one-tailed-t-test-with-numpy-scipy
 %https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.stats.ttest_ind.html
 
-Hypothesis in this study that can be tested with a two-sampled t-test (if the conditions mentioned above are valid) is listed in figure \ref{fig:hypothesis_ttest}. 
+Hypothesis in this study that is used to answer the research questions that is tested with a two-sampled t-test (if the conditions mentioned above are valid) is listed in figure \ref{fig:hypothesis_ttest}. 
 
 \begin{figure}[H]
 	\begin{framed}\centering
 		\textbf{1}\\
 		%\textbf{$H_{0}$:} Experienced and inexperienced spent the same amount of time on the tasks\\
-		\textbf{$H_{0}$:} No difference in time spent on the tasks between the participants\\
+		\textbf{$H_{0}$:} There is no difference in time spent on the tasks between the participants\\
 		\textbf{$H_{A}$:} Time spent differs between experienced and inexperienced participants \newline
 		
 		\textbf{2}\\
@@ -141,7 +140,7 @@ Hypothesis in this study that can be tested with a two-sampled t-test (if the co
 		
 		\textbf{3}\\
 		$H_{0}$: Equal number of correct elements between experienced and inexperienced \\
-		$H_{A}$: There is a difference in number of correct elements between the two groups\newline
+		$H_{A}$: Number of correct elements differs between experienced and inexperienced participants\newline
 		
 		\textbf{4}\\
 		$H_{0}$: Experienced participants do not have more correct elements\\
@@ -153,21 +152,21 @@ Hypothesis in this study that can be tested with a two-sampled t-test (if the co
 %Before solving the hypothesis the conditions needs to be testet. More on this later. %*WHICH SECTION?
 
 \subsubsection[ANOVA]{Analysis-of-Variance}\label{sec:anova}
-Analysis-of-Variance (\textit{ANOVA}) is according to \cite{Walpole2012} a very common procedure used for testing population means. Where a two sample t-test is restricted to consider no more than two population parameters, \textit{ANOVA} can test multiple population parameters. A part of the goal of \textit{ANOVA} is to determine if the differences among the means of two or more samples are what we would expect due to random variation alone, or due to variation beyond merely random effects. \textit{ANOVA} assumes normally distributed, independent, samples with equal variance. The equal variance assumtion will be tested with Levene's Test also mentioned in section \ref{sec:t-test}. 
+Analysis-of-Variance (\textit{ANOVA}) is, according to \cite{Walpole2012}, a very common procedure used for testing population means. Where a two-sample t-test is restricted to consider no more than two population parameters, \textit{ANOVA} can test multiple population parameters. A part of the goal of \textit{ANOVA} is to determine if the differences among the means of two or more samples are what we would expect due to random variation alone, or due to variation beyond merely random effects \citep{Walpole2012}. \textit{ANOVA} assumes normally distributed, independent samples with equal variance. The equal variance assumption will be tested with Levene's Test mentioned in section \ref{sec:t-test}. 
 
 One-way \textit{ANOVA} tests the null hypothesis that two or more groups have the same population mean given that the mean is measured on the same factor or variable in all groups \citep{LundResearchLtd2013a}. The hypothesis test can be written as:\newline
 
 \centerline{$H_{0}$:  $\mu_{1} =  \mu_{2} = ... = \mu_{k} $} 
 \centerline{$H_{A}$:  At least two of the means are different}
 
-$\mu$ equals the group mean and $k$ represents the number of groups. It is important to check that each group are normally distributed \citep{LundResearchLtd2013a}. The weakness of one-way \textit{ANOVA} is that it cannot tell which specific groups were significally different from each other if $H_{0}$ is rejected. To be able to determine which group a \textit{post hoc test} is used. The null hypothesis is accepted if:
+$\mu$ equals the group mean and $k$ represents the number of groups. It is important to check that each group are normally distributed \citep{LundResearchLtd2013a}. The weakness of one-way \textit{ANOVA} is that it cannot tell which specific groups were significally different from each other if $H_{0}$ is rejected. To be able to determine which group differ, a \textit{post hoc test} is used. The null hypothesis is accepted if:
 
 \begin{equation}
 \label{eq:anova_reject}
-F (obtained) < f_{\alpha, v_{1}, v_{2}} (critical value)
+F < f_{\alpha, v_{1}, v_{2}}
 \end{equation}
 
-If the alternative hypothesis is accepted a \textit{post hoc test} is used. A post hoc test makes paired comparisons to determine which groups differs. This thesis will use Tykey's test to determine which group means are significantly different [\citep{Walpole2012}, p.526]. Hypotheses in this study that are tested in an one-way \textit{ANOVA} analysis (if the conditions mentioned above are valid) is listed in figure \ref{fig:hypothesis_anova}. 
+F is the calculated statistical value and f is the critical value with the given degrees of freedom ($v_{1}, v_{2}$) and significance level ($\alpha$). If the alternative hypothesis is accepted a \textit{post hoc test} is used. A post hoc test makes paired comparisons to determine which group differs. This thesis will use Tukey's test to determine which group means are significantly different [\citep{Walpole2012}, p.526]. Hypotheses in this study that is used to answer the research questions tested in an one-way \textit{ANOVA} analysis (if the conditions mentioned above are valid) is listed in figure \ref{fig:hypothesis_anova}. 
 
 \begin{figure}[H]
 	\begin{framed}\centering
@@ -191,18 +190,18 @@ The hypothesis written above is tested in section \ref{sec:anova_result}. %* Add
 
 %The test can determine if the mean time (the variable) is significally different between the three tasks (the groups) given in the survey. It can also be used to determine if there are any significant different in mean time given the six different orders the task could serve in. A third test is to have number of correct elements as the variable and the three tasks as groups. More on this later. %*WHIch section?
 
-\subsubsection[Wilcoxon]{Wilcoxon Rank-Sum test}\label{sec:Wilcoxon}
-The Wilcoxon Rank-Sum test is an appropriate alternative to the two-sample t-test (see subsection \ref{sec:t-test}) when the normality assumptions do not hold, but the samples are still independent and have a continuous distribution \citep{Walpole2012}. Since this method is non-parametric (or distribution-free) it do not require the assumption of normality. 
+%\subsubsection[Wilcoxon]{Wilcoxon Rank-Sum test}\label{sec:Wilcoxon}
+%The Wilcoxon Rank-Sum test is an appropriate alternative to the two-sample t-test (see subsection \ref{sec:t-test}) when the normality assumptions do not hold, but the samples are still independent and have a continuous distribution \citep{Walpole2012}. Since this method is non-parametric (or distribution-free) it do not require the assumption of normality. 
 
-The hypothesis for Wilcoxon Rank-Sum Test is:\newline
+%The hypothesis for Wilcoxon Rank-Sum Test is:\newline
 
-\centerline{$H_{0}$:  $\tilde{\mu}_{1} =  \tilde{\mu}_{2} $} 
-\centerline{$H_{A}$: $\tilde{\mu}_{1} >  \tilde{\mu}_{2} $ or $\tilde{\mu}_{1} <  \tilde{\mu}_{2} $ or $\tilde{\mu}_{1} \neq  \tilde{\mu}_{2} $}
+%\centerline{$H_{0}$:  $\tilde{\mu}_{1} =  \tilde{\mu}_{2} $} 
+%\centerline{$H_{A}$: $\tilde{\mu}_{1} >  \tilde{\mu}_{2} $ or $\tilde{\mu}_{1} <  \tilde{\mu}_{2} $ or $\tilde{\mu}_{1} \neq  \tilde{\mu}_{2} $}
 
-The alternative hypothesis depends on what the test should determine. If the sample with mean $\tilde{\mu}_1$ is greater than, smaller than or unequal to the sample with mean $\tilde{\mu}_2$.  First select a random sample from each population with means $\tilde{\mu}_{1} $ and $ \tilde{\mu}_{2} $. If the sample sizes are different, let $n_{1}$ be the number of observations in the smallest sample and $n_{2}$ for the largest sample. Then $\tilde{\mu}_1$ will be the mean for the smallest sample. If there are ties (identical observations) in the sample a Mann-Whitey U test is preferred \citep{TheScipycommunity2017}. 
+%The alternative hypothesis depends on what the test should determine. If the sample with mean $\tilde{\mu}_1$ is greater than, smaller than or unequal to the sample with mean $\tilde{\mu}_2$.  First select a random sample from each population with means $\tilde{\mu}_{1} $ and $ \tilde{\mu}_{2} $. If the sample sizes are different, let $n_{1}$ be the number of observations in the smallest sample and $n_{2}$ for the largest sample. Then $\tilde{\mu}_1$ will be the mean for the smallest sample. If there are ties (identical observations) in the sample a Mann-Whitey U test is preferred \citep{TheScipycommunity2017}. 
 
 \subsubsection{Mann-Whitey U test}\label{sec:mannwhiteyu}
-The Mann-Whitney U test is used to compare differences between two independent groups. This test can be used to conclude whether two populations differ. It can for instance test if there are differences in medians between groups \citep{LundResearchLtd2013b}. In contrast to the t-test, it compares the median scores of two samples instead of the mean score. The test is non-parametric and can therefore be used on samples that are not normally distributed. The test assumes that the samples come from populations with equal variances. When comparing two sample medians the two independent variables (i.e experienced and inexperienced participants) has to have a similar shape. It can test the hypothesis: \\
+The Mann-Whitney U test is used to compare differences between two independent groups. This test can be used to conclude whether two populations differ. It can for instance test if there are differences in medians between groups \citep{LundResearchLtd2013b}. In contrast to the t-test, it compares the median scores of two samples instead of the mean score. The test is non-parametric and can therefore be used on samples that are not normally distributed. The test assumes that the samples come from populations with equal variances. If there are ties (identical observations) in the sample a Mann-Whitey U test is preferred \citep{TheScipycommunity2017}.  When comparing two sample medians the two independent variables (i.e experienced and inexperienced participants) has to have a similar shape. It can test the hypothesis: \\
 
 \centerline{$H_{0}$: The two populations are equal} 
 \centerline{$H_{A}$: The two populations are not equal}
@@ -217,14 +216,14 @@ U <= critical value
 The critical value is found in the table of Critical Values for U and depends on the sample sizes, n1 and n2, and the significant level $\alpha$. U is the statistical value calculated. 
 
 \subsubsection[Kruskal]{Kruskal-Wallis test}\label{sec:kruskal-w-test}
-The Kruskal-Wallis test is a nonparametric alternative to one-way \textit{ANOVA} (see subsection \ref{sec:anova})  \citep{Walpole2012}. This test should be used if the assumption of normal distribution failed. As mentioned in this sections introduction, a nonparametric method does not assume normality. This test is an generalization of the rank-sum test when there are more than 2 samples.
+The Kruskal-Wallis test is a nonparametric alternative to one-way \textit{ANOVA} (see subsection \ref{sec:anova})  \citep{Walpole2012}. This test should be used if the assumption of normal distribution failed. As mentioned in this sections introduction, a nonparametric method does not assume normality. This test is an generalization of the rank-sum test when there are more than two samples.
 
 Kruskal-Wallis is used to test equality of means in one-way \textit{ANOVA}, so the hypothesis for the Kruskal-Wallis test is:\newline
 
 \centerline{$H_{0}$:  $\mu_{1} =  \mu_{2} = ... = \mu_{k} $} 
 \centerline{$H_{A}$: Minimum two of the $\mu_{k}$'s are different}
 
-Here $\mu_{k}$ is the rank mean for the group k. As in Wilcoxon Rank-Sum test (subsection \ref{sec:Wilcoxon}), the number of observations in the smallest sample is assigned to $n_1$, the second smallest to $n_2$ and the largest sample is assigned to $n_k$. 
+Here $\mu_{k}$ is the rank mean for the group k. The number of observations in the smallest sample is assigned to $n_1$, the second smallest to $n_2$ and the largest sample is assigned to $n_k$. 
 
 The null hypothesis is accepted if: 
 
