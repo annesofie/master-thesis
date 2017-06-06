@@ -49,7 +49,7 @@ Table \ref{tab:totaltime_all} and \ref{tab:totalcorrect_all} are samples contain
 
 \subsubsection{All participants, divided by task}\label{sec:taskdivided_all}
 
-In table \ref{tab:totaltime_tasks} and \ref{tab:totalcorrect_tasks} the task results are\ divided by the three different tasks, grouped by the dependent variables. Task A is the task that served the participants with one and one elements. Task B is the task that served the participants with three and three elements, and task C gave all six elements at the same time. 
+In table \ref{tab:totaltime_tasks} and \ref{tab:totalcorrect_tasks} the task results are\ divided by the three different tasks, grouped by the dependent variables. Task A is the task that used micro-tasks containing one element. Task B is the task with micro-tasks containing three elements, and task C gave all six elements at the same time. 
 
 \begin{table}[H]
 	\centering
@@ -213,7 +213,7 @@ D'Agostino and Pearson tests confirmed the visual interpretation with a signific
 %Boc-Cox Transformation? https://docs.scipy.org/doc/scipy-0.19.0/reference/generated/scipy.stats.boxcox.html https://www.isixsigma.com/tools-templates/normality/dealing-non-normal-data-strategies-and-tools/
 In both sample 1 and 2, the p-value was significantly lower than the significance level of 5\%. Data transformations are commonly used tools to improve the normality of a samples distributions, but there are many types of data transformations. \cite{Osborne2010} claim that almost all tests, even non-parametric tests, benefit from improving the normality of the samples, especially when the normality test is significantly denied. Typical traditional transformations are square root, inverse or converting to logarithmic scales  \citep{Osborne2010}. 
 
-A Box-Cox power transformation (Box-Cox) is used in this thesis. This transformation can only be used on positive data. The data gathered in this thesis will never be below zero, so this is not a concern. Box-Cox takes the idea of having a range of power transformations (i.e., square root $x^{\frac{1}{2}}$, inverse $x^{-1}$) available to improve the effectiveness of normalizing and variance equalizing for both positively- and negatively-skewed variables \citep{Osborne2010}. This transformation will always use the appropriate conversion to be maximally effective in moving each sampled data towards normality. This is the reason why this thesis will use the Box-Cox transformation.
+A Box-Cox power transformation (Box-Cox) is used in this thesis. This transformation can only be used on positive data. The data gathered in this thesis will never be below zero, so this is not a concern. Box-Cox takes the idea of having a range of power transformations (i.e., square root $x^{\frac{1}{2}}$, inverse $x^{-1}$) available to improve the effectiveness of normalizing and variance equalizing for both positively- and negatively-skewed variables \citep{Osborne2010}. This transformation will always use the appropriate conversion to be maximum effective in moving each sampled data towards normality. This is the reason why this thesis will use the Box-Cox transformation.
 
 Sample 1 and 2 after a Box-Cox power transformation is shown in histogram \ref{fig:totaltimeboxcoxtransformation_experienced} and \ref{fig:totaltimeboxcoxtransformedtitle_inexperienced}. A visual inspection gives a good indication that the transformed data follows a normal distribution after the transformation. The skewness looks approximately zero.
 
@@ -284,25 +284,25 @@ Sample 3 and 4 is Box-Cox power transformed because the null hypothesis was reje
 
 \subsubsection[Sample 5, 6 and 7]{All participants divided by task, total time variable}\label{sec:task123_time_normaltest}
 
-In this section sample 5, 6, and 7 (table \ref{tab:totaltime_tasks}) is normal distribution tested. These samples will be used to test whether there is a significant difference between the three tasks when considering the total time variable. 
+In this section sample 5, 6, and 7 (table \ref{tab:totaltime_tasks}) is tested for a normal distribution. These samples will be used to test whether there is a significant difference between the three tasks when considering the total time variable. 
 
 A visual analysis of the three histograms in figure \ref{fig:totaltimeallnotinterupted_task1}, \ref{fig:totaltimeallnotinterupted_task2} and \ref{fig:totaltimeallnotinterupted_task3} show a positive skewness, just like the histograms in figure \ref{fig:sample1,2_histo_original}. This gives an indication that the three samples do not follow the normal distribution. 
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
-	\begin{subfigure}[b]{0.3\textwidth}
+	\begin{subfigure}[b]{0.32\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task1/totaltime_all_not_interupted}
 		\caption{Sample 5 - Task A}
 		\label{fig:totaltimeallnotinterupted_task1}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.3\textwidth}
+	\begin{subfigure}[b]{0.32\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task2/totaltime_all_not_interupted}
 		\caption{Sample 6 - Task B}
 		\label{fig:totaltimeallnotinterupted_task2}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.3\textwidth}
+	\begin{subfigure}[b]{0.32\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task3/totaltime_all_not_interupted}
 		\caption{Sample 7 - Task C}
@@ -313,23 +313,23 @@ A visual analysis of the three histograms in figure \ref{fig:totaltimeallnotinte
 
 The D'Agostino and Pearson normality test agreed with the visual analysis. Obtained p-values for all three samples ($2.39 * 10^{-24}$, $2.57 * 10^{-9}$, and $1.71 * 10^{-11}$) are smaller than the significance level (0.05), and the null hypothesis is rejected. The samples do not follow the normal distribution with a confidence interval of 95\%.\\[0.2cm]
 
-Because the null hypothesis was rejected, the samples are Box-Cox power transformed. Histograms of each sample after the transformation is shown in figure \ref{fig:totaltimeallnotinteruptedboxcox_task1}, \ref{fig:totaltimeallnotinteruptedboxcox_task2} and \ref{fig:totaltimeallnotinteruptedboxcox_task3}. A visual analysis of the histograms gives a good indication that the transformed data is approximately normal distributed. The histograms have a skewness of approximately zero. 
+Because the null hypothesis was rejected, the samples are Box-Cox power transformed. Histograms of each sample after the transformation is shown in figure \ref{fig:totaltimeallnotinteruptedboxcox_task1}, \ref{fig:totaltimeallnotinteruptedboxcox_task2} and \ref{fig:totaltimeallnotinteruptedboxcox_task3}. A visual analysis of the histograms gives a good indication that the transformed data is approximately normally distributed. The histograms have a skewness of approximately zero. 
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
-	\begin{subfigure}[b]{0.3\textwidth}
+	\begin{subfigure}[b]{0.32\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task1/totaltime_all_not_interupted_boxcox}
 		\caption{Sample 5 - Task A}
 		\label{fig:totaltimeallnotinteruptedboxcox_task1}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.3\textwidth}
+	\begin{subfigure}[b]{0.32\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task2/totaltime_all_not_interupted_boxcox}
 		\caption{Sample 6 - Task B}
 		\label{fig:totaltimeallnotinteruptedboxcox_task2}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.3\textwidth}
+	\begin{subfigure}[b]{0.32\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task3/totaltime_all_not_interupted_boxcox}
 		\caption{Sample 7 - Task C}
@@ -347,19 +347,19 @@ A visual analysis of the three histograms in figure \ref{fig:correctallnotinteru
  
  \begin{figure}[H]
  	\centering
-	 \begin{subfigure}[b]{0.3\textwidth}
+	 \begin{subfigure}[b]{0.32\linewidth}
 	 	\centering
 	 	\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task1/correct_all_not_interupted}
 	 	\caption{Sample 8 -Task A}
 	 	\label{fig:correctallnotinterupted_task1}
 	 \end{subfigure}
-	\begin{subfigure}[b]{0.3\textwidth}
+	\begin{subfigure}[b]{0.32\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task2/correct_all_not_interupted}
 		\caption{Sample 9 - Task B}
 		\label{fig:correctallnotinterupted_task2}
 	\end{subfigure}
-	 \begin{subfigure}[b]{0.3\textwidth}
+	 \begin{subfigure}[b]{0.32\linewidth}
 	 	\centering
 	 	\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task3/correct_all_not_interupted}
 	 	\caption{Sample 10 - Task C}
@@ -373,19 +373,19 @@ A Box-Cox power transformation is applied to all three samples. A transformation
 
 \begin{figure}[H]
 	\centering
-	\begin{subfigure}[b]{0.3\textwidth}
+	\begin{subfigure}[b]{0.32\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task1/correct_boxcox}
 		\caption{Sample 8 - Task A}
 		\label{fig:correctboxcox_task1}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.3\textwidth}
+	\begin{subfigure}[b]{0.32\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task2/correct_boxcox}
 		\caption{Sample 9 - Task B}
 		\label{fig:correctboxcox_task2}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.3\textwidth}
+	\begin{subfigure}[b]{0.32\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task3/correct_boxcox}
 		\caption{Sample 10 - Task C}
@@ -397,7 +397,7 @@ A Box-Cox power transformation is applied to all three samples. A transformation
 D'Agostino and Pearson normality test accepts the null hypothesis on sample 9 and 10 and rejects it on sample 8. Sample 9 and 10 has p-values ($0.0752$ and $0.2104$) higher than the significance level, while computed p-value for sample 8 ($0.0027$) is significantly lower. When using these three samples in hypothesis tests, a non-parametric method should be used. This is because sample 8 do not follow the normal distribution.
 
 \subsubsection[Sample 11, 12 and 13]{Experienced participants divided by task, total time variable}
-In this section, sample 11, 12, and 13, shown in table \ref{tab:totaltime_tasks_experienced}, is normal distribution tested. The three samples will be used to test whether there is a significant difference between the total time results for the three tasks when considering only experienced participants. 
+In this section, sample 11, 12, and 13, shown in table \ref{tab:totaltime_tasks_experienced}, is tested if they follow a normal distribution. The three samples will be used to test whether there is a significant difference between the total time results for the three tasks when considering only experienced participants. 
 
 A visual interpretation of the histograms in figure \ref{fig:sample11_12_13_histogram} show that all three samples are positively skewed (figure \ref{fig:skew}). Skew gives a fairly strong evidence that the samples are not normally distributed.
 
