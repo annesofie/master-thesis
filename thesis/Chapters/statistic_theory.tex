@@ -1,10 +1,9 @@
 \chapter{Results}
-%My hypothesis before start
 This chapter will present the result of the conducted experiment. It will summarize who the participants were, the gathered data and then present the statistical results from the analysis performed on the gathered data. It took eight days to collect enough participants completing the experiment. Only 38\% of the registered participants completed the experiment. All task results saved in the database was valid and could be used in the analyses. The analyses were calculated in Python, using statistical packages as SciPy, Numpy, and Pandas. The data was extracted from the database using Django Queryset and saved in CSV files. The implemented statistical methods are available on GitHub \footnote{https://github.com/annesofie/thesis-statisticmethods}. 
 
 \section{Participants}
 %- Who is the participants, -age, -sex, -completion rate, how many completed the survey, -why include the data where the participants didn't complete the whole survey \\
-One of the benefits of using an online based experiment is the potential to reach a huge number of people. The challenge is how to reach out to people and make them aware of the existence of the experiment. Using mailing lists and sites available to the author was the solution. All students at \textit{Civil and engineering} was emailed, as well as a mailing list reaching out to the Norwegian OpenStreetMap community. The web application was also published at the Geoforum website (www.geoforum.no) and Facebook page. Geoforum is a Norwegian association for individuals and companies working in the field of geomatics. The participants receiving the email or looking at the Geoforum site could click on the web application URL and access the experiment from there. 
+One of the benefits of using an online based experiment is the potential to reach a huge number of people. The challenge is how to reach out to people and make them aware of the existence of the experiment. The solution was to use mailing lists and sites available to the author. All students at \textit{Engineering and ICT} was emailed, as well as a mailing list reaching out to the Norwegian OpenStreetMap community. The web application was also published at the Geoforum website (www.geoforum.no) and Facebook page. Geoforum is a Norwegian association for individuals and companies working in the field of geomatics. The participants receiving the email or looking at the Geoforum site could click on the web application URL and access the experiment from there. 
 
 After eight days there was in total 461 task results in the database. 402 participants registered on the website during the data gathering period, but only 38\% of the registered participants completed all three tasks. This number was surprisingly low, but time to complete the whole experiment can probably explain why so few completed. It probably lasted too long for participants to have the patience to finish. 152 participants completed all three tasks. Results from participants not completing all three tasks are also included in the dataset. Including these result is not a problem. The three tasks were given to the participant in a random order, and the tasks are also independent, containing different buildings and rows. %Doing all three or only one or two of the tasks should not affect the result. 
 
@@ -94,7 +93,7 @@ The hypothesis tested on two means can be written as\newline
 \centerline{$H_{0}$: Sample means are equal} 
 \centerline{$H_{A}$: Sample means differ}
 
-The two-sample t-test is used to estimate if differences between two means are significant. In a two-sample, two-sided, t-test ($\mu_{1}$ - $\mu_{2}$ $\neq$ 0) the null hypothesis is rejected when [\citep{Walpole2012}, p. 345]:
+The two-sample t-test is used to estimate if differences between two means are significant. In a two-sample, two-sided, t-test ($\mu_{1}$ - $\mu_{2}$ $\neq$ 0) the null hypothesis is rejected when \citep[p.~345]{Walpole2012}:
 
 \begin{equation}
 \label{eq:ttest_twoway}
@@ -125,7 +124,7 @@ If we can assume equal variances in the two samples and the samples are normally
 %Because the one-sided tests can be backed out from the two-sided tests. (With symmetric distributions one-sided p-value is just half of the two-sided pvalue). It goes on to say that scipy always gives the test statistic as signed. This means that given p and t values from a two-tailed test, you would reject the null hypothesis of a greater-than test when p/2 < alpha and t > 0, and of a less-than test when p/2 < alpha and t < 0. %http://stackoverflow.com/questions/15984221/how-to-perform-two-sample-one-tailed-t-test-with-numpy-scipy
 %https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.stats.ttest_ind.html
 
-Hypothesis in this study that is used to answer the research questions that is tested with a two-sampled t-test (if the conditions mentioned above are valid) is listed in figure \ref{fig:hypothesis_ttest}. 
+The hypotheses in this study, used to answer the research questions, that is tested with a two-sampled t-test (if the conditions mentioned above are valid) is listed in figure \ref{fig:hypothesis_ttest}. 
 
 \begin{figure}[H]
 	\begin{framed}\centering
@@ -146,7 +145,7 @@ Hypothesis in this study that is used to answer the research questions that is t
 		$H_{0}$: Experienced participants do not have more correct elements\\
 		$H_{A}$: Experienced participants have a higher number of correct elements\newline
 	\end{framed}
-	\caption{Two-sample t-test hypothesis}
+	\caption{Two-sample t-test hypotheses}
 	\label{fig:hypothesis_ttest}
 \end{figure}
 %Before solving the hypothesis the conditions needs to be testet. More on this later. %*WHICH SECTION?
@@ -166,7 +165,7 @@ $\mu$ equals the group mean and $k$ represents the number of groups. It is impor
 F < f_{\alpha, v_{1}, v_{2}}
 \end{equation}
 
-F is the calculated statistical value and f is the critical value with the given degrees of freedom ($v_{1}, v_{2}$) and significance level ($\alpha$). If the alternative hypothesis is accepted a \textit{post hoc test} is used. A post hoc test makes paired comparisons to determine which group differs. This thesis will use Tukey's test to determine which group means are significantly different [\citep{Walpole2012}, p.526]. Hypotheses in this study that is used to answer the research questions tested in a one-way \textit{ANOVA} analysis (if the conditions mentioned above are valid) is listed in figure \ref{fig:hypothesis_anova}. 
+F is the calculated statistical value, and f is the critical value with the given degrees of freedom ($v_{1}, v_{2}$) and significance level ($\alpha$). If the alternative hypothesis is accepted a \textit{post hoc test} is used to make paired comparisons. The test determines which group differs. This thesis will use Tukey's test to determine which group means are significantly different \citep[p.~526]{Walpole2012}. Hypotheses in this study that is used to answer the research questions tested in a one-way \textit{ANOVA} analysis (if the conditions mentioned above are valid) is listed in figure \ref{fig:hypothesis_anova}. 
 
 \begin{figure}[H]
 	\begin{framed}\centering
@@ -176,16 +175,15 @@ F is the calculated statistical value and f is the critical value with the given
 		\textit{Variable = time, group = tasks}\newline
 		
 		\textbf{2}\\
-		$H_{0}$: Correct elements in each of the three tasks do not differ\\
-		$H_{A}$: Correct elements between at least two of the tasks differs \\
+		$H_{0}$: Number of correct elements in each of the three tasks do not differ\\
+		$H_{A}$: Number of correct elements between at least two of the tasks differs \\
 		\textit{Variable = Number of correct elements, group = tasks}
 		
 	\end{framed}
-	\caption{One-way ANOVA hypothesis}
+	\caption{One-way ANOVA hypotheses}
 	\label{fig:hypothesis_anova}
 \end{figure}
 
-The hypothesis written above is tested in section \ref{sec:anova_result}. %* Add correct section
 %As regards the normality of group data, the one-way ANOVA can tolerate data that is non-normal (skewed or kurtotic distributions) with only a small effect on the Type I error rate. However, platykurtosis can have a profound effect when your group sizes are small. This leaves you with two options: (1) transform your data using various algorithms so that the shape of your distributions become normally distributed or (2) choose the nonparametric Kruskal-Wallis H Test which does not require the assumption of normality. https://statistics.laerd.com/statistical-guides/one-way-anova-statistical-guide-3.php
 
 %The test can determine if the mean time (the variable) is significally different between the three tasks (the groups) given in the survey. It can also be used to determine if there are any significant different in mean time given the six different orders the task could serve in. A third test is to have number of correct elements as the variable and the three tasks as groups. More on this later. %*WHIch section?
@@ -225,7 +223,7 @@ Kruskal-Wallis is used to test equality of means in one-way \textit{ANOVA}, so t
 
 Here $\mu_{k}$ is the rank mean for the group k. The number of observations in the smallest sample is assigned to $n_1$, the second smallest to $n_2$ and the largest sample is assigned to $n_k$. 
 
-The null hypothesis is accepted if [\citep{Walpole2012}, p.668]: 
+The null hypothesis is accepted if \citep[p.~668]{Walpole2012}: 
 
 \begin{equation}
 \label{eq:kruskapw-accept}
