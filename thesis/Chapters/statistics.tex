@@ -253,68 +253,9 @@ The transformed data is applied to the D'Agostino and Pearson test. This test co
 	\end{tcolorbox}
 \end{center}
 
-The assumption that sample 1 and sample 2 follows a normal distribution is now accepted and the transformed data can be used in parametric methods.
+The assumption that sample 1 and sample 2 follows a normal distribution is now accepted and the transformed data can be used in parametric methods. \\[0.5cm]
 
-
-
-\subsubsection[Sample 17, 18 and 19]{Inexperienced participants divided by task, total time variable}\label{sec:sample_17,18,19_normalitytest}
-This section will test if sample 17, 18 and 19, table \ref{tab:totaltime_tasks_inexperienced}, follows the normal distribution. These samples will be used to test whether there is a significant difference in total time between the three tasks when only looking at inexperienced participants.
-
-A visual analysis of the histograms \ref{fig:totaltimeinexperienced_task1}, \ref{fig:totaltimeinexperienced_task2} and \ref{fig:totaltimeinexperienced_task3} show a positive skewness. The skew is less than the histograms in figure \ref{fig:sample11_12_13_histogram}, but is most likely too large for the samples to be normally distributed.
-
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.32\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task1/totaltime_inexperienced}
-		\caption{Sample 17 - Task A}
-		\label{fig:totaltimeinexperienced_task1}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.32\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task2/totaltime_inexperienced}
-		\caption{Sample 18 - Task B}
-		\label{fig:totaltimeinexperienced_task2}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.32\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task3/totaltime_inexperienced}
-		\caption{Sample 19 - Task C}
-		\label{fig:totaltimeinexperienced_task3}
-	\end{subfigure}
-	\caption{Histogram with normal distribution fit}
-\end{figure}
-
-The D'Agostino and Pearson normality test agrees with the visual analysis. The three obtained p-values ($1.586 * 10^{-11}$, $1.773 * 10^{-6}$ and $2.312 * 10 ^{-11}$) are all significantly lower than the significance level of 0.05. Sample 17, 18, and 19 do not follow a normal distribution with a confidence interval of 95\%. The null hypothesis is rejected. 
-
-The samples are Box-Cox power transformed. The histograms after transformation (\ref{fig:totaltimeinexperiencedboxcox_task1}, \ref{fig:totaltimeinexperiencedboxcox_task2}, and \ref{fig:totaltimeinexperiencedboxcox_task3}) are visually evaluated to be normally distributed. 
-
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.32\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task1/totaltime_inexperienced_boxcox}
-		\caption{Sample 17 - Task A}
-		\label{fig:totaltimeinexperiencedboxcox_task1}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.32\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task2/totaltime_inexperienced_boxcox}
-		\caption{Sample 18 - Task B}
-		\label{fig:totaltimeinexperiencedboxcox_task2}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.32\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{../../thesis-statisticmethods/statistic_analysis/figures/task3/totaltime_inexperienced_boxcox}
-		\caption{Sample 19 - Task C}
-		\label{fig:totaltimeinexperiencedboxcox_task3}
-	\end{subfigure}
-	\caption{Histogram with normal distribution fit after Box-Cox}
-\end{figure}
-
-A new D'Agostino and Pearson normality test on the transformed data confirms that all three samples are drawn from a normal distribution with a significance level of 5\%. The obtained p-values ($0.139$, $0.909$ and $0.067$) are larger than 0.05, and the null hypothesis is accepted. These samples can be used in parametric methods \\[0.2cm]
-
-The calculations and visual inspections of the rest of the 21 samples are located in the appendix. Table \ref{tab:normaltest_summary} show the results of all normal tests performed with D'Agostino and Pearson method. The appendix column refers to where in the appendix the calculations are located.
+The calculations and visual inspections of the rest of the 21 samples are located in the appendix. Table \ref{tab:normaltest_summary} show the results of all normal tests performed with D'Agostino and Pearson method. The appendix column in the summary table refers to where in the appendix the calculations are located. 
 
 \newpage
 
