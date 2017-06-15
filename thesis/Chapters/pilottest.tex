@@ -1,7 +1,7 @@
 \chapter{Experiment and Web application}
 %This thesis will try to determine questions regarding micro-tasks involving geospatial data. 
 %There is little research on how inexperienced individuals solve micro-tasks when the tasks involve map interaction. To the authors best knowledge, little, if any, research has been conducted on micro-tasks involving geospatial interpretation and analysis. 
-This chapter will introduce the developed experiment and the implemented web-application hosting the experiment. The web application containing the experiment that captures the data for the analyses. A pilot-test of the web application is used to secure the usability and discover weaknesses in the implementation. How the pilot-test was executed and some preliminary results, is also presented in this chapter. At last, there is a section about how to determine the sample size.  
+This chapter will introduce the developed experiment and the implemented web application hosting the experiment. The web application contains the experiment that collects the data for the statistical analyses. A pilot-test of the web application is used to secure the usability and discover weaknesses in the implementation. How the pilot-test was executed and improvements implemented from the result, is also presented in this chapter. At last, there is a section about how to determine the sample size.  
 %The gathered data from the experiment will be used to get more knowledge about micro-tasks involving geospatial tasks, both how to best partition the large geospatial task and how well individuals solves the tasks based on their background. 
 %The experiment will be administered through a Self-Administered Questionnaire, where the questions will be located in a web-application developed and implemented by the author. When doing questionnaire designed survey, a key factor is to keep the questions short, simple, and clearly worded [\citep{Kitchin2000}, p. 52].
 
@@ -23,7 +23,7 @@ The first question (micro-task) asks the participant to click on the color that 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\linewidth]{fig/q1_2}
-	\caption{Question one as it is displayed in the web application during task B}
+	\caption{Question one as it is displayed in the web application during the task containing three buildings with two footprints each}
 	\label{fig:q12}
 \end{figure}
 
@@ -32,7 +32,7 @@ The second question (micro-task) asks the participant to select the most informa
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\linewidth]{fig/q2_2}
-	\caption{Question two as it is displayed in the web application during task B}
+	\caption{Question two as it is displayed in the web application when the task asks the participants to select three of six rows}
 	\label{fig:q22}
 \end{figure}
 
@@ -107,7 +107,7 @@ The React application was created to serve the experiment to all participants. I
 	\begin{subfigure}[b]{0.35\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{fig/mt-survey}
-		\caption{After each task survey site}
+		\caption{After each task survey}
 		\label{fig:mt-survey}
 	\end{subfigure}
 	\caption{Interface for the client application}
@@ -138,13 +138,13 @@ In this study, the independent variables are: 1) experienced or inexperienced pa
 	1)Time spent on each question and task \\
 	2) Number of correctly chosen elements in each question and task \\ 
 	3) Task difficulty  \\  \hline
-	\caption[Experiments variables]{The experiments independent and dependent variables} \label{tab:independentdependentvariables} \\
+	\caption[Variables in the experiment]{The independent and dependent variables} \label{tab:independentdependentvariables} \\
 \end{longtable}
 
-The React application generates and saves the task results. In both questions, the time and number of correct elements are registered. The React application has a timer that registers time elapsed on both questions and adds the time measurements together to get the total time spent on the task. The time only reflects how long the participants spent solving the two questions. Time spent loading new layers, moving to the next question, etc., is not included. The building footprints and rows the participant selected is also registered. Before saving the result it counts the number of correctly chosen elements in each question and then adds the number together to get the total number of correctly chosen elements in the task. A participant can maximum have twelve correct elements, six from each question. Total time and number of correct elements are the two primary dependent variables, and they create the basis of the statistical analyses together with the independent variables mentioned above. Participants task results are saved after each task and contain the following information:
+The React application generates and saves the task results. In both questions, the time and number of correct elements are registered. The React application has a timer that registers time elapsed on both questions and adds the time measurements together to get the total time spent on the task. The time only reflects how long the participants spent solving the two questions. Time spent loading new layers, moving to the next question, i.e., is not included. The building footprints and rows the participant selected is also registered. Before saving the result, the application counts the number of correctly chosen elements in each question and then adds the number together to get the total number of correctly chosen elements in the task. A participant can maximum have twelve correct elements, six from each question. Total time and number of correct elements are the two primary dependent variables, and they create the basis of the statistical analyses together with the independent variables mentioned above. Participants task results are saved after each task and contain the following information:
 
 \begin{itemize}
-	\item Task number (which task
+	\item Task number (which task)
 	\item Task order number (which order)
 	\item Time spent on question one 
 	\item Time spent on question two
@@ -177,7 +177,7 @@ The test data was used to find errors or weaknesses in the database model. The d
 
 The average time spent on the survey was 18 minutes. The two slowest participants used on average 33 minutes, while the rest of the participants spent on average 13 minutes to complete the survey. 
 
-In the pilot test, the same building footprints (question one) and information rows (question two) were used in all three tasks. At the end of the pilot test, the author asked the participants if they remembered the buildings and meta information from the previous tasks. Seven out of eight answered yes on the question. This information was valuable. If every participant does a better job at the last task, because they remember the elements from earlier tasks, the result will not be as useful. This almost matches the number of participants who remembered the previous elements in the last task. This finding made the author create three different task element groups. Each task will then contain new building footprints and meta information. The three element groups were randomly assigned to each task, to avoid the three building groups influencing the result. The risk of participants remembering previous task elements disappeared with this decision. 
+In the pilot test, the same building footprints (question one) and information rows (question two) were used in all three tasks. At the end of the pilot test, the author asked the participants if they remembered the buildings and meta information from the previous tasks. Seven out of eight answered yes on the question. This information was valuable. If every participant does a better job at the last task, because they remember the elements from earlier tasks, the result will not be as useful. This finding made the author create three different task element groups. Each task will then contain new building footprints and meta information. The three element groups were randomly assigned to each task, to avoid the three building groups influencing the result. The risk of participants remembering previous task elements disappeared with this decision. 
 %Each element group contained six different buildings with two footprints and meta information covering three separate areas. The groups were designed to contain identical element cases. Eighteen footprint pairs and information row pairs were produced because of this decision.
 
 \section[Sample Size]{Determining sample size}\label{sec:samplesize}

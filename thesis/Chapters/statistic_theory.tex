@@ -1,5 +1,5 @@
 \chapter{Results}
-This chapter will present the result of the conducted experiment. It will summarize who the participants were, the gathered data and then present the statistical results from the analysis performed on the gathered data. It took eight days to collect enough participants completing the experiment. Only 38\% of the registered participants completed the experiment. All task results saved in the database was valid and could be used in the analyses. The analyses were calculated in Python, using statistical packages as SciPy, Numpy, and Pandas. The data was extracted from the database using Django Queryset and saved in CSV files. The implemented statistical methods are available on GitHub \footnote{https://github.com/annesofie/thesis-statisticmethods}. 
+This chapter will present the result of the conducted experiment. It will summarize who the participants were, the gathered data and then present the statistical results from the analysis performed on the gathered data. It took eight days to collect enough participants completing the experiment. All task results saved in the database was valid and could be used in the analyses. The analyses were calculated in Python, using statistical packages as SciPy, Numpy, and Pandas. The data was extracted from the database using Django Queryset and saved in CSV files. The implemented statistical methods are available on GitHub \footnote{https://github.com/annesofie/thesis-statisticmethods}. 
 
 \section{Participants}
 %- Who is the participants, -age, -sex, -completion rate, how many completed the survey, -why include the data where the participants didn't complete the whole survey \\
@@ -100,7 +100,7 @@ The two-sample t-test is used to estimate if differences between two means are s
 |T| > t_{\frac{\alpha}{2}, v} 
 \end{equation}
 
-In a two-sample, one-sided, t-test the null hypothesis is rejected when [\citep{Walpole2012}, p. 350]:
+In a two-sample, one-sided, t-test the null hypothesis is rejected when \cite[p.~350]{Walpole2012}:
 
 \begin{equation}
 \label{eq:ttest_greater}
@@ -124,7 +124,7 @@ If we can assume equal variances in the two samples and the samples are normally
 %Because the one-sided tests can be backed out from the two-sided tests. (With symmetric distributions one-sided p-value is just half of the two-sided pvalue). It goes on to say that scipy always gives the test statistic as signed. This means that given p and t values from a two-tailed test, you would reject the null hypothesis of a greater-than test when p/2 < alpha and t > 0, and of a less-than test when p/2 < alpha and t < 0. %http://stackoverflow.com/questions/15984221/how-to-perform-two-sample-one-tailed-t-test-with-numpy-scipy
 %https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.stats.ttest_ind.html
 
-The hypotheses in this study, used to answer the research questions, that is tested with a two-sampled t-test (if the conditions mentioned above are valid) is listed in figure \ref{fig:hypothesis_ttest}. 
+The hypotheses in this study that is used to answer the research questions tested with a two-sampled t-test (if the conditions mentioned above are valid) are listed in figure \ref{fig:hypothesis_ttest}. 
 
 \begin{figure}[H]
 	\begin{framed}\centering
@@ -165,7 +165,7 @@ $\mu$ equals the group mean and $k$ represents the number of groups. It is impor
 F < f_{\alpha, v_{1}, v_{2}}
 \end{equation}
 
-F is the calculated statistical value, and f is the critical value with the given degrees of freedom ($v_{1}, v_{2}$) and significance level ($\alpha$). If the alternative hypothesis is accepted a \textit{post hoc test} is used to make paired comparisons. The test determines which group differs. This thesis will use Tukey's test to determine which group means are significantly different \citep[p.~526]{Walpole2012}. Hypotheses in this study that is used to answer the research questions tested in a one-way \textit{ANOVA} analysis (if the conditions mentioned above are valid) is listed in figure \ref{fig:hypothesis_anova}. 
+F is the calculated statistical value, and f is the critical value with the given degrees of freedom ($v_{1}, v_{2}$) and significance level ($\alpha$). If the alternative hypothesis is accepted a \textit{post hoc test,} is used to make paired comparisons. The test determines which group differs. This thesis will use Tukey's test to determine which group means are significantly different \citep[p.~526]{Walpole2012}. Hypotheses in this study that is used to answer the research questions tested in a one-way \textit{ANOVA} analysis (if the conditions mentioned above are valid) is listed in figure \ref{fig:hypothesis_anova}. 
 
 \begin{figure}[H]
 	\begin{framed}\centering
